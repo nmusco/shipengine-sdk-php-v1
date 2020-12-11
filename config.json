@@ -1,0 +1,14 @@
+{
+	"sortParamsByRequiredFlag": true,
+	"ensureUniqueParams": true,
+	"allowUnicodeIdentifiers": false,
+	"variableNamingConvention": "snake_case",
+	"invokerPackage": "Nmusco\\ShipEngine\\v1",
+	"packagePath": "shipengine-sdk-php-v1",
+	"composerVendorName": "nmusco",
+	"composerProjectName": "shipengine-sdk-php-v1",
+	"artifactVersion": "1.0.0",
+	"gitRepoId": "shipengine-sdk-php-v1",
+	"gitUserId": "nmusco",
+	"srcBasePath": "lib"
+}

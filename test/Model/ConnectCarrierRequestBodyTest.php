@@ -191,13 +191,6 @@ class ConnectCarrierRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "ancillary_endorsement"
-     */
-    public function testPropertyAncillaryEndorsement()
-    {
-    }
-
-    /**
      * Test attribute "site_id"
      */
     public function testPropertySiteId()
@@ -222,13 +215,6 @@ class ConnectCarrierRequestBodyTest extends TestCase
      * Test attribute "address1"
      */
     public function testPropertyAddress1()
-    {
-    }
-
-    /**
-     * Test attribute "address2"
-     */
-    public function testPropertyAddress2()
     {
     }
 
@@ -296,30 +282,9 @@ class ConnectCarrierRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "meter_number"
-     */
-    public function testPropertyMeterNumber()
-    {
-    }
-
-    /**
      * Test attribute "mailer_id"
      */
     public function testPropertyMailerId()
-    {
-    }
-
-    /**
-     * Test attribute "profile_name"
-     */
-    public function testPropertyProfileName()
-    {
-    }
-
-    /**
-     * Test attribute "merchant_id"
-     */
-    public function testPropertyMerchantId()
     {
     }
 
@@ -338,44 +303,9 @@ class ConnectCarrierRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "oba_email"
-     */
-    public function testPropertyObaEmail()
-    {
-    }
-
-    /**
      * Test attribute "contact_name"
      */
     public function testPropertyContactName()
-    {
-    }
-
-    /**
-     * Test attribute "company_name"
-     */
-    public function testPropertyCompanyName()
-    {
-    }
-
-    /**
-     * Test attribute "street_line1"
-     */
-    public function testPropertyStreetLine1()
-    {
-    }
-
-    /**
-     * Test attribute "street_line2"
-     */
-    public function testPropertyStreetLine2()
-    {
-    }
-
-    /**
-     * Test attribute "street_line3"
-     */
-    public function testPropertyStreetLine3()
     {
     }
 
@@ -408,6 +338,83 @@ class ConnectCarrierRequestBodyTest extends TestCase
     }
 
     /**
+     * Test attribute "agree_to_technology_agreement"
+     */
+    public function testPropertyAgreeToTechnologyAgreement()
+    {
+    }
+
+    /**
+     * Test attribute "ancillary_endorsement"
+     */
+    public function testPropertyAncillaryEndorsement()
+    {
+    }
+
+    /**
+     * Test attribute "address2"
+     */
+    public function testPropertyAddress2()
+    {
+    }
+
+    /**
+     * Test attribute "meter_number"
+     */
+    public function testPropertyMeterNumber()
+    {
+    }
+
+    /**
+     * Test attribute "profile_name"
+     */
+    public function testPropertyProfileName()
+    {
+    }
+
+    /**
+     * Test attribute "merchant_id"
+     */
+    public function testPropertyMerchantId()
+    {
+    }
+
+    /**
+     * Test attribute "oba_email"
+     */
+    public function testPropertyObaEmail()
+    {
+    }
+
+    /**
+     * Test attribute "company_name"
+     */
+    public function testPropertyCompanyName()
+    {
+    }
+
+    /**
+     * Test attribute "street_line1"
+     */
+    public function testPropertyStreetLine1()
+    {
+    }
+
+    /**
+     * Test attribute "street_line2"
+     */
+    public function testPropertyStreetLine2()
+    {
+    }
+
+    /**
+     * Test attribute "street_line3"
+     */
+    public function testPropertyStreetLine3()
+    {
+    }
+
+    /**
      * Test attribute "title"
      */
     public function testPropertyTitle()
@@ -418,13 +425,6 @@ class ConnectCarrierRequestBodyTest extends TestCase
      * Test attribute "invoice"
      */
     public function testPropertyInvoice()
-    {
-    }
-
-    /**
-     * Test attribute "agree_to_technology_agreement"
-     */
-    public function testPropertyAgreeToTechnologyAgreement()
     {
     }
 }

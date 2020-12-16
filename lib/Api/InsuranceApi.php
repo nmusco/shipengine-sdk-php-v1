@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Api;
+namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -120,11 +120,11 @@ class InsuranceApi
      *
      * Add Funds To Insurance
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body add_funds_to_insurance_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body add_funds_to_insurance_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function addFundsToInsurance($add_funds_to_insurance_request_body)
     {
@@ -137,11 +137,11 @@ class InsuranceApi
      *
      * Add Funds To Insurance
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function addFundsToInsuranceWithHttpInfo($add_funds_to_insurance_request_body)
     {
@@ -178,44 +178,44 @@ class InsuranceApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -234,7 +234,7 @@ class InsuranceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -242,7 +242,7 @@ class InsuranceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class InsuranceApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -265,7 +265,7 @@ class InsuranceApi
      *
      * Add Funds To Insurance
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -285,14 +285,14 @@ class InsuranceApi
      *
      * Add Funds To Insurance
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addFundsToInsuranceAsyncWithHttpInfo($add_funds_to_insurance_request_body)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody';
         $request = $this->addFundsToInsuranceRequest($add_funds_to_insurance_request_body);
 
         return $this->client
@@ -332,7 +332,7 @@ class InsuranceApi
     /**
      * Create request for operation 'addFundsToInsurance'
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody $add_funds_to_insurance_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -433,11 +433,11 @@ class InsuranceApi
      *
      * Connect a Shipsurance Account
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody $connect_insurer_request_body connect_insurer_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody $connect_insurer_request_body connect_insurer_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return object|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function connectInsurer($connect_insurer_request_body)
     {
@@ -450,11 +450,11 @@ class InsuranceApi
      *
      * Connect a Shipsurance Account
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody $connect_insurer_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody $connect_insurer_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function connectInsurerWithHttpInfo($connect_insurer_request_body)
     {
@@ -503,26 +503,26 @@ class InsuranceApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -555,7 +555,7 @@ class InsuranceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -563,7 +563,7 @@ class InsuranceApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -578,7 +578,7 @@ class InsuranceApi
      *
      * Connect a Shipsurance Account
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody $connect_insurer_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody $connect_insurer_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -598,7 +598,7 @@ class InsuranceApi
      *
      * Connect a Shipsurance Account
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody $connect_insurer_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody $connect_insurer_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -645,7 +645,7 @@ class InsuranceApi
     /**
      * Create request for operation 'connectInsurer'
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody $connect_insurer_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody $connect_insurer_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -749,7 +749,7 @@ class InsuranceApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return object|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function disconnectInsurer()
     {
@@ -765,7 +765,7 @@ class InsuranceApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function disconnectInsurerWithHttpInfo()
     {
@@ -814,26 +814,26 @@ class InsuranceApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class InsuranceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -874,7 +874,7 @@ class InsuranceApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1048,7 +1048,7 @@ class InsuranceApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function getInsuranceBalance()
     {
@@ -1064,7 +1064,7 @@ class InsuranceApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInsuranceBalanceWithHttpInfo()
     {
@@ -1101,44 +1101,44 @@ class InsuranceApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1157,7 +1157,7 @@ class InsuranceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1165,7 +1165,7 @@ class InsuranceApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1173,7 +1173,7 @@ class InsuranceApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1213,7 +1213,7 @@ class InsuranceApi
      */
     public function getInsuranceBalanceAsyncWithHttpInfo()
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody';
         $request = $this->getInsuranceBalanceRequest();
 
         return $this->client

@@ -86,16 +86,37 @@ class ConnectRoyalMailRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "oba_email"
+     * Test attribute "contact_name"
      */
-    public function testPropertyObaEmail()
+    public function testPropertyContactName()
     {
     }
 
     /**
-     * Test attribute "contact_name"
+     * Test attribute "city"
      */
-    public function testPropertyContactName()
+    public function testPropertyCity()
+    {
+    }
+
+    /**
+     * Test attribute "postal_code"
+     */
+    public function testPropertyPostalCode()
+    {
+    }
+
+    /**
+     * Test attribute "nickname"
+     */
+    public function testPropertyNickname()
+    {
+    }
+
+    /**
+     * Test attribute "oba_email"
+     */
+    public function testPropertyObaEmail()
     {
     }
 
@@ -135,30 +156,9 @@ class ConnectRoyalMailRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-    }
-
-    /**
-     * Test attribute "postal_code"
-     */
-    public function testPropertyPostalCode()
-    {
-    }
-
-    /**
      * Test attribute "phone"
      */
     public function testPropertyPhone()
-    {
-    }
-
-    /**
-     * Test attribute "nickname"
-     */
-    public function testPropertyNickname()
     {
     }
 }

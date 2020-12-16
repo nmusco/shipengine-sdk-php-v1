@@ -86,20 +86,6 @@ class TrackEventTest extends TestCase
     }
 
     /**
-     * Test attribute "carrier_occurred_at"
-     */
-    public function testPropertyCarrierOccurredAt()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
      * Test attribute "city_locality"
      */
     public function testPropertyCityLocality()
@@ -117,6 +103,20 @@ class TrackEventTest extends TestCase
      * Test attribute "postal_code"
      */
     public function testPropertyPostalCode()
+    {
+    }
+
+    /**
+     * Test attribute "carrier_occurred_at"
+     */
+    public function testPropertyCarrierOccurredAt()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
     {
     }
 

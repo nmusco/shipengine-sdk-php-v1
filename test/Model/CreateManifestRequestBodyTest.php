@@ -86,13 +86,6 @@ class CreateManifestRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "excluded_label_ids"
-     */
-    public function testPropertyExcludedLabelIds()
-    {
-    }
-
-    /**
      * Test attribute "label_ids"
      */
     public function testPropertyLabelIds()
@@ -110,6 +103,13 @@ class CreateManifestRequestBodyTest extends TestCase
      * Test attribute "ship_date"
      */
     public function testPropertyShipDate()
+    {
+    }
+
+    /**
+     * Test attribute "excluded_label_ids"
+     */
+    public function testPropertyExcludedLabelIds()
     {
     }
 }

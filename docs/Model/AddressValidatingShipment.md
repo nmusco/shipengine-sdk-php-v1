@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**validate_address** | [**ValidateAddress**](ValidateAddress.md) |  | [optional] 
 **shipment_id** | **string** | A string that uniquely identifies the shipment | [readonly] 
 **carrier_id** | **string** | The carrier account that is billed for the shipping charges | 
 **service_code** | **string** | The [carrier service](https://www.shipengine.com/docs/shipping/use-a-carrier-service/) used to ship the package, such as &#x60;fedex_ground&#x60;, &#x60;usps_first_class_mail&#x60;, &#x60;flat_rate_envelope&#x60;, etc. | 
+**ship_to** | [**Address**](Address.md) | The recipient&#39;s mailing address | 
+**ship_from** | [**Address**](Address.md) | The shipment&#39;s origin address. If you frequently ship from the same location, consider [creating a warehouse](https://www.shipengine.com/docs/reference/create-warehouse/).  Then you can simply specify the &#x60;warehouse_id&#x60; rather than the complete address each time. | 
+**validate_address** | [**ValidateAddress**](ValidateAddress.md) |  | [optional] 
 **external_order_id** | **string** | ID that the Order Source assigned | [optional] 
 **items** | [**ShipmentItem[]**](ShipmentItem.md) | Describe the packages included in this shipment as related to potential metadata that was imported from external order sources | [optional] 
 **external_shipment_id** | **string** | You can optionally use this field to store your own identifier for this shipment.  &gt; **Warning:** The &#x60;external_shipment_id&#x60; is limited to 50 characters. Any additional characters will be truncated. | [optional] 
@@ -15,8 +17,6 @@ Name | Type | Description | Notes
 **created_at** | [**\DateTime**](\DateTime.md) | The date and time that the shipment was created in ShipEngine. | [optional] [readonly] 
 **modified_at** | [**\DateTime**](\DateTime.md) | The date and time that the shipment was created or last modified. | [optional] [readonly] 
 **shipment_status** | [**ShipmentStatus**](ShipmentStatus.md) | The current status of the shipment | [optional] [readonly] 
-**ship_to** | [**Address**](Address.md) | The recipient&#39;s mailing address | 
-**ship_from** | [**Address**](Address.md) | The shipment&#39;s origin address. If you frequently ship from the same location, consider [creating a warehouse](https://www.shipengine.com/docs/reference/create-warehouse/).  Then you can simply specify the &#x60;warehouse_id&#x60; rather than the complete address each time. | 
 **warehouse_id** | **string** | The [warehouse](https://www.shipengine.com/docs/shipping/ship-from-a-warehouse/) that the shipment is being shipped from.  Either &#x60;warehouse_id&#x60; or &#x60;ship_from&#x60; must be specified. | [optional] 
 **return_to** | [**Address**](Address.md) | The return address for this shipment.  Defaults to the &#x60;ship_from&#x60; address. | [optional] 
 **confirmation** | [**DeliveryConfirmation**](DeliveryConfirmation.md) | The type of delivery confirmation that is required for this shipment. | [optional] 

@@ -2,7 +2,7 @@
 /**
  * ObjectSerializer
  *
- * PHP version 5
+ * PHP version 7.2
  *
  * @category Class
  * @package  Nmusco\ShipEngine\v1
@@ -29,7 +29,7 @@
 
 namespace Nmusco\ShipEngine\v1;
 
-use Nmusco\ShipEngine\v1\Model\ModelInterface;
+use Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment
@@ -61,33 +61,45 @@ class ObjectSerializer
      * @param string $type   the OpenAPIToolsType of the data
      * @param string $format the format of the OpenAPITools type of the data
      *
-     * @return string|object serialized form of $data
+     * @return scalar|object|array|null serialized form of $data
      */
     public static function sanitizeForSerialization($data, $type = null, $format = null)
     {
         if (is_scalar($data) || null === $data) {
             return $data;
-        } elseif ($data instanceof \DateTime) {
+        }
+
+        if ($data instanceof \DateTime) {
             return ($format === 'date') ? $data->format('Y-m-d') : $data->format(self::$dateTimeFormat);
-        } elseif (is_array($data)) {
+        }
+
+        if (is_array($data)) {
             foreach ($data as $property => $value) {
                 $data[$property] = self::sanitizeForSerialization($value);
             }
+            
             return $data;
-        } elseif (is_object($data)) {
+        }
+
+        if (is_object($data)) {
             $values = [];
             if ($data instanceof ModelInterface) {
                 $formats = $data::openAPIFormats();
                 foreach ($data::openAPITypes() as $property => $openAPIType) {
                     $getter = $data::getters()[$property];
                     $value = $data->$getter();
-                    if ($value !== null
-                        && !in_array($openAPIType, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)
-                        && method_exists($openAPIType, 'getAllowableEnumValues')
-                        && !in_array($value, $openAPIType::getAllowableEnumValues(), true)) {
-                        $imploded = implode("', '", $openAPIType::getAllowableEnumValues());
-                        throw new \InvalidArgumentException("Invalid value for enum '$openAPIType', must be one of: '$imploded'");
+                    if ($value !== null && !in_array($openAPIType, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+                        $callable = [$openAPIType, 'getAllowableEnumValues'];
+                        if (is_callable($callable)) {
+                            /** array $callable */
+                            $allowedEnumTypes = $callable();
+                            if (!in_array($value, $allowedEnumTypes, true)) {
+                                $imploded = implode("', '", $allowedEnumTypes);
+                                throw new \InvalidArgumentException("Invalid value for enum '$openAPIType', must be one of: '$imploded'");
+                            }
+                        }
                     }
+
                     if ($value !== null) {
                         $values[$data::attributeMap()[$property]] = self::sanitizeForSerialization($value, $openAPIType, $formats[$property]);
                     }
@@ -97,10 +109,11 @@ class ObjectSerializer
                     $values[$property] = self::sanitizeForSerialization($value);
                 }
             }
+
             return (object)$values;
-        } else {
-            return (string)$data;
         }
+
+        return (string)$data;
     }
 
     /**
@@ -115,9 +128,9 @@ class ObjectSerializer
     {
         if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
             return $match[1];
-        } else {
-            return $filename;
         }
+		
+		return $filename;
     }
 
     /**
@@ -147,24 +160,26 @@ class ObjectSerializer
     {
         if (is_array($object)) {
             return implode(',', $object);
-        } else {
-            return self::toString($object);
         }
+		
+		return self::toString($object);
     }
 
     /**
      * Take value and turn it into a string suitable for inclusion in
      * the header. If it's a string, pass through unchanged
      * If it's a datetime object, format it in ISO8601
+	 * If it's a boolean, convert it to "true" or "false".
      *
-     * @param string $value a string which will be part of the header
+     * @param string|bool|\DateTime|object $value a string which will be part of the header
      *
      * @return string the header string
      */
     public static function toHeaderValue($value)
     {
-        if (method_exists($value, 'toHeaderValue')) {
-            return $value->toHeaderValue();
+        $callable = [$value, 'toHeaderValue'];
+        if (is_callable($callable)) {
+            return $callable();
         }
 
         return self::toString($value);
@@ -183,9 +198,9 @@ class ObjectSerializer
     {
         if ($value instanceof \SplFileObject) {
             return $value->getRealPath();
-        } else {
-            return self::toString($value);
         }
+
+		return self::toString($value);
     }
 
     /**
@@ -202,11 +217,13 @@ class ObjectSerializer
     {
         if ($value instanceof \DateTime) { // datetime in ISO8601 format
             return $value->format(self::$dateTimeFormat);
-        } else if (is_bool($value)) {
+        } 
+		
+		if (is_bool($value)) {
             return $value ? 'true' : 'false';
-        } else {
-            return $value;
         }
+		
+		return $value;
     }
 
     /**
@@ -260,11 +277,30 @@ class ObjectSerializer
     {
         if (null === $data) {
             return null;
-        } elseif (substr($class, 0, 4) === 'map[') { // for associative array e.g. map[string,int]
+        }
+
+        if (strcasecmp(substr($class, -2), '[]') === 0) {
+            $data = is_string($data) ? json_decode($data) : $data;
+            
+            if (!is_array($data)) {
+                throw new \InvalidArgumentException("Invalid array '$class'");
+            }
+            
+            $subClass = substr($class, 0, -2);
+            $values = [];
+            foreach ($data as $key => $value) {
+                $values[] = self::deserialize($value, $subClass, null);
+            }
+
+            return $values;
+        }
+
+        if (substr($class, 0, 4) === 'map[') { // for associative array e.g. map[string,int]
             $data = is_string($data) ? json_decode($data) : $data;
             settype($data, 'array');
             $inner = substr($class, 4, -1);
             $deserialized = [];
+            
             if (strrpos($inner, ",") !== false) {
                 $subClass_array = explode(',', $inner, 2);
                 $subClass = $subClass_array[1];
@@ -272,19 +308,16 @@ class ObjectSerializer
                     $deserialized[$key] = self::deserialize($value, $subClass, null);
                 }
             }
+
             return $deserialized;
-        } elseif (strcasecmp(substr($class, -2), '[]') === 0) {
-            $data = is_string($data) ? json_decode($data) : $data;
-            $subClass = substr($class, 0, -2);
-            $values = [];
-            foreach ($data as $key => $value) {
-                $values[] = self::deserialize($value, $subClass, null);
-            }
-            return $values;
-        } elseif ($class === 'object') {
+        }
+
+        if ($class === 'object') {
             settype($data, 'array');
             return $data;
-        } elseif ($class === '\DateTime') {
+        }
+
+        if ($class === '\DateTime') {
             // Some API's return an invalid, empty string as a
             // date-time property. DateTime::__construct() will return
             // the current time for empty input which is probably not
@@ -292,14 +325,27 @@ class ObjectSerializer
             // be interpreted as a missing field/value. Let's handle
             // this graceful.
             if (!empty($data)) {
-                return new \DateTime($data);
-            } else {
-                return null;
+                try {
+                    return new \DateTime($data);
+                } catch (\Exception $exception) {
+                    // Some API's return a date-time with too high nanosecond
+                    // precision for php's DateTime to handle. This conversion
+                    // (string -> unix timestamp -> DateTime) is a workaround
+                    // for the problem.
+                    return (new \DateTime())->setTimestamp(strtotime($data));
+                }
             }
-        } elseif (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+
+            return null;
+        }
+
+        /** @psalm-suppress ParadoxicalCondition */
+        if (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
             settype($data, $class);
             return $data;
-        } elseif ($class === '\SplFileObject') {
+        }
+
+        if ($class === '\SplFileObject') {
             /** @var \Psr\Http\Message\StreamInterface $data */
 
             // determine file name
@@ -317,36 +363,42 @@ class ObjectSerializer
             fclose($file);
 
             return new \SplFileObject($filename, 'r');
-        } elseif (method_exists($class, 'getAllowableEnumValues')) {
+        } 
+        
+        if (method_exists($class, 'getAllowableEnumValues')) {
             if (!in_array($data, $class::getAllowableEnumValues(), true)) {
                 $imploded = implode("', '", $class::getAllowableEnumValues());
                 throw new \InvalidArgumentException("Invalid value for enum '$class', must be one of: '$imploded'");
             }
+
             return $data;
-        } else {
-            $data = is_string($data) ? json_decode($data) : $data;
-            // If a discriminator is defined and points to a valid subclass, use it.
-            $discriminator = $class::DISCRIMINATOR;
-            if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Nmusco\ShipEngine\v1\Model\\' . $data->{$discriminator};
-                if (is_subclass_of($subclass, $class)) {
-                    $class = $subclass;
-                }
-            }
-            $instance = new $class();
-            foreach ($instance::openAPITypes() as $property => $type) {
-                $propertySetter = $instance::setters()[$property];
-
-                if (!isset($propertySetter) || !isset($data->{$instance::attributeMap()[$property]})) {
-                    continue;
-                }
-
-                $propertyValue = $data->{$instance::attributeMap()[$property]};
-                if (isset($propertyValue)) {
-                    $instance->$propertySetter(self::deserialize($propertyValue, $type, null));
-                }
-            }
-            return $instance;
         }
+
+        $data = is_string($data) ? json_decode($data) : $data;
+        // If a discriminator is defined and points to a valid subclass, use it.
+        $discriminator = $class::DISCRIMINATOR;
+        if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
+            $subclass = '\Nmusco\ShipEngine\v1\Model\\' . $data->{$discriminator};
+            if (is_subclass_of($subclass, $class)) {
+                $class = $subclass;
+            }
+        }
+
+        /** @var ModelInterface $instance */
+        $instance = new $class();
+        foreach ($instance::openAPITypes() as $property => $type) {
+            $propertySetter = $instance::setters()[$property];
+
+            if (!isset($propertySetter) || !isset($data->{$instance::attributeMap()[$property]})) {
+                continue;
+            }
+
+            if (isset($data->{$instance::attributeMap()[$property]})) {
+                $propertyValue = $data->{$instance::attributeMap()[$property]};
+                $instance->$propertySetter(self::deserialize($propertyValue, $type, null));
+            }
+        }
+
+        return $instance;
     }
 }

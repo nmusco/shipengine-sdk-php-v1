@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Api;
+namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -121,11 +121,11 @@ class BatchesApi
      * Add to a Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody $add_to_batch_request_body add_to_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody $add_to_batch_request_body add_to_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function addToBatch($batch_id, $add_to_batch_request_body)
     {
@@ -139,11 +139,11 @@ class BatchesApi
      * Add to a Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody $add_to_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody $add_to_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function addToBatchWithHttpInfo($batch_id, $add_to_batch_request_body)
     {
@@ -192,38 +192,38 @@ class BatchesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -256,7 +256,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -264,7 +264,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -272,7 +272,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -288,7 +288,7 @@ class BatchesApi
      * Add to a Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody $add_to_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody $add_to_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -309,7 +309,7 @@ class BatchesApi
      * Add to a Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody $add_to_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody $add_to_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -357,7 +357,7 @@ class BatchesApi
      * Create request for operation 'addToBatch'
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody $add_to_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody $add_to_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -482,11 +482,11 @@ class BatchesApi
      *
      * Create A Batch
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody $create_batch_request_body create_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody $create_batch_request_body create_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function createBatch($create_batch_request_body)
     {
@@ -499,11 +499,11 @@ class BatchesApi
      *
      * Create A Batch
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody $create_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody $create_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function createBatchWithHttpInfo($create_batch_request_body)
     {
@@ -540,44 +540,44 @@ class BatchesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -596,7 +596,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -604,7 +604,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -612,7 +612,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -627,7 +627,7 @@ class BatchesApi
      *
      * Create A Batch
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody $create_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody $create_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -647,14 +647,14 @@ class BatchesApi
      *
      * Create A Batch
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody $create_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody $create_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createBatchAsyncWithHttpInfo($create_batch_request_body)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody';
         $request = $this->createBatchRequest($create_batch_request_body);
 
         return $this->client
@@ -694,7 +694,7 @@ class BatchesApi
     /**
      * Create request for operation 'createBatch'
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody $create_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody $create_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -799,7 +799,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function deleteBatch($batch_id)
     {
@@ -816,7 +816,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteBatchWithHttpInfo($batch_id)
     {
@@ -865,38 +865,38 @@ class BatchesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -929,7 +929,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -937,7 +937,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -945,7 +945,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1147,7 +1147,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function getBatchByExternalId($external_batch_id)
     {
@@ -1164,7 +1164,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBatchByExternalIdWithHttpInfo($external_batch_id)
     {
@@ -1201,56 +1201,56 @@ class BatchesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1269,7 +1269,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1277,7 +1277,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1285,7 +1285,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1293,7 +1293,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1335,7 +1335,7 @@ class BatchesApi
      */
     public function getBatchByExternalIdAsyncWithHttpInfo($external_batch_id)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody';
         $request = $this->getBatchByExternalIdRequest($external_batch_id);
 
         return $this->client
@@ -1485,7 +1485,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function getBatchById($batch_id)
     {
@@ -1502,7 +1502,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBatchByIdWithHttpInfo($batch_id)
     {
@@ -1539,56 +1539,56 @@ class BatchesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1607,7 +1607,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1615,7 +1615,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1623,7 +1623,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1631,7 +1631,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1673,7 +1673,7 @@ class BatchesApi
      */
     public function getBatchByIdAsyncWithHttpInfo($batch_id)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody';
         $request = $this->getBatchByIdRequest($batch_id);
 
         return $this->client
@@ -1835,7 +1835,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function listBatchErrors($batch_id, $page = 1, $pagesize = null)
     {
@@ -1854,7 +1854,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function listBatchErrorsWithHttpInfo($batch_id, $page = 1, $pagesize = null)
     {
@@ -1891,56 +1891,56 @@ class BatchesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1959,7 +1959,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1967,7 +1967,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1975,7 +1975,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1983,7 +1983,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2029,7 +2029,7 @@ class BatchesApi
      */
     public function listBatchErrorsAsyncWithHttpInfo($batch_id, $page = 1, $pagesize = null)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody';
         $request = $this->listBatchErrorsRequest($batch_id, $page, $pagesize);
 
         return $this->client
@@ -2217,16 +2217,16 @@ class BatchesApi
      *
      * List Batches
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchStatus $status status (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus $status status (optional)
      * @param  int $page Return a specific page of results. Defaults to the first page. If set to a number that&#39;s greater than the number of pages of results, an empty page is returned. (optional, default to 1)
      * @param  int $page_size The number of results to return per response. (optional, default to 25)
      * @param  SortDir $sort_dir Controls the sort order of the query. (optional)
      * @param  string $batch_number Batch Number (optional)
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchesSortBy $sort_by sort_by (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy $sort_by sort_by (optional)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function listBatches($status = null, $page = 1, $page_size = 25, $sort_dir = null, $batch_number = null, $sort_by = null)
     {
@@ -2239,16 +2239,16 @@ class BatchesApi
      *
      * List Batches
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchStatus $status (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus $status (optional)
      * @param  int $page Return a specific page of results. Defaults to the first page. If set to a number that&#39;s greater than the number of pages of results, an empty page is returned. (optional, default to 1)
      * @param  int $page_size The number of results to return per response. (optional, default to 25)
      * @param  SortDir $sort_dir Controls the sort order of the query. (optional)
      * @param  string $batch_number Batch Number (optional)
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchesSortBy $sort_by (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy $sort_by (optional)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function listBatchesWithHttpInfo($status = null, $page = 1, $page_size = 25, $sort_dir = null, $batch_number = null, $sort_by = null)
     {
@@ -2285,44 +2285,44 @@ class BatchesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -2341,7 +2341,7 @@ class BatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2349,7 +2349,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2357,7 +2357,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2372,12 +2372,12 @@ class BatchesApi
      *
      * List Batches
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchStatus $status (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus $status (optional)
      * @param  int $page Return a specific page of results. Defaults to the first page. If set to a number that&#39;s greater than the number of pages of results, an empty page is returned. (optional, default to 1)
      * @param  int $page_size The number of results to return per response. (optional, default to 25)
      * @param  SortDir $sort_dir Controls the sort order of the query. (optional)
      * @param  string $batch_number Batch Number (optional)
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchesSortBy $sort_by (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy $sort_by (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2397,19 +2397,19 @@ class BatchesApi
      *
      * List Batches
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchStatus $status (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus $status (optional)
      * @param  int $page Return a specific page of results. Defaults to the first page. If set to a number that&#39;s greater than the number of pages of results, an empty page is returned. (optional, default to 1)
      * @param  int $page_size The number of results to return per response. (optional, default to 25)
      * @param  SortDir $sort_dir Controls the sort order of the query. (optional)
      * @param  string $batch_number Batch Number (optional)
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchesSortBy $sort_by (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy $sort_by (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function listBatchesAsyncWithHttpInfo($status = null, $page = 1, $page_size = 25, $sort_dir = null, $batch_number = null, $sort_by = null)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody';
         $request = $this->listBatchesRequest($status, $page, $page_size, $sort_dir, $batch_number, $sort_by);
 
         return $this->client
@@ -2449,12 +2449,12 @@ class BatchesApi
     /**
      * Create request for operation 'listBatches'
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchStatus $status (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus $status (optional)
      * @param  int $page Return a specific page of results. Defaults to the first page. If set to a number that&#39;s greater than the number of pages of results, an empty page is returned. (optional, default to 1)
      * @param  int $page_size The number of results to return per response. (optional, default to 25)
      * @param  SortDir $sort_dir Controls the sort order of the query. (optional)
      * @param  string $batch_number Batch Number (optional)
-     * @param  \Nmusco\ShipEngine\v1\Model\BatchesSortBy $sort_by (optional)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy $sort_by (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2621,11 +2621,11 @@ class BatchesApi
      * Process Batch ID Labels
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody $process_batch_request_body process_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody $process_batch_request_body process_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function processBatch($batch_id, $process_batch_request_body)
     {
@@ -2639,11 +2639,11 @@ class BatchesApi
      * Process Batch ID Labels
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody $process_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody $process_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function processBatchWithHttpInfo($batch_id, $process_batch_request_body)
     {
@@ -2692,38 +2692,38 @@ class BatchesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2756,7 +2756,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2764,7 +2764,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2772,7 +2772,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2788,7 +2788,7 @@ class BatchesApi
      * Process Batch ID Labels
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody $process_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody $process_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2809,7 +2809,7 @@ class BatchesApi
      * Process Batch ID Labels
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody $process_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody $process_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2857,7 +2857,7 @@ class BatchesApi
      * Create request for operation 'processBatch'
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody $process_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody $process_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2983,11 +2983,11 @@ class BatchesApi
      * Remove From Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody $remove_from_batch_request_body remove_from_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody $remove_from_batch_request_body remove_from_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function removeFromBatch($batch_id, $remove_from_batch_request_body)
     {
@@ -3001,11 +3001,11 @@ class BatchesApi
      * Remove From Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function removeFromBatchWithHttpInfo($batch_id, $remove_from_batch_request_body)
     {
@@ -3054,38 +3054,38 @@ class BatchesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3118,7 +3118,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3126,7 +3126,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3134,7 +3134,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3150,7 +3150,7 @@ class BatchesApi
      * Remove From Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3171,7 +3171,7 @@ class BatchesApi
      * Remove From Batch
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3219,7 +3219,7 @@ class BatchesApi
      * Create request for operation 'removeFromBatch'
      *
      * @param  string $batch_id Batch ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody $remove_from_batch_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3348,7 +3348,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function updateBatch($batch_id)
     {
@@ -3365,7 +3365,7 @@ class BatchesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateBatchWithHttpInfo($batch_id)
     {
@@ -3414,38 +3414,38 @@ class BatchesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3478,7 +3478,7 @@ class BatchesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3486,7 +3486,7 @@ class BatchesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3494,7 +3494,7 @@ class BatchesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

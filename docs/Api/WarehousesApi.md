@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createWarehouse
 
-> \Nmusco\ShipEngine\v1\Model\CreateWarehouseResponseBody createWarehouse($create_warehouse_request_body)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWarehouseResponseBody createWarehouse($create_warehouse_request_body)
 
 Create Warehouse
 
@@ -39,7 +39,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WarehousesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_warehouse_request_body = new \Nmusco\ShipEngine\v1\Model\CreateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Model\CreateWarehouseRequestBody | 
+$create_warehouse_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWarehouseRequestBody | 
 
 try {
     $result = $apiInstance->createWarehouse($create_warehouse_request_body);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_warehouse_request_body** | [**\Nmusco\ShipEngine\v1\Model\CreateWarehouseRequestBody**](../Model/CreateWarehouseRequestBody.md)|  |
+ **create_warehouse_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWarehouseRequestBody**](../Model/CreateWarehouseRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\CreateWarehouseResponseBody**](../Model/CreateWarehouseResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWarehouseResponseBody**](../Model/CreateWarehouseResponseBody.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ## getWarehouseById
 
-> \Nmusco\ShipEngine\v1\Model\GetWarehouseByIdResponseBody getWarehouseById($warehouse_id)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetWarehouseByIdResponseBody getWarehouseById($warehouse_id)
 
 Get Warehouse By Id
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\GetWarehouseByIdResponseBody**](../Model/GetWarehouseByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetWarehouseByIdResponseBody**](../Model/GetWarehouseByIdResponseBody.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ## listWarehouses
 
-> \Nmusco\ShipEngine\v1\Model\ListWarehousesResponseBody listWarehouses()
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListWarehousesResponseBody listWarehouses()
 
 List Warehouses
 
@@ -244,7 +244,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\ListWarehousesResponseBody**](../Model/ListWarehousesResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListWarehousesResponseBody**](../Model/ListWarehousesResponseBody.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WarehousesApi(
     $config
 );
 $warehouse_id = 'warehouse_id_example'; // string | Warehouse ID
-$update_warehouse_request_body = new \Nmusco\ShipEngine\v1\Model\UpdateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Model\UpdateWarehouseRequestBody | 
+$update_warehouse_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateWarehouseRequestBody | 
 
 try {
     $result = $apiInstance->updateWarehouse($warehouse_id, $update_warehouse_request_body);
@@ -305,7 +305,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **warehouse_id** | **string**| Warehouse ID |
- **update_warehouse_request_body** | [**\Nmusco\ShipEngine\v1\Model\UpdateWarehouseRequestBody**](../Model/UpdateWarehouseRequestBody.md)|  |
+ **update_warehouse_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateWarehouseRequestBody**](../Model/UpdateWarehouseRequestBody.md)|  |
 
 ### Return type
 

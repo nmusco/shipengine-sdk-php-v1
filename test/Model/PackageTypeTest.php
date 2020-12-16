@@ -79,13 +79,6 @@ class PackageTypeTest extends TestCase
     }
 
     /**
-     * Test attribute "package_id"
-     */
-    public function testPropertyPackageId()
-    {
-    }
-
-    /**
      * Test attribute "package_code"
      */
     public function testPropertyPackageCode()
@@ -96,6 +89,13 @@ class PackageTypeTest extends TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "package_id"
+     */
+    public function testPropertyPackageId()
     {
     }
 

@@ -86,6 +86,97 @@ class CalculateRatesResponseBodyTest extends TestCase
     }
 
     /**
+     * Test attribute "ship_date"
+     */
+    public function testPropertyShipDate()
+    {
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "modified_at"
+     */
+    public function testPropertyModifiedAt()
+    {
+    }
+
+    /**
+     * Test attribute "shipment_status"
+     */
+    public function testPropertyShipmentStatus()
+    {
+    }
+
+    /**
+     * Test attribute "return_to"
+     */
+    public function testPropertyReturnTo()
+    {
+    }
+
+    /**
+     * Test attribute "confirmation"
+     */
+    public function testPropertyConfirmation()
+    {
+    }
+
+    /**
+     * Test attribute "customs"
+     */
+    public function testPropertyCustoms()
+    {
+    }
+
+    /**
+     * Test attribute "advanced_options"
+     */
+    public function testPropertyAdvancedOptions()
+    {
+    }
+
+    /**
+     * Test attribute "insurance_provider"
+     */
+    public function testPropertyInsuranceProvider()
+    {
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+    }
+
+    /**
+     * Test attribute "packages"
+     */
+    public function testPropertyPackages()
+    {
+    }
+
+    /**
+     * Test attribute "total_weight"
+     */
+    public function testPropertyTotalWeight()
+    {
+    }
+
+    /**
+     * Test attribute "rate_response"
+     */
+    public function testPropertyRateResponse()
+    {
+    }
+
+    /**
      * Test attribute "carrier_id"
      */
     public function testPropertyCarrierId()
@@ -121,34 +212,6 @@ class CalculateRatesResponseBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "ship_date"
-     */
-    public function testPropertyShipDate()
-    {
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "modified_at"
-     */
-    public function testPropertyModifiedAt()
-    {
-    }
-
-    /**
-     * Test attribute "shipment_status"
-     */
-    public function testPropertyShipmentStatus()
-    {
-    }
-
-    /**
      * Test attribute "ship_to"
      */
     public function testPropertyShipTo()
@@ -170,34 +233,6 @@ class CalculateRatesResponseBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "return_to"
-     */
-    public function testPropertyReturnTo()
-    {
-    }
-
-    /**
-     * Test attribute "confirmation"
-     */
-    public function testPropertyConfirmation()
-    {
-    }
-
-    /**
-     * Test attribute "customs"
-     */
-    public function testPropertyCustoms()
-    {
-    }
-
-    /**
-     * Test attribute "advanced_options"
-     */
-    public function testPropertyAdvancedOptions()
-    {
-    }
-
-    /**
      * Test attribute "origin_type"
      */
     public function testPropertyOriginType()
@@ -205,44 +240,9 @@ class CalculateRatesResponseBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "insurance_provider"
-     */
-    public function testPropertyInsuranceProvider()
-    {
-    }
-
-    /**
-     * Test attribute "tags"
-     */
-    public function testPropertyTags()
-    {
-    }
-
-    /**
      * Test attribute "order_source_code"
      */
     public function testPropertyOrderSourceCode()
-    {
-    }
-
-    /**
-     * Test attribute "packages"
-     */
-    public function testPropertyPackages()
-    {
-    }
-
-    /**
-     * Test attribute "total_weight"
-     */
-    public function testPropertyTotalWeight()
-    {
-    }
-
-    /**
-     * Test attribute "rate_response"
-     */
-    public function testPropertyRateResponse()
     {
     }
 }

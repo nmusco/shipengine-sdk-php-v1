@@ -45,7 +45,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     $config
 );
 $batch_id = 'batch_id_example'; // string | Batch ID
-$add_to_batch_request_body = new \Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody(); // \Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody | 
+$add_to_batch_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody | 
 
 try {
     $result = $apiInstance->addToBatch($batch_id, $add_to_batch_request_body);
@@ -62,7 +62,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **string**| Batch ID |
- **add_to_batch_request_body** | [**\Nmusco\ShipEngine\v1\Model\AddToBatchRequestBody**](../Model/AddToBatchRequestBody.md)|  |
+ **add_to_batch_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody**](../Model/AddToBatchRequestBody.md)|  |
 
 ### Return type
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## createBatch
 
-> \Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody createBatch($create_batch_request_body)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody createBatch($create_batch_request_body)
 
 Create A Batch
 
@@ -109,7 +109,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_batch_request_body = new \Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody(); // \Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody | 
+$create_batch_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody | 
 
 try {
     $result = $apiInstance->createBatch($create_batch_request_body);
@@ -125,11 +125,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_batch_request_body** | [**\Nmusco\ShipEngine\v1\Model\CreateBatchRequestBody**](../Model/CreateBatchRequestBody.md)|  |
+ **create_batch_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody**](../Model/CreateBatchRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\CreateBatchResponseBody**](../Model/CreateBatchResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody**](../Model/CreateBatchResponseBody.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ## getBatchByExternalId
 
-> \Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody getBatchByExternalId($external_batch_id)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody getBatchByExternalId($external_batch_id)
 
 Get Batch By External ID
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\GetBatchByExternalIdResponseBody**](../Model/GetBatchByExternalIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody**](../Model/GetBatchByExternalIdResponseBody.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ## getBatchById
 
-> \Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody getBatchById($batch_id)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody getBatchById($batch_id)
 
 Get Batch By ID
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\GetBatchByIdResponseBody**](../Model/GetBatchByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody**](../Model/GetBatchByIdResponseBody.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ## listBatchErrors
 
-> \Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody listBatchErrors($batch_id, $page, $pagesize)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody listBatchErrors($batch_id, $page, $pagesize)
 
 Get Batch Errors
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\ListBatchErrorsResponseBody**](../Model/ListBatchErrorsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody**](../Model/ListBatchErrorsResponseBody.md)
 
 ### Authorization
 
@@ -403,7 +403,7 @@ Name | Type | Description  | Notes
 
 ## listBatches
 
-> \Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody listBatches($status, $page, $page_size, $sort_dir, $batch_number, $sort_by)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody listBatches($status, $page, $page_size, $sort_dir, $batch_number, $sort_by)
 
 List Batches
 
@@ -428,12 +428,12 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$status = new \Nmusco\ShipEngine\v1\Model\\Nmusco\ShipEngine\v1\Model\BatchStatus(); // \Nmusco\ShipEngine\v1\Model\BatchStatus | 
+$status = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus | 
 $page = 2; // int | Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
 $page_size = 50; // int | The number of results to return per response.
-$sort_dir = new \Nmusco\ShipEngine\v1\Model\SortDir(); // SortDir | Controls the sort order of the query.
+$sort_dir = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\SortDir(); // SortDir | Controls the sort order of the query.
 $batch_number = 'batch_number_example'; // string | Batch Number
-$sort_by = new \Nmusco\ShipEngine\v1\Model\\Nmusco\ShipEngine\v1\Model\BatchesSortBy(); // \Nmusco\ShipEngine\v1\Model\BatchesSortBy | 
+$sort_by = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy | 
 
 try {
     $result = $apiInstance->listBatches($status, $page, $page_size, $sort_dir, $batch_number, $sort_by);
@@ -449,16 +449,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | [**\Nmusco\ShipEngine\v1\Model\BatchStatus**](../Model/.md)|  | [optional]
+ **status** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchStatus**](../Model/.md)|  | [optional]
  **page** | **int**| Return a specific page of results. Defaults to the first page. If set to a number that&#39;s greater than the number of pages of results, an empty page is returned. | [optional] [default to 1]
  **page_size** | **int**| The number of results to return per response. | [optional] [default to 25]
  **sort_dir** | [**SortDir**](../Model/.md)| Controls the sort order of the query. | [optional]
  **batch_number** | **string**| Batch Number | [optional]
- **sort_by** | [**\Nmusco\ShipEngine\v1\Model\BatchesSortBy**](../Model/.md)|  | [optional]
+ **sort_by** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchesSortBy**](../Model/.md)|  | [optional]
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\ListBatchesResponseBody**](../Model/ListBatchesResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody**](../Model/ListBatchesResponseBody.md)
 
 ### Authorization
 
@@ -502,7 +502,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     $config
 );
 $batch_id = 'batch_id_example'; // string | Batch ID
-$process_batch_request_body = new \Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody(); // \Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody | 
+$process_batch_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody | 
 
 try {
     $result = $apiInstance->processBatch($batch_id, $process_batch_request_body);
@@ -519,7 +519,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **string**| Batch ID |
- **process_batch_request_body** | [**\Nmusco\ShipEngine\v1\Model\ProcessBatchRequestBody**](../Model/ProcessBatchRequestBody.md)|  |
+ **process_batch_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody**](../Model/ProcessBatchRequestBody.md)|  |
 
 ### Return type
 
@@ -567,7 +567,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     $config
 );
 $batch_id = 'batch_id_example'; // string | Batch ID
-$remove_from_batch_request_body = new \Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody(); // \Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody | 
+$remove_from_batch_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody | 
 
 try {
     $result = $apiInstance->removeFromBatch($batch_id, $remove_from_batch_request_body);
@@ -584,7 +584,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **string**| Batch ID |
- **remove_from_batch_request_body** | [**\Nmusco\ShipEngine\v1\Model\RemoveFromBatchRequestBody**](../Model/RemoveFromBatchRequestBody.md)|  |
+ **remove_from_batch_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody**](../Model/RemoveFromBatchRequestBody.md)|  |
 
 ### Return type
 

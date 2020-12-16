@@ -128,13 +128,6 @@ class RateTest extends TestCase
     }
 
     /**
-     * Test attribute "tax_amount"
-     */
-    public function testPropertyTaxAmount()
-    {
-    }
-
-    /**
      * Test attribute "zone"
      */
     public function testPropertyZone()
@@ -149,37 +142,9 @@ class RateTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_days"
-     */
-    public function testPropertyDeliveryDays()
-    {
-    }
-
-    /**
      * Test attribute "guaranteed_service"
      */
     public function testPropertyGuaranteedService()
-    {
-    }
-
-    /**
-     * Test attribute "estimated_delivery_date"
-     */
-    public function testPropertyEstimatedDeliveryDate()
-    {
-    }
-
-    /**
-     * Test attribute "carrier_delivery_days"
-     */
-    public function testPropertyCarrierDeliveryDays()
-    {
-    }
-
-    /**
-     * Test attribute "ship_date"
-     */
-    public function testPropertyShipDate()
     {
     }
 
@@ -250,6 +215,41 @@ class RateTest extends TestCase
      * Test attribute "error_messages"
      */
     public function testPropertyErrorMessages()
+    {
+    }
+
+    /**
+     * Test attribute "tax_amount"
+     */
+    public function testPropertyTaxAmount()
+    {
+    }
+
+    /**
+     * Test attribute "delivery_days"
+     */
+    public function testPropertyDeliveryDays()
+    {
+    }
+
+    /**
+     * Test attribute "estimated_delivery_date"
+     */
+    public function testPropertyEstimatedDeliveryDate()
+    {
+    }
+
+    /**
+     * Test attribute "carrier_delivery_days"
+     */
+    public function testPropertyCarrierDeliveryDays()
+    {
+    }
+
+    /**
+     * Test attribute "ship_date"
+     */
+    public function testPropertyShipDate()
     {
     }
 }

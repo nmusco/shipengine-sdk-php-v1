@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**package_id** | **string** | A string that uniquely identifies the package. | [optional] 
 **package_code** | **string** |  | 
 **name** | **string** |  | 
+**package_id** | **string** | A string that uniquely identifies the package. | [optional] 
 **dimensions** | [**Dimensions**](Dimensions.md) | The custom dimensions for the package. | [optional] 
 **description** | **string** | Provides a helpful description for the custom package. | [optional] 
 

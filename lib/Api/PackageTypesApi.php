@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Api;
+namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -120,11 +120,11 @@ class PackageTypesApi
      *
      * Create Custom Package Type
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreatePackageTypeRequestBody $create_package_type_request_body create_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody $create_package_type_request_body create_package_type_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\CreatePackageTypeResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function createPackageType($create_package_type_request_body)
     {
@@ -137,11 +137,11 @@ class PackageTypesApi
      *
      * Create Custom Package Type
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreatePackageTypeRequestBody $create_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody $create_package_type_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\CreatePackageTypeResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPackageTypeWithHttpInfo($create_package_type_request_body)
     {
@@ -178,44 +178,44 @@ class PackageTypesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\CreatePackageTypeResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\CreatePackageTypeResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\CreatePackageTypeResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -234,7 +234,7 @@ class PackageTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\CreatePackageTypeResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -242,7 +242,7 @@ class PackageTypesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class PackageTypesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -265,7 +265,7 @@ class PackageTypesApi
      *
      * Create Custom Package Type
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreatePackageTypeRequestBody $create_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody $create_package_type_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -285,14 +285,14 @@ class PackageTypesApi
      *
      * Create Custom Package Type
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreatePackageTypeRequestBody $create_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody $create_package_type_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPackageTypeAsyncWithHttpInfo($create_package_type_request_body)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\CreatePackageTypeResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody';
         $request = $this->createPackageTypeRequest($create_package_type_request_body);
 
         return $this->client
@@ -332,7 +332,7 @@ class PackageTypesApi
     /**
      * Create request for operation 'createPackageType'
      *
-     * @param  \Nmusco\ShipEngine\v1\Model\CreatePackageTypeRequestBody $create_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody $create_package_type_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -437,7 +437,7 @@ class PackageTypesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function deletePackageType($package_id)
     {
@@ -454,7 +454,7 @@ class PackageTypesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePackageTypeWithHttpInfo($package_id)
     {
@@ -503,38 +503,38 @@ class PackageTypesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -567,7 +567,7 @@ class PackageTypesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -575,7 +575,7 @@ class PackageTypesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -583,7 +583,7 @@ class PackageTypesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -785,7 +785,7 @@ class PackageTypesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\GetPackageTypeByIdResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function getPackageTypeById($package_id)
     {
@@ -802,7 +802,7 @@ class PackageTypesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\GetPackageTypeByIdResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPackageTypeByIdWithHttpInfo($package_id)
     {
@@ -839,56 +839,56 @@ class PackageTypesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\GetPackageTypeByIdResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\GetPackageTypeByIdResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\GetPackageTypeByIdResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -907,7 +907,7 @@ class PackageTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\GetPackageTypeByIdResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -915,7 +915,7 @@ class PackageTypesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -923,7 +923,7 @@ class PackageTypesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -931,7 +931,7 @@ class PackageTypesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -973,7 +973,7 @@ class PackageTypesApi
      */
     public function getPackageTypeByIdAsyncWithHttpInfo($package_id)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\GetPackageTypeByIdResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody';
         $request = $this->getPackageTypeByIdRequest($package_id);
 
         return $this->client
@@ -1132,7 +1132,7 @@ class PackageTypesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\ListPackageTypesResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function listPackageTypes()
     {
@@ -1148,7 +1148,7 @@ class PackageTypesApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\ListPackageTypesResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPackageTypesWithHttpInfo()
     {
@@ -1185,56 +1185,56 @@ class PackageTypesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\ListPackageTypesResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ListPackageTypesResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\ListPackageTypesResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1253,7 +1253,7 @@ class PackageTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ListPackageTypesResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1261,7 +1261,7 @@ class PackageTypesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1269,7 +1269,7 @@ class PackageTypesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1277,7 +1277,7 @@ class PackageTypesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1317,7 +1317,7 @@ class PackageTypesApi
      */
     public function listPackageTypesAsyncWithHttpInfo()
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\ListPackageTypesResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody';
         $request = $this->listPackageTypesRequest();
 
         return $this->client
@@ -1449,11 +1449,11 @@ class PackageTypesApi
      * Update Custom Package Type By ID
      *
      * @param  string $package_id Package ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\UpdatePackageTypeRequestBody $update_package_type_request_body update_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody $update_package_type_request_body update_package_type_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function updatePackageType($package_id, $update_package_type_request_body)
     {
@@ -1467,11 +1467,11 @@ class PackageTypesApi
      * Update Custom Package Type By ID
      *
      * @param  string $package_id Package ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePackageTypeWithHttpInfo($package_id, $update_package_type_request_body)
     {
@@ -1520,38 +1520,38 @@ class PackageTypesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1584,7 +1584,7 @@ class PackageTypesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1592,7 +1592,7 @@ class PackageTypesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1600,7 +1600,7 @@ class PackageTypesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1616,7 +1616,7 @@ class PackageTypesApi
      * Update Custom Package Type By ID
      *
      * @param  string $package_id Package ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1637,7 +1637,7 @@ class PackageTypesApi
      * Update Custom Package Type By ID
      *
      * @param  string $package_id Package ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1685,7 +1685,7 @@ class PackageTypesApi
      * Create request for operation 'updatePackageType'
      *
      * @param  string $package_id Package ID (required)
-     * @param  \Nmusco\ShipEngine\v1\Model\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
+     * @param  \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody $update_package_type_request_body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

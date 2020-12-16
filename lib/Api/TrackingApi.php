@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Api;
+namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -125,7 +125,7 @@ class TrackingApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Nmusco\ShipEngine\v1\Model\GetTrackingLogResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function getTrackingLog($carrier_code = null, $tracking_number = null)
     {
@@ -143,7 +143,7 @@ class TrackingApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Nmusco\ShipEngine\v1\Model\GetTrackingLogResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTrackingLogWithHttpInfo($carrier_code = null, $tracking_number = null)
     {
@@ -180,56 +180,56 @@ class TrackingApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Nmusco\ShipEngine\v1\Model\GetTrackingLogResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\GetTrackingLogResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Nmusco\ShipEngine\v1\Model\GetTrackingLogResponseBody';
+            $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -248,7 +248,7 @@ class TrackingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\GetTrackingLogResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class TrackingApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -264,7 +264,7 @@ class TrackingApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -272,7 +272,7 @@ class TrackingApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,7 +316,7 @@ class TrackingApi
      */
     public function getTrackingLogAsyncWithHttpInfo($carrier_code = null, $tracking_number = null)
     {
-        $returnType = '\Nmusco\ShipEngine\v1\Model\GetTrackingLogResponseBody';
+        $returnType = '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody';
         $request = $this->getTrackingLogRequest($carrier_code, $tracking_number);
 
         return $this->client
@@ -484,7 +484,7 @@ class TrackingApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function startTracking($carrier_code = null, $tracking_number = null)
     {
@@ -502,7 +502,7 @@ class TrackingApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function startTrackingWithHttpInfo($carrier_code = null, $tracking_number = null)
     {
@@ -551,38 +551,38 @@ class TrackingApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -615,7 +615,7 @@ class TrackingApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -623,7 +623,7 @@ class TrackingApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -631,7 +631,7 @@ class TrackingApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -843,7 +843,7 @@ class TrackingApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody
+     * @return string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody
      */
     public function stopTracking($carrier_code = null, $tracking_number = null)
     {
@@ -861,7 +861,7 @@ class TrackingApi
      *
      * @throws \Nmusco\ShipEngine\v1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody|\Nmusco\ShipEngine\v1\Model\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody|\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function stopTrackingWithHttpInfo($carrier_code = null, $tracking_number = null)
     {
@@ -910,38 +910,38 @@ class TrackingApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Nmusco\ShipEngine\v1\Model\ErrorResponseBody' === '\SplFileObject') {
+                    if ('\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody', []),
+                        ObjectSerializer::deserialize($content, '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -974,7 +974,7 @@ class TrackingApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -982,7 +982,7 @@ class TrackingApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -990,7 +990,7 @@ class TrackingApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Nmusco\ShipEngine\v1\Model\ErrorResponseBody',
+                        '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ErrorResponseBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

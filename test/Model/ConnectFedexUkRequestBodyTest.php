@@ -93,23 +93,9 @@ class ConnectFedexUkRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "address2"
-     */
-    public function testPropertyAddress2()
-    {
-    }
-
-    /**
      * Test attribute "city"
      */
     public function testPropertyCity()
-    {
-    }
-
-    /**
-     * Test attribute "company"
-     */
-    public function testPropertyCompany()
     {
     }
 
@@ -173,6 +159,20 @@ class ConnectFedexUkRequestBodyTest extends TestCase
      * Test attribute "agree_to_eula"
      */
     public function testPropertyAgreeToEula()
+    {
+    }
+
+    /**
+     * Test attribute "address2"
+     */
+    public function testPropertyAddress2()
+    {
+    }
+
+    /**
+     * Test attribute "company"
+     */
+    public function testPropertyCompany()
     {
     }
 

@@ -79,6 +79,20 @@ class UpdateShipmentRequestBodyTest extends TestCase
     }
 
     /**
+     * Test attribute "ship_to"
+     */
+    public function testPropertyShipTo()
+    {
+    }
+
+    /**
+     * Test attribute "ship_from"
+     */
+    public function testPropertyShipFrom()
+    {
+    }
+
+    /**
      * Test attribute "shipment_id"
      */
     public function testPropertyShipmentId()
@@ -145,20 +159,6 @@ class UpdateShipmentRequestBodyTest extends TestCase
      * Test attribute "shipment_status"
      */
     public function testPropertyShipmentStatus()
-    {
-    }
-
-    /**
-     * Test attribute "ship_to"
-     */
-    public function testPropertyShipTo()
-    {
-    }
-
-    /**
-     * Test attribute "ship_from"
-     */
-    public function testPropertyShipFrom()
     {
     }
 

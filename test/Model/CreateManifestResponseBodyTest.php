@@ -79,13 +79,6 @@ class CreateManifestResponseBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "manifests"
-     */
-    public function testPropertyManifests()
-    {
-    }
-
-    /**
      * Test attribute "manifest_id"
      */
     public function testPropertyManifestId()
@@ -149,13 +142,6 @@ class CreateManifestResponseBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "label_ids"
-     */
-    public function testPropertyLabelIds()
-    {
-    }
-
-    /**
      * Test attribute "request_id"
      */
     public function testPropertyRequestId()
@@ -166,6 +152,20 @@ class CreateManifestResponseBodyTest extends TestCase
      * Test attribute "errors"
      */
     public function testPropertyErrors()
+    {
+    }
+
+    /**
+     * Test attribute "manifests"
+     */
+    public function testPropertyManifests()
+    {
+    }
+
+    /**
+     * Test attribute "label_ids"
+     */
+    public function testPropertyLabelIds()
     {
     }
 }

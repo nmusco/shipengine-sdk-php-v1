@@ -1,0 +1,22 @@
+---
+allowUnicodeIdentifiers: false
+apiPackage: Nmusco\ShipEngine\v1\Api
+artifactVersion: 1.1.202012041812.1
+ensureUniqueParams: true
+hideGenerationTimestamp: true
+invokerPackage: Nmusco\ShipEngine\v1
+legacyDiscriminatorBehavior: false
+modelPackage: Nmusco\ShipEngine\v1\Models
+packageName: ShipEngineClient
+prependFormOrBodyParameters: false
+sortModelPropertiesByRequiredFlag: true
+sortParamsByRequiredFlag: true
+srcBasePath: lib
+variableNamingConvention: snake_case
+disallowAdditionalPropertiesIfNotPresent: false
+packagePath: shipengine-sdk-php-v1
+composerVendorName: nmusco
+composerProjectName: shipengine-sdk-php-v1
+gitRepoId: shipengine-sdk-php-v1
+gitUserId: nmusco
+templateDir: php

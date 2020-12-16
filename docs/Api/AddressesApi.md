@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## parseAddress
 
-> \Nmusco\ShipEngine\v1\Model\ParseAddressResponseBody parseAddress($parse_address_request_body)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseAddressResponseBody parseAddress($parse_address_request_body)
 
 Parse an address
 
@@ -36,7 +36,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\AddressesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$parse_address_request_body = {"text":"Margie McMiller at 3800 North Lamar suite 200 in austin, tx.  The zip code there is 78652."}; // \Nmusco\ShipEngine\v1\Model\ParseAddressRequestBody | The only required field is `text`, which is the text to be parsed. You can optionally also provide an `address` containing already-known values. For example, you may already know the recipient's name, city, and country, and only want to parse the street address into separate lines.
+$parse_address_request_body = {"text":"Margie McMiller at 3800 North Lamar suite 200 in austin, tx.  The zip code there is 78652."}; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseAddressRequestBody | The only required field is `text`, which is the text to be parsed. You can optionally also provide an `address` containing already-known values. For example, you may already know the recipient's name, city, and country, and only want to parse the street address into separate lines.
 
 try {
     $result = $apiInstance->parseAddress($parse_address_request_body);
@@ -52,11 +52,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parse_address_request_body** | [**\Nmusco\ShipEngine\v1\Model\ParseAddressRequestBody**](../Model/ParseAddressRequestBody.md)| The only required field is &#x60;text&#x60;, which is the text to be parsed. You can optionally also provide an &#x60;address&#x60; containing already-known values. For example, you may already know the recipient&#39;s name, city, and country, and only want to parse the street address into separate lines. |
+ **parse_address_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseAddressRequestBody**](../Model/ParseAddressRequestBody.md)| The only required field is &#x60;text&#x60;, which is the text to be parsed. You can optionally also provide an &#x60;address&#x60; containing already-known values. For example, you may already know the recipient&#39;s name, city, and country, and only want to parse the street address into separate lines. |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\ParseAddressResponseBody**](../Model/ParseAddressResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseAddressResponseBody**](../Model/ParseAddressResponseBody.md)
 
 ### Authorization
 

@@ -93,16 +93,16 @@ class ConnectFirstmileRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "profile_name"
+     * Test attribute "password"
      */
-    public function testPropertyProfileName()
+    public function testPropertyPassword()
     {
     }
 
     /**
-     * Test attribute "password"
+     * Test attribute "profile_name"
      */
-    public function testPropertyPassword()
+    public function testPropertyProfileName()
     {
     }
 }

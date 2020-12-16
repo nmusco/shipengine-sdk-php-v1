@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **estimated_delivery_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **actual_delivery_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **exception_description** | **string** | Exception description | [optional] [readonly] 
-**events** | [**\Nmusco\ShipEngine\v1\Model\TrackEvent[]**](TrackEvent.md) | The events that have occured during the lifetime of this tracking number. | [optional] [readonly] 
+**events** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\TrackEvent[]**](TrackEvent.md) | The events that have occured during the lifetime of this tracking number. | [optional] [readonly] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

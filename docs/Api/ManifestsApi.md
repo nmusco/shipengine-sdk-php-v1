@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## createManifest
 
-> \Nmusco\ShipEngine\v1\Model\CreateManifestResponseBody createManifest($create_manifest_request_body)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateManifestResponseBody createManifest($create_manifest_request_body)
 
 Create Manifest
 
@@ -37,7 +37,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ManifestsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_manifest_request_body = new \Nmusco\ShipEngine\v1\Model\CreateManifestRequestBody(); // \Nmusco\ShipEngine\v1\Model\CreateManifestRequestBody | 
+$create_manifest_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateManifestRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateManifestRequestBody | 
 
 try {
     $result = $apiInstance->createManifest($create_manifest_request_body);
@@ -53,11 +53,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_manifest_request_body** | [**\Nmusco\ShipEngine\v1\Model\CreateManifestRequestBody**](../Model/CreateManifestRequestBody.md)|  |
+ **create_manifest_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateManifestRequestBody**](../Model/CreateManifestRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\CreateManifestResponseBody**](../Model/CreateManifestResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateManifestResponseBody**](../Model/CreateManifestResponseBody.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ## getManifestById
 
-> \Nmusco\ShipEngine\v1\Model\GetManifestByIdResponseBody getManifestById($manifest_id)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetManifestByIdResponseBody getManifestById($manifest_id)
 
 Get Manifest By Id
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\GetManifestByIdResponseBody**](../Model/GetManifestByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetManifestByIdResponseBody**](../Model/GetManifestByIdResponseBody.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ## listManifests
 
-> \Nmusco\ShipEngine\v1\Model\ListManifestsResponseBody listManifests($warehouse_id, $ship_date_start, $ship_date_end, $created_at_start, $created_at_end, $carrier_id, $page, $page_size, $label_ids)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListManifestsResponseBody listManifests($warehouse_id, $ship_date_start, $ship_date_end, $created_at_start, $created_at_end, $carrier_id, $page, $page_size, $label_ids)
 
 List Manifests
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\ListManifestsResponseBody**](../Model/ListManifestsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListManifestsResponseBody**](../Model/ListManifestsResponseBody.md)
 
 ### Authorization
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## addFundsToInsurance
 
-> \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody addFundsToInsurance($add_funds_to_insurance_request_body)
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody addFundsToInsurance($add_funds_to_insurance_request_body)
 
 Add Funds To Insurance
 
@@ -38,7 +38,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\InsuranceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$add_funds_to_insurance_request_body = new \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody(); // \Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody | 
+$add_funds_to_insurance_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody | 
 
 try {
     $result = $apiInstance->addFundsToInsurance($add_funds_to_insurance_request_body);
@@ -54,11 +54,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **add_funds_to_insurance_request_body** | [**\Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceRequestBody**](../Model/AddFundsToInsuranceRequestBody.md)|  |
+ **add_funds_to_insurance_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody**](../Model/AddFundsToInsuranceRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\AddFundsToInsuranceResponseBody**](../Model/AddFundsToInsuranceResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody**](../Model/AddFundsToInsuranceResponseBody.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\InsuranceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$connect_insurer_request_body = new \Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody(); // \Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody | 
+$connect_insurer_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody | 
 
 try {
     $result = $apiInstance->connectInsurer($connect_insurer_request_body);
@@ -117,7 +117,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **connect_insurer_request_body** | [**\Nmusco\ShipEngine\v1\Model\ConnectInsurerRequestBody**](../Model/ConnectInsurerRequestBody.md)|  |
+ **connect_insurer_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody**](../Model/ConnectInsurerRequestBody.md)|  |
 
 ### Return type
 
@@ -198,7 +198,7 @@ This endpoint does not need any parameter.
 
 ## getInsuranceBalance
 
-> \Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody getInsuranceBalance()
+> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody getInsuranceBalance()
 
 Get Insurance Funds Balance
 
@@ -239,7 +239,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Model\GetInsuranceBalanceResponseBody**](../Model/GetInsuranceBalanceResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody**](../Model/GetInsuranceBalanceResponseBody.md)
 
 ### Authorization
 

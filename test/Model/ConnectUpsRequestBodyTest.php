@@ -107,13 +107,6 @@ class ConnectUpsRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "title"
-     */
-    public function testPropertyTitle()
-    {
-    }
-
-    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()
@@ -138,13 +131,6 @@ class ConnectUpsRequestBodyTest extends TestCase
      * Test attribute "address1"
      */
     public function testPropertyAddress1()
-    {
-    }
-
-    /**
-     * Test attribute "address2"
-     */
-    public function testPropertyAddress2()
     {
     }
 
@@ -191,16 +177,30 @@ class ConnectUpsRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice"
+     * Test attribute "agree_to_technology_agreement"
      */
-    public function testPropertyInvoice()
+    public function testPropertyAgreeToTechnologyAgreement()
     {
     }
 
     /**
-     * Test attribute "agree_to_technology_agreement"
+     * Test attribute "title"
      */
-    public function testPropertyAgreeToTechnologyAgreement()
+    public function testPropertyTitle()
+    {
+    }
+
+    /**
+     * Test attribute "address2"
+     */
+    public function testPropertyAddress2()
+    {
+    }
+
+    /**
+     * Test attribute "invoice"
+     */
+    public function testPropertyInvoice()
     {
     }
 }

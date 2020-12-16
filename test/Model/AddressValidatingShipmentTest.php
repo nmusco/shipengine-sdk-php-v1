@@ -79,13 +79,6 @@ class AddressValidatingShipmentTest extends TestCase
     }
 
     /**
-     * Test attribute "validate_address"
-     */
-    public function testPropertyValidateAddress()
-    {
-    }
-
-    /**
      * Test attribute "shipment_id"
      */
     public function testPropertyShipmentId()
@@ -103,6 +96,27 @@ class AddressValidatingShipmentTest extends TestCase
      * Test attribute "service_code"
      */
     public function testPropertyServiceCode()
+    {
+    }
+
+    /**
+     * Test attribute "ship_to"
+     */
+    public function testPropertyShipTo()
+    {
+    }
+
+    /**
+     * Test attribute "ship_from"
+     */
+    public function testPropertyShipFrom()
+    {
+    }
+
+    /**
+     * Test attribute "validate_address"
+     */
+    public function testPropertyValidateAddress()
     {
     }
 
@@ -152,20 +166,6 @@ class AddressValidatingShipmentTest extends TestCase
      * Test attribute "shipment_status"
      */
     public function testPropertyShipmentStatus()
-    {
-    }
-
-    /**
-     * Test attribute "ship_to"
-     */
-    public function testPropertyShipTo()
-    {
-    }
-
-    /**
-     * Test attribute "ship_from"
-     */
-    public function testPropertyShipFrom()
     {
     }
 

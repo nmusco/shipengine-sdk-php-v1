@@ -79,16 +79,16 @@ class PackageTest extends TestCase
     }
 
     /**
-     * Test attribute "package_code"
+     * Test attribute "weight"
      */
-    public function testPropertyPackageCode()
+    public function testPropertyWeight()
     {
     }
 
     /**
-     * Test attribute "weight"
+     * Test attribute "package_code"
      */
-    public function testPropertyWeight()
+    public function testPropertyPackageCode()
     {
     }
 

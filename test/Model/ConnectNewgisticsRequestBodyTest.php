@@ -79,20 +79,6 @@ class ConnectNewgisticsRequestBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "merchant_id"
-     */
-    public function testPropertyMerchantId()
-    {
-    }
-
-    /**
-     * Test attribute "mailer_id"
-     */
-    public function testPropertyMailerId()
-    {
-    }
-
-    /**
      * Test attribute "induction_site"
      */
     public function testPropertyInductionSite()
@@ -103,6 +89,20 @@ class ConnectNewgisticsRequestBodyTest extends TestCase
      * Test attribute "nickname"
      */
     public function testPropertyNickname()
+    {
+    }
+
+    /**
+     * Test attribute "merchant_id"
+     */
+    public function testPropertyMerchantId()
+    {
+    }
+
+    /**
+     * Test attribute "mailer_id"
+     */
+    public function testPropertyMailerId()
     {
     }
 }

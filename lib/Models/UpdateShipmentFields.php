@@ -57,7 +57,7 @@ class UpdateShipmentFields implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'validate_address' => 'ValidateAddress'
+        'validate_address' => '\Nmusco\ShipEngine\v1\Models\ValidateAddress'
     ];
 
     /**

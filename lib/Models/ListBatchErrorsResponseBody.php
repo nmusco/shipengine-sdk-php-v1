@@ -59,7 +59,7 @@ class ListBatchErrorsResponseBody implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'errors' => '\Nmusco\ShipEngine\v1\Models\BatchResponseError[]',
-        'links' => 'PaginationLink'
+        'links' => '\Nmusco\ShipEngine\v1\Models\PaginationLink'
     ];
 
     /**

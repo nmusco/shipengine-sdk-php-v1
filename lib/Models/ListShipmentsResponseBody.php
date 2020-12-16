@@ -58,11 +58,11 @@ class ListShipmentsResponseBody implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipments' => 'Shipment[]',
+        'shipments' => '\Nmusco\ShipEngine\v1\Models\Shipment[]',
         'total' => 'int',
         'page' => 'int',
         'pages' => 'int',
-        'links' => 'PaginationLink'
+        'links' => '\Nmusco\ShipEngine\v1\Models\PaginationLink'
     ];
 
     /**

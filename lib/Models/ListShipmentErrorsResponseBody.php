@@ -59,7 +59,7 @@ class ListShipmentErrorsResponseBody implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'errors' => '\Nmusco\ShipEngine\v1\Models\ShipmentResponseError[]',
-        'links' => 'PaginationLink'
+        'links' => '\Nmusco\ShipEngine\v1\Models\PaginationLink'
     ];
 
     /**

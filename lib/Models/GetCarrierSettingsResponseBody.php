@@ -60,18 +60,18 @@ class GetCarrierSettingsResponseBody implements ModelInterface, ArrayAccess, \Js
         'nickname' => 'string',
         'should_hide_account_number_on_archive_doc' => 'bool',
         'is_primary_account' => 'bool',
-        'pickup_type' => 'UpsPickupType',
-        'smart_post_hub' => 'SmartPostHub',
-        'smart_post_endorsement' => 'AncillaryServiceEndorsement',
+        'pickup_type' => '\Nmusco\ShipEngine\v1\Models\UpsPickupType',
+        'smart_post_hub' => '\Nmusco\ShipEngine\v1\Models\SmartPostHub',
+        'smart_post_endorsement' => '\Nmusco\ShipEngine\v1\Models\AncillaryServiceEndorsement',
         'use_carbon_neutral_shipping_program' => 'bool',
         'use_ground_freight_pricing' => 'bool',
         'use_consolidation_services' => 'bool',
         'use_order_number_on_mail_innovations_labels' => 'bool',
-        'mail_innovations_endorsement' => 'AncillaryServiceEndorsement',
+        'mail_innovations_endorsement' => '\Nmusco\ShipEngine\v1\Models\AncillaryServiceEndorsement',
         'mail_innovations_cost_center' => 'string',
         'use_negotiated_rates' => 'bool',
         'account_postal_code' => 'string',
-        'invoice' => 'UpsInvoice'
+        'invoice' => '\Nmusco\ShipEngine\v1\Models\UpsInvoice'
     ];
 
     /**

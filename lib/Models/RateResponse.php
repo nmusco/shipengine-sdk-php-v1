@@ -57,7 +57,7 @@ class RateResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'rate_response' => 'RatesInformation'
+        'rate_response' => '\Nmusco\ShipEngine\v1\Models\RatesInformation'
     ];
 
     /**

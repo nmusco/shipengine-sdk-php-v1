@@ -66,9 +66,9 @@ class CreateManifestResponseBody implements ModelInterface, ArrayAccess, \JsonSe
         'warehouse_id' => 'string',
         'submission_id' => 'string',
         'carrier_id' => 'string',
-        'manifest_download' => 'ManifestDownload',
+        'manifest_download' => '\Nmusco\ShipEngine\v1\Models\ManifestDownload',
         'request_id' => 'string',
-        'errors' => 'Error[]',
+        'errors' => '\Nmusco\ShipEngine\v1\Models\Error[]',
         'manifests' => '\Nmusco\ShipEngine\v1\Models\Manifest[]',
         'label_ids' => 'string[]'
     ];

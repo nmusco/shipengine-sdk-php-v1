@@ -58,7 +58,7 @@ class CreateWebhookRequestBody implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event' => 'WebhookEvent',
+        'event' => '\Nmusco\ShipEngine\v1\Models\WebhookEvent',
         'url' => 'string'
     ];
 

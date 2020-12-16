@@ -58,7 +58,7 @@ class GetCarrierOptionsResponseBody implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'options' => 'CarrierAdvancedOption[]'
+        'options' => '\Nmusco\ShipEngine\v1\Models\CarrierAdvancedOption[]'
     ];
 
     /**

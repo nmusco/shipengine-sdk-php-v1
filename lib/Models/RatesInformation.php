@@ -58,13 +58,13 @@ class RatesInformation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'rates' => 'Rate[]',
-        'invalid_rates' => 'Rate[]',
+        'rates' => '\Nmusco\ShipEngine\v1\Models\Rate[]',
+        'invalid_rates' => '\Nmusco\ShipEngine\v1\Models\Rate[]',
         'rate_request_id' => 'string',
         'shipment_id' => 'string',
         'created_at' => 'string',
-        'status' => 'RateResponseStatus',
-        'errors' => 'Error[]'
+        'status' => '\Nmusco\ShipEngine\v1\Models\RateResponseStatus',
+        'errors' => '\Nmusco\ShipEngine\v1\Models\Error[]'
     ];
 
     /**

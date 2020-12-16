@@ -58,7 +58,7 @@ class ListWarehousesResponseBody implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'warehouses' => 'Warehouse[]'
+        'warehouses' => '\Nmusco\ShipEngine\v1\Models\Warehouse[]'
     ];
 
     /**

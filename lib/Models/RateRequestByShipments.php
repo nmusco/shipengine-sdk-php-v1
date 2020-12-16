@@ -57,7 +57,7 @@ class RateRequestByShipments implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipments' => 'AddressValidatingShipment[]'
+        'shipments' => '\Nmusco\ShipEngine\v1\Models\AddressValidatingShipment[]'
     ];
 
     /**

@@ -58,8 +58,8 @@ class InternationalShipmentOptions implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'contents' => 'PackageContents',
-        'non_delivery' => 'NonDelivery',
+        'contents' => '\Nmusco\ShipEngine\v1\Models\PackageContents',
+        'non_delivery' => '\Nmusco\ShipEngine\v1\Models\NonDelivery',
         'customs_items' => '\Nmusco\ShipEngine\v1\Models\CustomsItem[]'
     ];
 

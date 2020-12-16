@@ -59,7 +59,7 @@ class TagShipmentResponseBody implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'shipment_id' => 'string',
-        'tag' => 'Tag'
+        'tag' => '\Nmusco\ShipEngine\v1\Models\Tag'
     ];
 
     /**

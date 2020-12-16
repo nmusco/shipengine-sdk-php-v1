@@ -95,7 +95,7 @@ class ConnectCarrierRequestBody implements ModelInterface, ArrayAccess, \JsonSer
         'account_country_code' => 'string',
         'account_postal_code' => 'string',
         'agree_to_technology_agreement' => 'bool',
-        'ancillary_endorsement' => 'AncillaryServiceEndorsement',
+        'ancillary_endorsement' => '\Nmusco\ShipEngine\v1\Models\AncillaryServiceEndorsement',
         'address2' => 'string',
         'meter_number' => 'string',
         'profile_name' => 'string',
@@ -106,7 +106,7 @@ class ConnectCarrierRequestBody implements ModelInterface, ArrayAccess, \JsonSer
         'street_line2' => 'string',
         'street_line3' => 'string',
         'title' => 'string',
-        'invoice' => 'UpsInvoice'
+        'invoice' => '\Nmusco\ShipEngine\v1\Models\UpsInvoice'
     ];
 
     /**

@@ -58,11 +58,11 @@ class CreateReturnLabelRequestBody implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'charge_event' => 'LabelChargeEvent',
-        'label_layout' => 'LabelLayout',
-        'label_format' => 'LabelFormat',
-        'label_download_type' => 'LabelDownloadType',
-        'display_scheme' => 'DisplayScheme',
+        'charge_event' => '\Nmusco\ShipEngine\v1\Models\LabelChargeEvent',
+        'label_layout' => '\Nmusco\ShipEngine\v1\Models\LabelLayout',
+        'label_format' => '\Nmusco\ShipEngine\v1\Models\LabelFormat',
+        'label_download_type' => '\Nmusco\ShipEngine\v1\Models\LabelDownloadType',
+        'display_scheme' => '\Nmusco\ShipEngine\v1\Models\DisplayScheme',
         'label_image_id' => 'string'
     ];
 

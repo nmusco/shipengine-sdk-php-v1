@@ -58,11 +58,11 @@ class CreateLabelFromShipmentRequestBody implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'validate_address' => 'ValidateAddress',
-        'label_layout' => 'LabelLayout',
-        'label_format' => 'LabelFormat',
-        'label_download_type' => 'LabelDownloadType',
-        'display_scheme' => 'DisplayScheme'
+        'validate_address' => '\Nmusco\ShipEngine\v1\Models\ValidateAddress',
+        'label_layout' => '\Nmusco\ShipEngine\v1\Models\LabelLayout',
+        'label_format' => '\Nmusco\ShipEngine\v1\Models\LabelFormat',
+        'label_download_type' => '\Nmusco\ShipEngine\v1\Models\LabelDownloadType',
+        'display_scheme' => '\Nmusco\ShipEngine\v1\Models\DisplayScheme'
     ];
 
     /**

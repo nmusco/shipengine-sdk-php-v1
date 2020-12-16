@@ -58,7 +58,7 @@ class ListCarrierPackageTypesResponseBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'packages' => 'PackageType[]'
+        'packages' => '\Nmusco\ShipEngine\v1\Models\PackageType[]'
     ];
 
     /**

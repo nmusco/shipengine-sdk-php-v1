@@ -66,7 +66,7 @@ class ConnectDhlEcommerceRequestBody implements ModelInterface, ArrayAccess, \Js
         'distribution_center' => 'string',
         'api_key' => 'string',
         'api_secret' => 'string',
-        'ancillary_endorsement' => 'AncillaryServiceEndorsement',
+        'ancillary_endorsement' => '\Nmusco\ShipEngine\v1\Models\AncillaryServiceEndorsement',
         'account_number' => 'string',
         'ftp_username' => 'string',
         'ftp_password' => 'string'

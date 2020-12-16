@@ -62,7 +62,7 @@ class RateRequestBody implements ModelInterface, ArrayAccess, \JsonSerializable
         'package_types' => 'string[]',
         'service_codes' => 'string[]',
         'calculate_tax_amount' => 'bool',
-        'preferred_currency' => 'Currency'
+        'preferred_currency' => '\Nmusco\ShipEngine\v1\Models\Currency'
     ];
 
     /**

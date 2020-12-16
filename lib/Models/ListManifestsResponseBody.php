@@ -58,11 +58,11 @@ class ListManifestsResponseBody implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'manifests' => 'Manifest[]',
+        'manifests' => '\Nmusco\ShipEngine\v1\Models\Manifest[]',
         'total' => 'int',
         'page' => 'int',
         'pages' => 'int',
-        'links' => 'PaginationLink'
+        'links' => '\Nmusco\ShipEngine\v1\Models\PaginationLink'
     ];
 
     /**

@@ -58,12 +58,12 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'weight' => 'Weight',
+        'weight' => '\Nmusco\ShipEngine\v1\Models\Weight',
         'package_code' => 'string',
-        'dimensions' => 'Dimensions',
-        'insured_value' => 'MonetaryValue',
+        'dimensions' => '\Nmusco\ShipEngine\v1\Models\Dimensions',
+        'insured_value' => '\Nmusco\ShipEngine\v1\Models\MonetaryValue',
         'tracking_number' => 'string',
-        'label_messages' => 'LabelMessages',
+        'label_messages' => '\Nmusco\ShipEngine\v1\Models\LabelMessages',
         'external_package_id' => 'string'
     ];
 

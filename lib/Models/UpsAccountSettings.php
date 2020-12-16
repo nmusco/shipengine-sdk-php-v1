@@ -60,16 +60,16 @@ class UpsAccountSettings implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'nickname' => 'string',
         'is_primary_account' => 'bool',
-        'pickup_type' => 'UpsPickupType',
+        'pickup_type' => '\Nmusco\ShipEngine\v1\Models\UpsPickupType',
         'use_carbon_neutral_shipping_program' => 'bool',
         'use_ground_freight_pricing' => 'bool',
         'use_consolidation_services' => 'bool',
         'use_order_number_on_mail_innovations_labels' => 'bool',
-        'mail_innovations_endorsement' => 'AncillaryServiceEndorsement',
+        'mail_innovations_endorsement' => '\Nmusco\ShipEngine\v1\Models\AncillaryServiceEndorsement',
         'mail_innovations_cost_center' => 'string',
         'use_negotiated_rates' => 'bool',
         'account_postal_code' => 'string',
-        'invoice' => 'UpsInvoice'
+        'invoice' => '\Nmusco\ShipEngine\v1\Models\UpsInvoice'
     ];
 
     /**

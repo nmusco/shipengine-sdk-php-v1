@@ -61,7 +61,7 @@ class PackageType implements ModelInterface, ArrayAccess, \JsonSerializable
         'package_code' => 'string',
         'name' => 'string',
         'package_id' => 'string',
-        'dimensions' => 'Dimensions',
+        'dimensions' => '\Nmusco\ShipEngine\v1\Models\Dimensions',
         'description' => 'string'
     ];
 

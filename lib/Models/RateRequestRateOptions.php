@@ -57,7 +57,7 @@ class RateRequestRateOptions implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'rate_options' => 'RateRequestBody'
+        'rate_options' => '\Nmusco\ShipEngine\v1\Models\RateRequestBody'
     ];
 
     /**

@@ -65,10 +65,10 @@ class RateEstimateOptions implements ModelInterface, ArrayAccess, \JsonSerializa
         'to_postal_code' => 'string',
         'to_city_locality' => 'string',
         'to_state_province' => 'string',
-        'weight' => 'Weight',
-        'dimensions' => 'Dimensions',
-        'confirmation' => 'DeliveryConfirmation',
-        'address_residential_indicator' => 'AddressResidentialIndicator',
+        'weight' => '\Nmusco\ShipEngine\v1\Models\Weight',
+        'dimensions' => '\Nmusco\ShipEngine\v1\Models\Dimensions',
+        'confirmation' => '\Nmusco\ShipEngine\v1\Models\DeliveryConfirmation',
+        'address_residential_indicator' => '\Nmusco\ShipEngine\v1\Models\AddressResidentialIndicator',
         'ship_date' => '\DateTime'
     ];
 

@@ -60,7 +60,7 @@ class Webhook implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'webhook_id' => 'string',
         'url' => 'string',
-        'event' => 'WebhookEvent'
+        'event' => '\Nmusco\ShipEngine\v1\Models\WebhookEvent'
     ];
 
     /**

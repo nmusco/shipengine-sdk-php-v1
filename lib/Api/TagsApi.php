@@ -34,6 +34,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
+
 use Nmusco\ShipEngine\v1\ApiException;
 use Nmusco\ShipEngine\v1\Configuration;
 use Nmusco\ShipEngine\v1\HeaderSelector;

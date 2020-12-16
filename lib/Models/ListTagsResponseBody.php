@@ -58,7 +58,7 @@ class ListTagsResponseBody implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tags' => 'Tag[]'
+        'tags' => '\Nmusco\ShipEngine\v1\Models\Tag[]'
     ];
 
     /**

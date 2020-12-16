@@ -58,11 +58,11 @@ class ListBatchesResponseBody implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'batches' => 'Batch[]',
+        'batches' => '\Nmusco\ShipEngine\v1\Models\Batch[]',
         'total' => 'int',
         'page' => 'int',
         'pages' => 'int',
-        'links' => 'PaginationLink'
+        'links' => '\Nmusco\ShipEngine\v1\Models\PaginationLink'
     ];
 
     /**

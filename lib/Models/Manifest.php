@@ -67,7 +67,7 @@ class Manifest implements ModelInterface, ArrayAccess, \JsonSerializable
         'warehouse_id' => 'string',
         'submission_id' => 'string',
         'carrier_id' => 'string',
-        'manifest_download' => 'ManifestDownload'
+        'manifest_download' => '\Nmusco\ShipEngine\v1\Models\ManifestDownload'
     ];
 
     /**

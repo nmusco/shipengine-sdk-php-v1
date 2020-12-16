@@ -61,8 +61,8 @@ class Warehouse implements ModelInterface, ArrayAccess, \JsonSerializable
         'warehouse_id' => 'string',
         'name' => 'string',
         'created_at' => '\DateTime',
-        'origin_address' => 'Address',
-        'return_address' => 'Address'
+        'origin_address' => '\Nmusco\ShipEngine\v1\Models\Address',
+        'return_address' => '\Nmusco\ShipEngine\v1\Models\Address'
     ];
 
     /**

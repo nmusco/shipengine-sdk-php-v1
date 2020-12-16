@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **custom_field2** | **string** | An arbitrary field that can be used to store information about the shipment. | [optional] [default to 'null']
 **custom_field3** | **string** | An arbitrary field that can be used to store information about the shipment. | [optional] [default to 'null']
 **origin_type** | [**OriginType**](OriginType.md) |  | [optional] 
-**collect_on_delivery** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CollectOnDelivery**](CollectOnDelivery.md) |  | [optional] 
+**collect_on_delivery** | [**\Nmusco\ShipEngine\v1\Models\CollectOnDelivery**](CollectOnDelivery.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

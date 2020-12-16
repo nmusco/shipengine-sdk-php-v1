@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createWebhook
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWebhookResponseBody createWebhook($create_webhook_request_body)
+> \Nmusco\ShipEngine\v1\Models\CreateWebhookResponseBody createWebhook($create_webhook_request_body)
 
 Create a Webhook
 
@@ -39,7 +39,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_webhook_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody | 
+$create_webhook_request_body = new \Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody | 
 
 try {
     $result = $apiInstance->createWebhook($create_webhook_request_body);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_webhook_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody**](../Model/CreateWebhookRequestBody.md)|  |
+ **create_webhook_request_body** | [**\Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody**](../Model/CreateWebhookRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateWebhookResponseBody**](../Model/CreateWebhookResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreateWebhookResponseBody**](../Model/CreateWebhookResponseBody.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ## getWebhookById
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetWebhookByIdResponseBody getWebhookById($webhook_id)
+> \Nmusco\ShipEngine\v1\Models\GetWebhookByIdResponseBody getWebhookById($webhook_id)
 
 Get Webhook By ID
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetWebhookByIdResponseBody**](../Model/GetWebhookByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetWebhookByIdResponseBody**](../Model/GetWebhookByIdResponseBody.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WebhooksApi(
     $config
 );
 $webhook_id = 'webhook_id_example'; // string | Webhook ID
-$update_webhook_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody | 
+$update_webhook_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody | 
 
 try {
     $result = $apiInstance->updateWebhook($webhook_id, $update_webhook_request_body);
@@ -305,7 +305,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook_id** | **string**| Webhook ID |
- **update_webhook_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody**](../Model/UpdateWebhookRequestBody.md)|  |
+ **update_webhook_request_body** | [**\Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody**](../Model/UpdateWebhookRequestBody.md)|  |
 
 ### Return type
 

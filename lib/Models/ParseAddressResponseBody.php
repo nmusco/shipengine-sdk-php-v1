@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -60,7 +60,7 @@ class ParseAddressResponseBody implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'score' => 'double',
         'address' => 'PartialAddress',
-        'entities' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RecognizedEntity[]'
+        'entities' => '\Nmusco\ShipEngine\v1\Models\RecognizedEntity[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class ParseAddressResponseBody implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets entities
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RecognizedEntity[]
+     * @return \Nmusco\ShipEngine\v1\Models\RecognizedEntity[]
      */
     public function getEntities()
     {
@@ -305,7 +305,7 @@ class ParseAddressResponseBody implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets entities
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\RecognizedEntity[] $entities All of the entities that were recognized in the text. An \"entity\" is a single piece of data, such as a city, a postal code, or an address line.  Each entity includes the original text and the parsed value.
+     * @param \Nmusco\ShipEngine\v1\Models\RecognizedEntity[] $entities All of the entities that were recognized in the text. An \"entity\" is a single piece of data, such as a city, a postal code, or an address line.  Each entity includes the original text and the parsed value.
      *
      * @return self
      */

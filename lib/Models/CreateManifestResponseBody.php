@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -69,7 +69,7 @@ class CreateManifestResponseBody implements ModelInterface, ArrayAccess, \JsonSe
         'manifest_download' => 'ManifestDownload',
         'request_id' => 'string',
         'errors' => 'Error[]',
-        'manifests' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Manifest[]',
+        'manifests' => '\Nmusco\ShipEngine\v1\Models\Manifest[]',
         'label_ids' => 'string[]'
     ];
 
@@ -597,7 +597,7 @@ class CreateManifestResponseBody implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets manifests
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Manifest[]|null
+     * @return \Nmusco\ShipEngine\v1\Models\Manifest[]|null
      */
     public function getManifests()
     {
@@ -607,7 +607,7 @@ class CreateManifestResponseBody implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets manifests
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Manifest[]|null $manifests manifests
+     * @param \Nmusco\ShipEngine\v1\Models\Manifest[]|null $manifests manifests
      *
      * @return self
      */

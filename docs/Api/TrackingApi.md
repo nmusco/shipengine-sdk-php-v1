@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## getTrackingLog
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody getTrackingLog($carrier_code, $tracking_number)
+> \Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody getTrackingLog($carrier_code, $tracking_number)
 
 Get Tracking Information
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody**](../Model/GetTrackingLogResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody**](../Model/GetTrackingLogResponseBody.md)
 
 ### Authorization
 

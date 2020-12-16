@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -58,7 +58,7 @@ class ListBatchErrorsResponseBody implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchResponseError[]',
+        'errors' => '\Nmusco\ShipEngine\v1\Models\BatchResponseError[]',
         'links' => 'PaginationLink'
     ];
 
@@ -222,7 +222,7 @@ class ListBatchErrorsResponseBody implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets errors
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchResponseError[]
+     * @return \Nmusco\ShipEngine\v1\Models\BatchResponseError[]
      */
     public function getErrors()
     {
@@ -232,7 +232,7 @@ class ListBatchErrorsResponseBody implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets errors
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BatchResponseError[] $errors The errors currently associated with the batch
+     * @param \Nmusco\ShipEngine\v1\Models\BatchResponseError[] $errors The errors currently associated with the batch
      *
      * @return self
      */

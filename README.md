@@ -103,7 +103,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\AddressesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$parse_address_request_body = {"text":"Margie McMiller at 3800 North Lamar suite 200 in austin, tx.  The zip code there is 78652."}; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseAddressRequestBody | The only required field is `text`, which is the text to be parsed. You can optionally also provide an `address` containing already-known values. For example, you may already know the recipient's name, city, and country, and only want to parse the street address into separate lines.
+$parse_address_request_body = {"text":"Margie McMiller at 3800 North Lamar suite 200 in austin, tx.  The zip code there is 78652."}; // \Nmusco\ShipEngine\v1\Models\ParseAddressRequestBody | The only required field is `text`, which is the text to be parsed. You can optionally also provide an `address` containing already-known values. For example, you may already know the recipient's name, city, and country, and only want to parse the street address into separate lines.
 
 try {
     $result = $apiInstance->parseAddress($parse_address_request_body);

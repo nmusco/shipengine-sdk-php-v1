@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -61,7 +61,7 @@ class AddressValidationResult implements ModelInterface, ArrayAccess, \JsonSeria
         'status' => 'AddressValidationStatus',
         'original_address' => 'Address',
         'matched_address' => 'Address',
-        'messages' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ResponseMessage[]'
+        'messages' => '\Nmusco\ShipEngine\v1\Models\ResponseMessage[]'
     ];
 
     /**
@@ -312,7 +312,7 @@ class AddressValidationResult implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets messages
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ResponseMessage[]
+     * @return \Nmusco\ShipEngine\v1\Models\ResponseMessage[]
      */
     public function getMessages()
     {
@@ -322,7 +322,7 @@ class AddressValidationResult implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets messages
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ResponseMessage[] $messages The list of messages that were generated during the address validation request.
+     * @param \Nmusco\ShipEngine\v1\Models\ResponseMessage[] $messages The list of messages that were generated during the address validation request.
      *
      * @return self
      */

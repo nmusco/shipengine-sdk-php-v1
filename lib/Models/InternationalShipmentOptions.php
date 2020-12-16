@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -60,7 +60,7 @@ class InternationalShipmentOptions implements ModelInterface, ArrayAccess, \Json
     protected static $openAPITypes = [
         'contents' => 'PackageContents',
         'non_delivery' => 'NonDelivery',
-        'customs_items' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CustomsItem[]'
+        'customs_items' => '\Nmusco\ShipEngine\v1\Models\CustomsItem[]'
     ];
 
     /**
@@ -276,7 +276,7 @@ class InternationalShipmentOptions implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets customs_items
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CustomsItem[]|null
+     * @return \Nmusco\ShipEngine\v1\Models\CustomsItem[]|null
      */
     public function getCustomsItems()
     {
@@ -286,7 +286,7 @@ class InternationalShipmentOptions implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets customs_items
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CustomsItem[]|null $customs_items Customs declarations for each item in the shipment.
+     * @param \Nmusco\ShipEngine\v1\Models\CustomsItem[]|null $customs_items Customs declarations for each item in the shipment.
      *
      * @return self
      */

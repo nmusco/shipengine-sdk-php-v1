@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## addFundsToCarrier
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToCarrierResponseBody addFundsToCarrier($carrier_id, $add_funds_to_carrier_request_body)
+> \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierResponseBody addFundsToCarrier($carrier_id, $add_funds_to_carrier_request_body)
 
 Add Funds To Carrier
 
@@ -41,7 +41,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarriersApi(
     $config
 );
 $carrier_id = se-28529731; // string | Carrier ID
-$add_funds_to_carrier_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody | 
+$add_funds_to_carrier_request_body = new \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody | 
 
 try {
     $result = $apiInstance->addFundsToCarrier($carrier_id, $add_funds_to_carrier_request_body);
@@ -58,11 +58,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **carrier_id** | **string**| Carrier ID |
- **add_funds_to_carrier_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody**](../Model/AddFundsToCarrierRequestBody.md)|  |
+ **add_funds_to_carrier_request_body** | [**\Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody**](../Model/AddFundsToCarrierRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\AddFundsToCarrierResponseBody**](../Model/AddFundsToCarrierResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\AddFundsToCarrierResponseBody**](../Model/AddFundsToCarrierResponseBody.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## getCarrierById
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarrierByIdResponseBody getCarrierById($carrier_id)
+> \Nmusco\ShipEngine\v1\Models\GetCarrierByIdResponseBody getCarrierById($carrier_id)
 
 Get Carrier By ID
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarrierByIdResponseBody**](../Model/GetCarrierByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetCarrierByIdResponseBody**](../Model/GetCarrierByIdResponseBody.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ## getCarrierOptions
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarrierOptionsResponseBody getCarrierOptions($carrier_id)
+> \Nmusco\ShipEngine\v1\Models\GetCarrierOptionsResponseBody getCarrierOptions($carrier_id)
 
 Get Carrier Options
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarrierOptionsResponseBody**](../Model/GetCarrierOptionsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetCarrierOptionsResponseBody**](../Model/GetCarrierOptionsResponseBody.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ## listCarrierPackageTypes
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListCarrierPackageTypesResponseBody listCarrierPackageTypes($carrier_id)
+> \Nmusco\ShipEngine\v1\Models\ListCarrierPackageTypesResponseBody listCarrierPackageTypes($carrier_id)
 
 List Carrier Package Types
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListCarrierPackageTypesResponseBody**](../Model/ListCarrierPackageTypesResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListCarrierPackageTypesResponseBody**](../Model/ListCarrierPackageTypesResponseBody.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ## listCarrierServices
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListCarrierServicesResponseBody listCarrierServices($carrier_id)
+> \Nmusco\ShipEngine\v1\Models\ListCarrierServicesResponseBody listCarrierServices($carrier_id)
 
 List Carrier Services
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListCarrierServicesResponseBody**](../Model/ListCarrierServicesResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListCarrierServicesResponseBody**](../Model/ListCarrierServicesResponseBody.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 ## listCarriers
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarriersResponseBody listCarriers()
+> \Nmusco\ShipEngine\v1\Models\GetCarriersResponseBody listCarriers()
 
 List Carriers
 
@@ -373,7 +373,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarriersResponseBody**](../Model/GetCarriersResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetCarriersResponseBody**](../Model/GetCarriersResponseBody.md)
 
 ### Authorization
 

@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## createShipments
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateShipmentsResponseBody createShipments($create_shipments_request_body)
+> \Nmusco\ShipEngine\v1\Models\CreateShipmentsResponseBody createShipments($create_shipments_request_body)
 
 Create Shipments
 
@@ -108,7 +108,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_shipments_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody | 
+$create_shipments_request_body = new \Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody | 
 
 try {
     $result = $apiInstance->createShipments($create_shipments_request_body);
@@ -124,11 +124,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_shipments_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody**](../Model/CreateShipmentsRequestBody.md)|  |
+ **create_shipments_request_body** | [**\Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody**](../Model/CreateShipmentsRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateShipmentsResponseBody**](../Model/CreateShipmentsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreateShipmentsResponseBody**](../Model/CreateShipmentsResponseBody.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ## getShipmentByExternalId
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetShipmentByExternalIdResponseBody getShipmentByExternalId($external_shipment_id)
+> \Nmusco\ShipEngine\v1\Models\GetShipmentByExternalIdResponseBody getShipmentByExternalId($external_shipment_id)
 
 Get Shipment By External ID
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetShipmentByExternalIdResponseBody**](../Model/GetShipmentByExternalIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetShipmentByExternalIdResponseBody**](../Model/GetShipmentByExternalIdResponseBody.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ## getShipmentById
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetShipmentByIdResponseBody getShipmentById($shipment_id)
+> \Nmusco\ShipEngine\v1\Models\GetShipmentByIdResponseBody getShipmentById($shipment_id)
 
 Get Shipment By ID
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetShipmentByIdResponseBody**](../Model/GetShipmentByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetShipmentByIdResponseBody**](../Model/GetShipmentByIdResponseBody.md)
 
 ### Authorization
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 ## listShipmentErrors
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListShipmentErrorsResponseBody listShipmentErrors($shipment_id, $page, $pagesize)
+> \Nmusco\ShipEngine\v1\Models\ListShipmentErrorsResponseBody listShipmentErrors($shipment_id, $page, $pagesize)
 
 Get Shipment Errors
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListShipmentErrorsResponseBody**](../Model/ListShipmentErrorsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListShipmentErrorsResponseBody**](../Model/ListShipmentErrorsResponseBody.md)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ## listShipmentRates
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListShipmentRatesResponseBody listShipmentRates($shipment_id, $created_at_start)
+> \Nmusco\ShipEngine\v1\Models\ListShipmentRatesResponseBody listShipmentRates($shipment_id, $created_at_start)
 
 Get Shipment Rates
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListShipmentRatesResponseBody**](../Model/ListShipmentRatesResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListShipmentRatesResponseBody**](../Model/ListShipmentRatesResponseBody.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ## listShipments
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListShipmentsResponseBody listShipments($shipment_status, $batch_id, $tag, $created_at_start, $created_at_end, $modified_at_start, $modified_at_end, $page, $page_size, $sales_order_id, $sort_dir, $sort_by)
+> \Nmusco\ShipEngine\v1\Models\ListShipmentsResponseBody listShipments($shipment_status, $batch_id, $tag, $created_at_start, $created_at_end, $modified_at_start, $modified_at_end, $page, $page_size, $sales_order_id, $sort_dir, $sort_by)
 
 List Shipments
 
@@ -429,7 +429,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shipment_status = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentStatus(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentStatus | 
+$shipment_status = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\ShipmentStatus(); // \Nmusco\ShipEngine\v1\Models\ShipmentStatus | 
 $batch_id = 'batch_id_example'; // string | Batch ID
 $tag = Letters_to_santa; // string | Search for shipments based on the custom tag added to the shipment object
 $created_at_start = 2019-03-12T19:24:13.657Z; // \DateTime | Used to create a filter for when a resource was created (ex. A shipment that was created after a certain time)
@@ -439,8 +439,8 @@ $modified_at_end = 2019-03-12T19:24:13.657Z; // \DateTime | Used to create a fil
 $page = 2; // int | Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
 $page_size = 50; // int | The number of results to return per response.
 $sales_order_id = 'sales_order_id_example'; // string | Sales Order ID
-$sort_dir = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\SortDir(); // SortDir | Controls the sort order of the query.
-$sort_by = modified_at; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentsSortBy | 
+$sort_dir = new \Nmusco\ShipEngine\v1\Models\SortDir(); // SortDir | Controls the sort order of the query.
+$sort_by = modified_at; // \Nmusco\ShipEngine\v1\Models\ShipmentsSortBy | 
 
 try {
     $result = $apiInstance->listShipments($shipment_status, $batch_id, $tag, $created_at_start, $created_at_end, $modified_at_start, $modified_at_end, $page, $page_size, $sales_order_id, $sort_dir, $sort_by);
@@ -456,7 +456,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment_status** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentStatus**](../Model/.md)|  | [optional]
+ **shipment_status** | [**\Nmusco\ShipEngine\v1\Models\ShipmentStatus**](../Model/.md)|  | [optional]
  **batch_id** | **string**| Batch ID | [optional]
  **tag** | **string**| Search for shipments based on the custom tag added to the shipment object | [optional]
  **created_at_start** | **\DateTime**| Used to create a filter for when a resource was created (ex. A shipment that was created after a certain time) | [optional]
@@ -467,11 +467,11 @@ Name | Type | Description  | Notes
  **page_size** | **int**| The number of results to return per response. | [optional] [default to 25]
  **sales_order_id** | **string**| Sales Order ID | [optional]
  **sort_dir** | [**SortDir**](../Model/.md)| Controls the sort order of the query. | [optional]
- **sort_by** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentsSortBy**](../Model/.md)|  | [optional]
+ **sort_by** | [**\Nmusco\ShipEngine\v1\Models\ShipmentsSortBy**](../Model/.md)|  | [optional]
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListShipmentsResponseBody**](../Model/ListShipmentsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListShipmentsResponseBody**](../Model/ListShipmentsResponseBody.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ## parseShipment
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseShipmentResponseBody parseShipment($parse_shipment_request_body)
+> \Nmusco\ShipEngine\v1\Models\ParseShipmentResponseBody parseShipment($parse_shipment_request_body)
 
 Parse shipping info
 
@@ -514,7 +514,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$parse_shipment_request_body = {"text":"I have a 4oz package that's 5x10x14in, and I need to ship it to Margie McMiller at 3800 North Lamar suite 200 in austin, tx 78652. Please send it via USPS first class and require an adult signature. It also needs to be insured for $400.\n"}; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseShipmentRequestBody | The only required field is `text`, which is the text to be parsed. You can optionally also provide a `shipment` containing any already-known values. For example, you probably already know the `ship_from` address, and you may also already know what carrier and service you want to use.
+$parse_shipment_request_body = {"text":"I have a 4oz package that's 5x10x14in, and I need to ship it to Margie McMiller at 3800 North Lamar suite 200 in austin, tx 78652. Please send it via USPS first class and require an adult signature. It also needs to be insured for $400.\n"}; // \Nmusco\ShipEngine\v1\Models\ParseShipmentRequestBody | The only required field is `text`, which is the text to be parsed. You can optionally also provide a `shipment` containing any already-known values. For example, you probably already know the `ship_from` address, and you may also already know what carrier and service you want to use.
 
 try {
     $result = $apiInstance->parseShipment($parse_shipment_request_body);
@@ -530,11 +530,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parse_shipment_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseShipmentRequestBody**](../Model/ParseShipmentRequestBody.md)| The only required field is &#x60;text&#x60;, which is the text to be parsed. You can optionally also provide a &#x60;shipment&#x60; containing any already-known values. For example, you probably already know the &#x60;ship_from&#x60; address, and you may also already know what carrier and service you want to use. |
+ **parse_shipment_request_body** | [**\Nmusco\ShipEngine\v1\Models\ParseShipmentRequestBody**](../Model/ParseShipmentRequestBody.md)| The only required field is &#x60;text&#x60;, which is the text to be parsed. You can optionally also provide a &#x60;shipment&#x60; containing any already-known values. For example, you probably already know the &#x60;ship_from&#x60; address, and you may also already know what carrier and service you want to use. |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ParseShipmentResponseBody**](../Model/ParseShipmentResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ParseShipmentResponseBody**](../Model/ParseShipmentResponseBody.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ## tagShipment
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\TagShipmentResponseBody tagShipment($shipment_id, $tag_name)
+> \Nmusco\ShipEngine\v1\Models\TagShipmentResponseBody tagShipment($shipment_id, $tag_name)
 
 Add Tag to Shipment
 
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\TagShipmentResponseBody**](../Model/TagShipmentResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\TagShipmentResponseBody**](../Model/TagShipmentResponseBody.md)
 
 ### Authorization
 
@@ -682,7 +682,7 @@ Name | Type | Description  | Notes
 
 ## updateShipment
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateShipmentResponseBody updateShipment($shipment_id, $update_shipment_request_body)
+> \Nmusco\ShipEngine\v1\Models\UpdateShipmentResponseBody updateShipment($shipment_id, $update_shipment_request_body)
 
 Update Shipment By ID
 
@@ -708,7 +708,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     $config
 );
 $shipment_id = 'shipment_id_example'; // string | Shipment ID
-$update_shipment_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody | 
+$update_shipment_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody | 
 
 try {
     $result = $apiInstance->updateShipment($shipment_id, $update_shipment_request_body);
@@ -725,11 +725,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **string**| Shipment ID |
- **update_shipment_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody**](../Model/UpdateShipmentRequestBody.md)|  |
+ **update_shipment_request_body** | [**\Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody**](../Model/UpdateShipmentRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateShipmentResponseBody**](../Model/UpdateShipmentResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\UpdateShipmentResponseBody**](../Model/UpdateShipmentResponseBody.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## createLabel
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelResponseBody createLabel($create_label_request_body)
+> \Nmusco\ShipEngine\v1\Models\CreateLabelResponseBody createLabel($create_label_request_body)
 
 Purchase Label
 
@@ -43,7 +43,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_label_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody | 
+$create_label_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody | 
 
 try {
     $result = $apiInstance->createLabel($create_label_request_body);
@@ -59,11 +59,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_label_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody**](../Model/CreateLabelRequestBody.md)|  |
+ **create_label_request_body** | [**\Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody**](../Model/CreateLabelRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelResponseBody**](../Model/CreateLabelResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreateLabelResponseBody**](../Model/CreateLabelResponseBody.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## createLabelFromRate
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromRateResponseBody createLabelFromRate($rate_id, $create_label_from_rate_request_body)
+> \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateResponseBody createLabelFromRate($rate_id, $create_label_from_rate_request_body)
 
 Purchase Label with Rate ID
 
@@ -107,7 +107,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $rate_id = 'rate_id_example'; // string | Rate ID
-$create_label_from_rate_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody | 
+$create_label_from_rate_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody | 
 
 try {
     $result = $apiInstance->createLabelFromRate($rate_id, $create_label_from_rate_request_body);
@@ -124,11 +124,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rate_id** | **string**| Rate ID |
- **create_label_from_rate_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody**](../Model/CreateLabelFromRateRequestBody.md)|  |
+ **create_label_from_rate_request_body** | [**\Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody**](../Model/CreateLabelFromRateRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromRateResponseBody**](../Model/CreateLabelFromRateResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreateLabelFromRateResponseBody**](../Model/CreateLabelFromRateResponseBody.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ## createLabelFromShipment
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentResponseBody createLabelFromShipment($shipment_id, $create_label_from_shipment_request_body)
+> \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentResponseBody createLabelFromShipment($shipment_id, $create_label_from_shipment_request_body)
 
 Purchase Label with Shipment ID
 
@@ -172,7 +172,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $shipment_id = 'shipment_id_example'; // string | Shipment ID
-$create_label_from_shipment_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody | 
+$create_label_from_shipment_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody | 
 
 try {
     $result = $apiInstance->createLabelFromShipment($shipment_id, $create_label_from_shipment_request_body);
@@ -189,11 +189,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **string**| Shipment ID |
- **create_label_from_shipment_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody**](../Model/CreateLabelFromShipmentRequestBody.md)|  |
+ **create_label_from_shipment_request_body** | [**\Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody**](../Model/CreateLabelFromShipmentRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentResponseBody**](../Model/CreateLabelFromShipmentResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentResponseBody**](../Model/CreateLabelFromShipmentResponseBody.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ## createReturnLabel
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateReturnLabelResponseBody createReturnLabel($label_id, $create_return_label_request_body)
+> \Nmusco\ShipEngine\v1\Models\CreateReturnLabelResponseBody createReturnLabel($label_id, $create_return_label_request_body)
 
 Create a return label
 
@@ -237,7 +237,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $label_id = 'label_id_example'; // string | Label ID
-$create_return_label_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody | 
+$create_return_label_request_body = new \Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody | 
 
 try {
     $result = $apiInstance->createReturnLabel($label_id, $create_return_label_request_body);
@@ -254,11 +254,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **label_id** | **string**| Label ID |
- **create_return_label_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody**](../Model/CreateReturnLabelRequestBody.md)|  |
+ **create_return_label_request_body** | [**\Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody**](../Model/CreateReturnLabelRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateReturnLabelResponseBody**](../Model/CreateReturnLabelResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreateReturnLabelResponseBody**](../Model/CreateReturnLabelResponseBody.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ## getLabelByExternalShipmentId
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetLabelByExternalShipmentIdResponseBody getLabelByExternalShipmentId($external_shipment_id, $label_download_type)
+> \Nmusco\ShipEngine\v1\Models\GetLabelByExternalShipmentIdResponseBody getLabelByExternalShipmentId($external_shipment_id, $label_download_type)
 
 Get Label By External Shipment ID
 
@@ -302,7 +302,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $external_shipment_id = 0bcb569d-1727-4ff9-ab49-b2fec0cee5ae; // string | 
-$label_download_type = url; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\LabelDownloadType | 
+$label_download_type = url; // \Nmusco\ShipEngine\v1\Models\LabelDownloadType | 
 
 try {
     $result = $apiInstance->getLabelByExternalShipmentId($external_shipment_id, $label_download_type);
@@ -319,11 +319,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_shipment_id** | **string**|  |
- **label_download_type** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\LabelDownloadType**](../Model/.md)|  | [optional]
+ **label_download_type** | [**\Nmusco\ShipEngine\v1\Models\LabelDownloadType**](../Model/.md)|  | [optional]
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetLabelByExternalShipmentIdResponseBody**](../Model/GetLabelByExternalShipmentIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetLabelByExternalShipmentIdResponseBody**](../Model/GetLabelByExternalShipmentIdResponseBody.md)
 
 ### Authorization
 
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ## getLabelById
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetLabelByIdResponseBody getLabelById($label_id, $label_download_type)
+> \Nmusco\ShipEngine\v1\Models\GetLabelByIdResponseBody getLabelById($label_id, $label_download_type)
 
 Get Label By ID
 
@@ -367,7 +367,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $label_id = 'label_id_example'; // string | Label ID
-$label_download_type = url; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\LabelDownloadType | 
+$label_download_type = url; // \Nmusco\ShipEngine\v1\Models\LabelDownloadType | 
 
 try {
     $result = $apiInstance->getLabelById($label_id, $label_download_type);
@@ -384,11 +384,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **label_id** | **string**| Label ID |
- **label_download_type** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\LabelDownloadType**](../Model/.md)|  | [optional]
+ **label_download_type** | [**\Nmusco\ShipEngine\v1\Models\LabelDownloadType**](../Model/.md)|  | [optional]
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetLabelByIdResponseBody**](../Model/GetLabelByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetLabelByIdResponseBody**](../Model/GetLabelByIdResponseBody.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ## getTrackingLogFromLabel
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogFromLabelResponseBody getTrackingLogFromLabel($label_id)
+> \Nmusco\ShipEngine\v1\Models\GetTrackingLogFromLabelResponseBody getTrackingLogFromLabel($label_id)
 
 Get Label Tracking Information
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetTrackingLogFromLabelResponseBody**](../Model/GetTrackingLogFromLabelResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetTrackingLogFromLabelResponseBody**](../Model/GetTrackingLogFromLabelResponseBody.md)
 
 ### Authorization
 
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 ## listLabels
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListLabelsResponseBody listLabels($label_status, $service_code, $carrier_id, $tracking_number, $batch_id, $rate_id, $shipment_id, $warehouse_id, $created_at_start, $created_at_end, $page, $page_size, $sort_dir, $sort_by)
+> \Nmusco\ShipEngine\v1\Models\ListLabelsResponseBody listLabels($label_status, $service_code, $carrier_id, $tracking_number, $batch_id, $rate_id, $shipment_id, $warehouse_id, $created_at_start, $created_at_end, $page, $page_size, $sort_dir, $sort_by)
 
 List labels
 
@@ -494,7 +494,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$label_status = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\LabelStatus(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\LabelStatus | Only return labels that are currently in the specified status
+$label_status = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\LabelStatus(); // \Nmusco\ShipEngine\v1\Models\LabelStatus | Only return labels that are currently in the specified status
 $service_code = usps_first_class_mail; // string | Only return labels for a specific [carrier service](https://www.shipengine.com/docs/shipping/use-a-carrier-service/)
 $carrier_id = 'carrier_id_example'; // string | Only return labels for a specific [carrier account](https://www.shipengine.com/docs/carriers/setup/)
 $tracking_number = 9.405511899223197E+21; // string | Only return labels with a specific tracking number
@@ -506,7 +506,7 @@ $created_at_start = 2019-03-12T19:24:13.657Z; // \DateTime | Only return labels 
 $created_at_end = 2019-03-12T19:24:13.657Z; // \DateTime | Only return labels that were created on or before a specific date/time
 $page = 2; // int | Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
 $page_size = 50; // int | The number of results to return per response.
-$sort_dir = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\SortDir(); // SortDir | Controls the sort order of the query.
+$sort_dir = new \Nmusco\ShipEngine\v1\Models\SortDir(); // SortDir | Controls the sort order of the query.
 $sort_by = 'created_at'; // string | Controls which field the query is sorted by.
 
 try {
@@ -523,7 +523,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **label_status** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\LabelStatus**](../Model/.md)| Only return labels that are currently in the specified status | [optional]
+ **label_status** | [**\Nmusco\ShipEngine\v1\Models\LabelStatus**](../Model/.md)| Only return labels that are currently in the specified status | [optional]
  **service_code** | **string**| Only return labels for a specific [carrier service](https://www.shipengine.com/docs/shipping/use-a-carrier-service/) | [optional]
  **carrier_id** | **string**| Only return labels for a specific [carrier account](https://www.shipengine.com/docs/carriers/setup/) | [optional]
  **tracking_number** | **string**| Only return labels with a specific tracking number | [optional]
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListLabelsResponseBody**](../Model/ListLabelsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListLabelsResponseBody**](../Model/ListLabelsResponseBody.md)
 
 ### Authorization
 
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 
 ## voidLabel
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\VoidLabelResponseBody voidLabel($label_id)
+> \Nmusco\ShipEngine\v1\Models\VoidLabelResponseBody voidLabel($label_id)
 
 Void a Label By ID
 
@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\VoidLabelResponseBody**](../Model/VoidLabelResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\VoidLabelResponseBody**](../Model/VoidLabelResponseBody.md)
 
 ### Authorization
 

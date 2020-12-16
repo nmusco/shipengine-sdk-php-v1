@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## calculateRates
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CalculateRatesResponseBody calculateRates($calculate_rates_request_body)
+> \Nmusco\ShipEngine\v1\Models\CalculateRatesResponseBody calculateRates($calculate_rates_request_body)
 
 Get Shipping Rates
 
@@ -38,7 +38,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\RatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$calculate_rates_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CalculateRatesRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CalculateRatesRequestBody | 
+$calculate_rates_request_body = new \Nmusco\ShipEngine\v1\Models\CalculateRatesRequestBody(); // \Nmusco\ShipEngine\v1\Models\CalculateRatesRequestBody | 
 
 try {
     $result = $apiInstance->calculateRates($calculate_rates_request_body);
@@ -54,11 +54,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **calculate_rates_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CalculateRatesRequestBody**](../Model/CalculateRatesRequestBody.md)|  |
+ **calculate_rates_request_body** | [**\Nmusco\ShipEngine\v1\Models\CalculateRatesRequestBody**](../Model/CalculateRatesRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CalculateRatesResponseBody**](../Model/CalculateRatesResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CalculateRatesResponseBody**](../Model/CalculateRatesResponseBody.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ## compareBulkRates
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BulkRate[] compareBulkRates($compare_bulk_rates_request_body)
+> \Nmusco\ShipEngine\v1\Models\BulkRate[] compareBulkRates($compare_bulk_rates_request_body)
 
 Get Bulk Rates
 
@@ -101,7 +101,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\RatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$compare_bulk_rates_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CompareBulkRatesRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CompareBulkRatesRequestBody | 
+$compare_bulk_rates_request_body = new \Nmusco\ShipEngine\v1\Models\CompareBulkRatesRequestBody(); // \Nmusco\ShipEngine\v1\Models\CompareBulkRatesRequestBody | 
 
 try {
     $result = $apiInstance->compareBulkRates($compare_bulk_rates_request_body);
@@ -117,11 +117,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **compare_bulk_rates_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CompareBulkRatesRequestBody**](../Model/CompareBulkRatesRequestBody.md)|  |
+ **compare_bulk_rates_request_body** | [**\Nmusco\ShipEngine\v1\Models\CompareBulkRatesRequestBody**](../Model/CompareBulkRatesRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\BulkRate[]**](../Model/BulkRate.md)
+[**\Nmusco\ShipEngine\v1\Models\BulkRate[]**](../Model/BulkRate.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\RatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$estimate_rates_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\EstimateRatesRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\EstimateRatesRequestBody | 
+$estimate_rates_request_body = new \Nmusco\ShipEngine\v1\Models\EstimateRatesRequestBody(); // \Nmusco\ShipEngine\v1\Models\EstimateRatesRequestBody | 
 
 try {
     $result = $apiInstance->estimateRates($estimate_rates_request_body);
@@ -180,7 +180,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **estimate_rates_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\EstimateRatesRequestBody**](../Model/EstimateRatesRequestBody.md)|  |
+ **estimate_rates_request_body** | [**\Nmusco\ShipEngine\v1\Models\EstimateRatesRequestBody**](../Model/EstimateRatesRequestBody.md)|  |
 
 ### Return type
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ## getRateById
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetRateByIdResponseBody getRateById($rate_id)
+> \Nmusco\ShipEngine\v1\Models\GetRateByIdResponseBody getRateById($rate_id)
 
 Get Rate By ID
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetRateByIdResponseBody**](../Model/GetRateByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetRateByIdResponseBody**](../Model/GetRateByIdResponseBody.md)
 
 ### Authorization
 

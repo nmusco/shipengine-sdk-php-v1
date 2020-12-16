@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -59,7 +59,7 @@ class CollectOnDelivery implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'payment_type' => 'CollectOnDeliveryPaymentType',
-        'payment_amount' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\PaymentAmount'
+        'payment_amount' => '\Nmusco\ShipEngine\v1\Models\PaymentAmount'
     ];
 
     /**
@@ -240,7 +240,7 @@ class CollectOnDelivery implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets payment_amount
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\PaymentAmount|null
+     * @return \Nmusco\ShipEngine\v1\Models\PaymentAmount|null
      */
     public function getPaymentAmount()
     {
@@ -250,7 +250,7 @@ class CollectOnDelivery implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets payment_amount
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\PaymentAmount|null $payment_amount payment_amount
+     * @param \Nmusco\ShipEngine\v1\Models\PaymentAmount|null $payment_amount payment_amount
      *
      * @return self
      */

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -58,7 +58,7 @@ class Manifests implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'manifests' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Manifest[]'
+        'manifests' => '\Nmusco\ShipEngine\v1\Models\Manifest[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class Manifests implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets manifests
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Manifest[]|null
+     * @return \Nmusco\ShipEngine\v1\Models\Manifest[]|null
      */
     public function getManifests()
     {
@@ -220,7 +220,7 @@ class Manifests implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets manifests
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Manifest[]|null $manifests manifests
+     * @param \Nmusco\ShipEngine\v1\Models\Manifest[]|null $manifests manifests
      *
      * @return self
      */

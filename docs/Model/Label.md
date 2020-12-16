@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **label_download** | [**LabelDownload**](LabelDownload.md) |  | [optional] [readonly] 
 **form_download** | [**Link**](Link.md) | The link to downlaod the customs form (a.k.a. commercial invoice) for this shipment, if any.  Forms are in PDF format. This field is null if the shipment does not require a customs form, or if the carrier does not support it. | [optional] [readonly] 
 **insurance_claim** | [**Link**](Link.md) | The link to submit an insurance claim for the shipment.  This field is null if the shipment is not insured or if the insurance provider does not support online claim submission. | [optional] [readonly] 
-**packages** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Package[]**](Package.md) | The label&#39;s package(s).  &gt; **Note:** Some carriers only allow one package per label.  If you attempt to create a multi-package label for a carrier that doesn&#39;t allow it, an error will be returned. | [optional] [readonly] 
+**packages** | [**\Nmusco\ShipEngine\v1\Models\Package[]**](Package.md) | The label&#39;s package(s).  &gt; **Note:** Some carriers only allow one package per label.  If you attempt to create a multi-package label for a carrier that doesn&#39;t allow it, an error will be returned. | [optional] [readonly] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

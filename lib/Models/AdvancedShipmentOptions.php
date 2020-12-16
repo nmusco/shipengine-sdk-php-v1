@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -74,7 +74,7 @@ class AdvancedShipmentOptions implements ModelInterface, ArrayAccess, \JsonSeria
         'custom_field2' => 'string',
         'custom_field3' => 'string',
         'origin_type' => 'OriginType',
-        'collect_on_delivery' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CollectOnDelivery'
+        'collect_on_delivery' => '\Nmusco\ShipEngine\v1\Models\CollectOnDelivery'
     ];
 
     /**
@@ -714,7 +714,7 @@ class AdvancedShipmentOptions implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets collect_on_delivery
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CollectOnDelivery|null
+     * @return \Nmusco\ShipEngine\v1\Models\CollectOnDelivery|null
      */
     public function getCollectOnDelivery()
     {
@@ -724,7 +724,7 @@ class AdvancedShipmentOptions implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets collect_on_delivery
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CollectOnDelivery|null $collect_on_delivery collect_on_delivery
+     * @param \Nmusco\ShipEngine\v1\Models\CollectOnDelivery|null $collect_on_delivery collect_on_delivery
      *
      * @return self
      */

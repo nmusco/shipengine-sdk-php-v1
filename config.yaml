@@ -1,12 +1,12 @@
 ---
 allowUnicodeIdentifiers: false
-apiPackage: Nmusco\ShipEngine\v1\Api
+apiPackage: Api
 artifactVersion: 1.1.202012041812.1
 ensureUniqueParams: true
 hideGenerationTimestamp: true
 invokerPackage: Nmusco\ShipEngine\v1
 legacyDiscriminatorBehavior: false
-modelPackage: Nmusco\ShipEngine\v1\Models
+modelPackage: Models
 packageName: ShipEngineClient
 prependFormOrBodyParameters: false
 sortModelPropertiesByRequiredFlag: true

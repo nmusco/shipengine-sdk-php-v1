@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -58,7 +58,7 @@ class ListShipmentErrorsResponseBody implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentResponseError[]',
+        'errors' => '\Nmusco\ShipEngine\v1\Models\ShipmentResponseError[]',
         'links' => 'PaginationLink'
     ];
 
@@ -222,7 +222,7 @@ class ListShipmentErrorsResponseBody implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets errors
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentResponseError[]
+     * @return \Nmusco\ShipEngine\v1\Models\ShipmentResponseError[]
      */
     public function getErrors()
     {
@@ -232,7 +232,7 @@ class ListShipmentErrorsResponseBody implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets errors
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ShipmentResponseError[] $errors The errors associated with the shipment.
+     * @param \Nmusco\ShipEngine\v1\Models\ShipmentResponseError[] $errors The errors associated with the shipment.
      *
      * @return self
      */

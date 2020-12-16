@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -67,7 +67,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
         'estimated_delivery_date' => '\DateTime',
         'actual_delivery_date' => '\DateTime',
         'exception_description' => 'string',
-        'events' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\TrackEvent[]'
+        'events' => '\Nmusco\ShipEngine\v1\Models\TrackEvent[]'
     ];
 
     /**
@@ -525,7 +525,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets events
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\TrackEvent[]|null
+     * @return \Nmusco\ShipEngine\v1\Models\TrackEvent[]|null
      */
     public function getEvents()
     {
@@ -535,7 +535,7 @@ class TrackingInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets events
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\TrackEvent[]|null $events The events that have occured during the lifetime of this tracking number.
+     * @param \Nmusco\ShipEngine\v1\Models\TrackEvent[]|null $events The events that have occured during the lifetime of this tracking number.
      *
      * @return self
      */

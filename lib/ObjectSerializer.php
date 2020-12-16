@@ -29,7 +29,7 @@
 
 namespace Nmusco\ShipEngine\v1;
 
-use Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ModelInterface;
+use Nmusco\ShipEngine\v1\Models\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment

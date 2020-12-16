@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 use \ArrayAccess;
 use \Nmusco\ShipEngine\v1\ObjectSerializer;
@@ -91,7 +91,7 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
         'label_download' => 'LabelDownload',
         'form_download' => 'Link',
         'insurance_claim' => 'Link',
-        'packages' => '\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Package[]'
+        'packages' => '\Nmusco\ShipEngine\v1\Models\Package[]'
     ];
 
     /**
@@ -1209,7 +1209,7 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets packages
      *
-     * @return \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Package[]|null
+     * @return \Nmusco\ShipEngine\v1\Models\Package[]|null
      */
     public function getPackages()
     {
@@ -1219,7 +1219,7 @@ class Label implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets packages
      *
-     * @param \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\Package[]|null $packages The label's package(s).  > **Note:** Some carriers only allow one package per label.  If you attempt to create a multi-package label for a carrier that doesn't allow it, an error will be returned.
+     * @param \Nmusco\ShipEngine\v1\Models\Package[]|null $packages The label's package(s).  > **Note:** Some carriers only allow one package per label.  If you attempt to create a multi-package label for a carrier that doesn't allow it, an error will be returned.
      *
      * @return self
      */

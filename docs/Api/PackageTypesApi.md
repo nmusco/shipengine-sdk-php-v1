@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createPackageType
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody createPackageType($create_package_type_request_body)
+> \Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody createPackageType($create_package_type_request_body)
 
 Create Custom Package Type
 
@@ -39,7 +39,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\PackageTypesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_package_type_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody | 
+$create_package_type_request_body = new \Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody | 
 
 try {
     $result = $apiInstance->createPackageType($create_package_type_request_body);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_package_type_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody**](../Model/CreatePackageTypeRequestBody.md)|  |
+ **create_package_type_request_body** | [**\Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody**](../Model/CreatePackageTypeRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody**](../Model/CreatePackageTypeResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody**](../Model/CreatePackageTypeResponseBody.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ## getPackageTypeById
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody getPackageTypeById($package_id)
+> \Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody getPackageTypeById($package_id)
 
 Get Custom Package Type By ID
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody**](../Model/GetPackageTypeByIdResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody**](../Model/GetPackageTypeByIdResponseBody.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ## listPackageTypes
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody listPackageTypes()
+> \Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody listPackageTypes()
 
 List Custom Package Types
 
@@ -244,7 +244,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody**](../Model/ListPackageTypesResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody**](../Model/ListPackageTypesResponseBody.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\PackageTypesApi(
     $config
 );
 $package_id = 'package_id_example'; // string | Package ID
-$update_package_type_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody | 
+$update_package_type_request_body = new \Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody | 
 
 try {
     $result = $apiInstance->updatePackageType($package_id, $update_package_type_request_body);
@@ -305,7 +305,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **package_id** | **string**| Package ID |
- **update_package_type_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody**](../Model/UpdatePackageTypeRequestBody.md)|  |
+ **update_package_type_request_body** | [**\Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody**](../Model/UpdatePackageTypeRequestBody.md)|  |
 
 ### Return type
 

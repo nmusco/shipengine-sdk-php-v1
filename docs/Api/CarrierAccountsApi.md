@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## connectCarrier
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectCarrierResponseBody connectCarrier($carrier_name, $connect_carrier_request_body)
+> \Nmusco\ShipEngine\v1\Models\ConnectCarrierResponseBody connectCarrier($carrier_name, $connect_carrier_request_body)
 
 Connect a carrier account
 
@@ -38,8 +38,8 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarrierAccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierName | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
-$connect_carrier_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody | 
+$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Models\CarrierName | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
+$connect_carrier_request_body = new \Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody | 
 
 try {
     $result = $apiInstance->connectCarrier($carrier_name, $connect_carrier_request_body);
@@ -55,12 +55,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **carrier_name** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierName**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
- **connect_carrier_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody**](../Model/ConnectCarrierRequestBody.md)|  |
+ **carrier_name** | [**\Nmusco\ShipEngine\v1\Models\CarrierName**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
+ **connect_carrier_request_body** | [**\Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody**](../Model/ConnectCarrierRequestBody.md)|  |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ConnectCarrierResponseBody**](../Model/ConnectCarrierResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ConnectCarrierResponseBody**](../Model/ConnectCarrierResponseBody.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarrierAccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierName | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
+$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Models\CarrierName | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
 $carrier_id = se-28529731; // string | Carrier ID
 
 try {
@@ -120,7 +120,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **carrier_name** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierName**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
+ **carrier_name** | [**\Nmusco\ShipEngine\v1\Models\CarrierName**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
  **carrier_id** | **string**| Carrier ID |
 
 ### Return type
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ## getCarrierSettings
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarrierSettingsResponseBody getCarrierSettings($carrier_name, $carrier_id)
+> \Nmusco\ShipEngine\v1\Models\GetCarrierSettingsResponseBody getCarrierSettings($carrier_name, $carrier_id)
 
 Get carrier settings
 
@@ -168,7 +168,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarrierAccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
+$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
 $carrier_id = se-28529731; // string | Carrier ID
 
 try {
@@ -185,12 +185,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **carrier_name** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
+ **carrier_name** | [**\Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
  **carrier_id** | **string**| Carrier ID |
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\GetCarrierSettingsResponseBody**](../Model/GetCarrierSettingsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\GetCarrierSettingsResponseBody**](../Model/GetCarrierSettingsResponseBody.md)
 
 ### Authorization
 
@@ -233,9 +233,9 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarrierAccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
+$carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
 $carrier_id = se-28529731; // string | Carrier ID
-$update_carrier_settings_request_body = new \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody(); // \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody | 
+$update_carrier_settings_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody | 
 
 try {
     $result = $apiInstance->updateCarrierSettings($carrier_name, $carrier_id, $update_carrier_settings_request_body);
@@ -251,9 +251,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **carrier_name** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
+ **carrier_name** | [**\Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings**](../Model/.md)| The carrier name, such as &#x60;stamps_com&#x60;, &#x60;ups&#x60;, &#x60;fedex&#x60;, or &#x60;dhl_express&#x60;. |
  **carrier_id** | **string**| Carrier ID |
- **update_carrier_settings_request_body** | [**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody**](../Model/UpdateCarrierSettingsRequestBody.md)|  |
+ **update_carrier_settings_request_body** | [**\Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody**](../Model/UpdateCarrierSettingsRequestBody.md)|  |
 
 ### Return type
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createTag
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateTagResponseBody createTag($tag_name)
+> \Nmusco\ShipEngine\v1\Models\CreateTagResponseBody createTag($tag_name)
 
 Create a New Tag
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\CreateTagResponseBody**](../Model/CreateTagResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\CreateTagResponseBody**](../Model/CreateTagResponseBody.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ## listTags
 
-> \Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListTagsResponseBody listTags()
+> \Nmusco\ShipEngine\v1\Models\ListTagsResponseBody listTags()
 
 Get Tags
 
@@ -180,7 +180,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models\ListTagsResponseBody**](../Model/ListTagsResponseBody.md)
+[**\Nmusco\ShipEngine\v1\Models\ListTagsResponseBody**](../Model/ListTagsResponseBody.md)
 
 ### Authorization
 

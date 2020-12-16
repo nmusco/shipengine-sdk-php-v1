@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models
+ * @package  Nmusco\ShipEngine\v1\Models
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models;
+namespace Nmusco\ShipEngine\v1\Models;
 
 /**
  * Interface abstracting model access.
  *
- * @package Nmusco\ShipEngine\v1\Nmusco\ShipEngine\v1\Models
+ * @package Nmusco\ShipEngine\v1\Models
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

@@ -59,7 +59,7 @@ class CreateShipmentsResponseBody implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'has_errors' => 'bool',
-        'shipments' => '\Nmusco\ShipEngine\v1\Models\CreateAndValidateShipment[]'
+        'shipments' => 'CreateAndValidateShipment[]'
     ];
 
     /**

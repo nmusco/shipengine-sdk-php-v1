@@ -15,7 +15,7 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}{{^pa
       * @var string[]
       */
     protected static $openAPITypes = [
-        {{#vars}}'{{name}}' => '{{#complexType}}{{^isContainer}}{{#isModel}}\{{{modelPackage}}}\{{/isModel}}{{/isContainer}}{{#isContainer}}{{^isModel}}\{{{modelPackage}}}\{{/isModel}}{{/isContainer}}{{/complexType}}{{{dataType}}}'{{^-last}},
+        {{#vars}}'{{name}}' => '{{{dataType}}}'{{^-last}},
         {{/-last}}{{/vars}}
     ];
 

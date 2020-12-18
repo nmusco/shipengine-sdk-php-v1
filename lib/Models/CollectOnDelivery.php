@@ -58,7 +58,7 @@ class CollectOnDelivery implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'payment_type' => '\Nmusco\ShipEngine\v1\Models\CollectOnDeliveryPaymentType',
+        'payment_type' => 'CollectOnDeliveryPaymentType',
         'payment_amount' => '\Nmusco\ShipEngine\v1\Models\PaymentAmount'
     ];
 

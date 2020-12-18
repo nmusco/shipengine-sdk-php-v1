@@ -58,7 +58,7 @@ class CreateShipmentResponseBodyFields implements ModelInterface, ArrayAccess, \
       */
     protected static $openAPITypes = [
         'errors' => 'string[]',
-        'address_validation' => '\Nmusco\ShipEngine\v1\Models\AddressValidationResult'
+        'address_validation' => 'AddressValidationResult'
     ];
 
     /**

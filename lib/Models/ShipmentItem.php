@@ -66,7 +66,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'external_order_id' => 'string',
         'external_order_item_id' => 'string',
         'asin' => 'string',
-        'order_source_code' => '\Nmusco\ShipEngine\v1\Models\OrderSourceName'
+        'order_source_code' => 'OrderSourceName'
     ];
 
     /**

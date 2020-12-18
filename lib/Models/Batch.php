@@ -58,8 +58,8 @@ class Batch implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'label_layout' => '\Nmusco\ShipEngine\v1\Models\LabelLayout',
-        'label_format' => '\Nmusco\ShipEngine\v1\Models\LabelFormat',
+        'label_layout' => 'LabelLayout',
+        'label_format' => 'LabelFormat',
         'batch_id' => 'string',
         'batch_number' => 'string',
         'external_batch_id' => 'string',
@@ -71,12 +71,12 @@ class Batch implements ModelInterface, ArrayAccess, \JsonSerializable
         'completed' => 'int',
         'forms' => 'int',
         'count' => 'int',
-        'batch_shipments_url' => '\Nmusco\ShipEngine\v1\Models\OptionalLink',
-        'batch_labels_url' => '\Nmusco\ShipEngine\v1\Models\OptionalLink',
-        'batch_errors_url' => '\Nmusco\ShipEngine\v1\Models\OptionalLink',
-        'label_download' => '\Nmusco\ShipEngine\v1\Models\LabelDownload',
-        'form_download' => '\Nmusco\ShipEngine\v1\Models\OptionalLink',
-        'status' => '\Nmusco\ShipEngine\v1\Models\BatchStatus'
+        'batch_shipments_url' => 'OptionalLink',
+        'batch_labels_url' => 'OptionalLink',
+        'batch_errors_url' => 'OptionalLink',
+        'label_download' => 'LabelDownload',
+        'form_download' => 'OptionalLink',
+        'status' => 'BatchStatus'
     ];
 
     /**

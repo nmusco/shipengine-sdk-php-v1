@@ -58,7 +58,7 @@ class ListCarriersResponseBody implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carriers' => '\Nmusco\ShipEngine\v1\Models\Carrier[]'
+        'carriers' => 'Carrier[]'
     ];
 
     /**

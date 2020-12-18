@@ -57,7 +57,7 @@ class ShipmentRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment' => '\Nmusco\ShipEngine\v1\Models\AddressValidatingShipment'
+        'shipment' => 'AddressValidatingShipment'
     ];
 
     /**

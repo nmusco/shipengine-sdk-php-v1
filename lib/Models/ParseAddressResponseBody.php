@@ -59,7 +59,7 @@ class ParseAddressResponseBody implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'score' => 'double',
-        'address' => '\Nmusco\ShipEngine\v1\Models\PartialAddress',
+        'address' => 'PartialAddress',
         'entities' => '\Nmusco\ShipEngine\v1\Models\RecognizedEntity[]'
     ];
 

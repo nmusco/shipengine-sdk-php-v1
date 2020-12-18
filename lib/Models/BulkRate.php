@@ -61,8 +61,8 @@ class BulkRate implements ModelInterface, ArrayAccess, \JsonSerializable
         'rate_request_id' => 'string',
         'shipment_id' => 'string',
         'created_at' => '\DateTime',
-        'status' => '\Nmusco\ShipEngine\v1\Models\RateResponseStatus',
-        'errors' => '\Nmusco\ShipEngine\v1\Models\Error[]'
+        'status' => 'RateResponseStatus',
+        'errors' => 'Error[]'
     ];
 
     /**

@@ -59,7 +59,7 @@ class ParseShipmentResponseBody implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'score' => 'double',
-        'shipment' => '\Nmusco\ShipEngine\v1\Models\PartialShipment',
+        'shipment' => 'PartialShipment',
         'entities' => '\Nmusco\ShipEngine\v1\Models\RecognizedEntity[]'
     ];
 

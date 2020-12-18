@@ -75,7 +75,7 @@ class ConnectUpsRequestBody implements ModelInterface, ArrayAccess, \JsonSeriali
         'agree_to_technology_agreement' => 'bool',
         'title' => 'string',
         'address2' => 'string',
-        'invoice' => '\Nmusco\ShipEngine\v1\Models\UpsInvoice'
+        'invoice' => 'UpsInvoice'
     ];
 
     /**

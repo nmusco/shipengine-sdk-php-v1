@@ -58,7 +58,7 @@ class Dimensions implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'unit' => '\Nmusco\ShipEngine\v1\Models\DimensionUnit',
+        'unit' => 'DimensionUnit',
         'length' => 'double',
         'width' => 'double',
         'height' => 'double'

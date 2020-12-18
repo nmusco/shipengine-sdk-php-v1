@@ -58,9 +58,9 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'error_source' => '\Nmusco\ShipEngine\v1\Models\ErrorSource',
-        'error_type' => '\Nmusco\ShipEngine\v1\Models\ErrorType',
-        'error_code' => '\Nmusco\ShipEngine\v1\Models\ErrorCode',
+        'error_source' => 'ErrorSource',
+        'error_type' => 'ErrorType',
+        'error_code' => 'ErrorCode',
         'message' => 'string'
     ];
 

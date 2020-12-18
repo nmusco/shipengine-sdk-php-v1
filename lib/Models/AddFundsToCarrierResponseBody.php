@@ -58,7 +58,7 @@ class AddFundsToCarrierResponseBody implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'balance' => '\Nmusco\ShipEngine\v1\Models\MonetaryValue'
+        'balance' => 'MonetaryValue'
     ];
 
     /**

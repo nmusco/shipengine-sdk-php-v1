@@ -60,12 +60,12 @@ class AdvancedShipmentOptions implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'bill_to_account' => 'string',
         'bill_to_country_code' => 'string',
-        'bill_to_party' => '\Nmusco\ShipEngine\v1\Models\BillToParty',
+        'bill_to_party' => 'BillToParty',
         'bill_to_postal_code' => 'string',
         'contains_alcohol' => 'bool',
         'delivered_duty_paid' => 'bool',
         'dry_ice' => 'bool',
-        'dry_ice_weight' => '\Nmusco\ShipEngine\v1\Models\Weight',
+        'dry_ice_weight' => 'Weight',
         'non_machinable' => 'bool',
         'saturday_delivery' => 'bool',
         'use_ups_ground_freight_pricing' => 'bool',
@@ -73,7 +73,7 @@ class AdvancedShipmentOptions implements ModelInterface, ArrayAccess, \JsonSeria
         'custom_field1' => 'string',
         'custom_field2' => 'string',
         'custom_field3' => 'string',
-        'origin_type' => '\Nmusco\ShipEngine\v1\Models\OriginType',
+        'origin_type' => 'OriginType',
         'collect_on_delivery' => '\Nmusco\ShipEngine\v1\Models\CollectOnDelivery'
     ];
 

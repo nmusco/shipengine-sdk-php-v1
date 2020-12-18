@@ -59,7 +59,7 @@ class ErrorResponseBody implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'request_id' => 'string',
-        'errors' => '\Nmusco\ShipEngine\v1\Models\Error[]'
+        'errors' => 'Error[]'
     ];
 
     /**

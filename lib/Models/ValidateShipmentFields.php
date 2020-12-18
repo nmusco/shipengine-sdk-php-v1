@@ -57,7 +57,7 @@ class ValidateShipmentFields implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'validate_address' => '\Nmusco\ShipEngine\v1\Models\ValidateAddress'
+        'validate_address' => 'ValidateAddress'
     ];
 
     /**

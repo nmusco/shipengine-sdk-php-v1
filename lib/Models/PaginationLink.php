@@ -58,10 +58,10 @@ class PaginationLink implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'first' => '\Nmusco\ShipEngine\v1\Models\Link',
-        'last' => '\Nmusco\ShipEngine\v1\Models\Link',
-        'prev' => '\Nmusco\ShipEngine\v1\Models\OptionalLink',
-        'next' => '\Nmusco\ShipEngine\v1\Models\OptionalLink'
+        'first' => 'Link',
+        'last' => 'Link',
+        'prev' => 'OptionalLink',
+        'next' => 'OptionalLink'
     ];
 
     /**

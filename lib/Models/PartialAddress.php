@@ -68,7 +68,7 @@ class PartialAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'state_province' => 'string',
         'postal_code' => 'string',
         'country_code' => 'string',
-        'address_residential_indicator' => '\Nmusco\ShipEngine\v1\Models\AddressResidentialIndicator'
+        'address_residential_indicator' => 'AddressResidentialIndicator'
     ];
 
     /**

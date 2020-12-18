@@ -61,7 +61,7 @@ class PagedListResponseBody implements ModelInterface, ArrayAccess, \JsonSeriali
         'total' => 'int',
         'page' => 'int',
         'pages' => 'int',
-        'links' => '\Nmusco\ShipEngine\v1\Models\PaginationLink'
+        'links' => 'PaginationLink'
     ];
 
     /**

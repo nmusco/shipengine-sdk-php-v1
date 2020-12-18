@@ -68,9 +68,9 @@ class Carrier implements ModelInterface, ArrayAccess, \JsonSerializable
         'primary' => 'bool',
         'has_multi_package_supporting_services' => 'bool',
         'supports_label_messages' => 'bool',
-        'services' => '\Nmusco\ShipEngine\v1\Models\Service[]',
-        'packages' => '\Nmusco\ShipEngine\v1\Models\PackageType[]',
-        'options' => '\Nmusco\ShipEngine\v1\Models\CarrierAdvancedOption[]'
+        'services' => 'Service[]',
+        'packages' => 'PackageType[]',
+        'options' => 'CarrierAdvancedOption[]'
     ];
 
     /**

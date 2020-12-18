@@ -59,9 +59,9 @@ class FedexAccountSettings implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'nickname' => 'string',
-        'pickup_type' => '\Nmusco\ShipEngine\v1\Models\FedexPickupType',
-        'smart_post_hub' => '\Nmusco\ShipEngine\v1\Models\SmartPostHub',
-        'smart_post_endorsement' => '\Nmusco\ShipEngine\v1\Models\AncillaryServiceEndorsement',
+        'pickup_type' => 'FedexPickupType',
+        'smart_post_hub' => 'SmartPostHub',
+        'smart_post_endorsement' => 'AncillaryServiceEndorsement',
         'is_primary_account' => 'bool'
     ];
 

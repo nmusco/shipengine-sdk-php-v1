@@ -57,7 +57,7 @@ class PaymentAmount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currency' => '\Nmusco\ShipEngine\v1\Models\Currency',
+        'currency' => 'Currency',
         'amount' => 'double'
     ];
 

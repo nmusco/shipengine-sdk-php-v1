@@ -59,7 +59,7 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'value' => 'double',
-        'unit' => '\Nmusco\ShipEngine\v1\Models\WeightUnit'
+        'unit' => 'WeightUnit'
     ];
 
     /**

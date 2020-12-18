@@ -59,9 +59,9 @@ class ProcessBatchRequestBody implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'ship_date' => '\DateTime',
-        'label_layout' => '\Nmusco\ShipEngine\v1\Models\LabelLayout',
-        'label_format' => '\Nmusco\ShipEngine\v1\Models\LabelFormat',
-        'display_scheme' => '\Nmusco\ShipEngine\v1\Models\DisplayScheme'
+        'label_layout' => 'LabelLayout',
+        'label_format' => 'LabelFormat',
+        'display_scheme' => 'DisplayScheme'
     ];
 
     /**

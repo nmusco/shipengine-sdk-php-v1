@@ -66,7 +66,7 @@ class DeprecatedManifest implements ModelInterface, ArrayAccess, \JsonSerializab
         'warehouse_id' => 'string',
         'submission_id' => 'string',
         'carrier_id' => 'string',
-        'manifest_download' => '\Nmusco\ShipEngine\v1\Models\ManifestDownload',
+        'manifest_download' => 'ManifestDownload',
         'label_ids' => 'string[]'
     ];
 

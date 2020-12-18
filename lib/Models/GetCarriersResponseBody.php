@@ -57,9 +57,9 @@ class GetCarriersResponseBody implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carriers' => '\Nmusco\ShipEngine\v1\Models\Carrier[]',
+        'carriers' => 'Carrier[]',
         'request_id' => 'string',
-        'errors' => '\Nmusco\ShipEngine\v1\Models\Error[]'
+        'errors' => 'Error[]'
     ];
 
     /**

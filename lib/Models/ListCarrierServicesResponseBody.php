@@ -58,7 +58,7 @@ class ListCarrierServicesResponseBody implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'services' => '\Nmusco\ShipEngine\v1\Models\Service[]'
+        'services' => 'Service[]'
     ];
 
     /**

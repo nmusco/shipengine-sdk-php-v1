@@ -58,9 +58,9 @@ class AddressValidationResult implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => '\Nmusco\ShipEngine\v1\Models\AddressValidationStatus',
-        'original_address' => '\Nmusco\ShipEngine\v1\Models\Address',
-        'matched_address' => '\Nmusco\ShipEngine\v1\Models\Address',
+        'status' => 'AddressValidationStatus',
+        'original_address' => 'Address',
+        'matched_address' => 'Address',
         'messages' => '\Nmusco\ShipEngine\v1\Models\ResponseMessage[]'
     ];
 

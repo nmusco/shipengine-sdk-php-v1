@@ -58,10 +58,10 @@ class ResponseMessage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'code' => '\Nmusco\ShipEngine\v1\Models\AddressValidationCode',
+        'code' => 'AddressValidationCode',
         'message' => 'string',
-        'type' => '\Nmusco\ShipEngine\v1\Models\AddressValidationMessageType',
-        'detail_code' => '\Nmusco\ShipEngine\v1\Models\AddressValidationDetailCode'
+        'type' => 'AddressValidationMessageType',
+        'detail_code' => 'AddressValidationDetailCode'
     ];
 
     /**

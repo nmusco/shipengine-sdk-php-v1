@@ -61,7 +61,7 @@ class CustomsItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'customs_item_id' => 'string',
         'description' => 'string',
         'quantity' => 'int',
-        'value' => '\Nmusco\ShipEngine\v1\Models\MonetaryValue',
+        'value' => 'MonetaryValue',
         'harmonized_tariff_code' => 'string',
         'country_of_origin' => 'string',
         'unit_of_measure' => 'string',

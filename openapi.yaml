@@ -9255,7 +9255,7 @@ components:
       items:
         allOf:
           - $ref: '#/components/schemas/rate estimate'
-    rate estimate:
+    rate_estimate:
       title: rate estimate
       type: object
       description: A rate estimate

@@ -272,8 +272,8 @@ class ObjectSerializer
         if (strcasecmp(substr($class, -2), '[]') === 0) {
             $data = is_string($data) ? json_decode($data) : $data;            
             $subClass = substr($class, 0, -2);
-            if (true === class_exists("\\{{{modelPackage}}}\\{$subClass}")) {
-                $subClass = "\\{{{modelPackage}}}\\{$subClass}";
+            if (true === class_exists("\\{{modelPackage}}\\{$subClass}")) {
+                $subClass = "\\{{modelPackage}}\\{$subClass}";
             }
 
             $values = [];
@@ -292,8 +292,8 @@ class ObjectSerializer
             if (strrpos($inner, ",") !== false) {
                 $subClass_array = explode(',', $inner, 2);
                 $subClass = $subClass_array[1];
-                if (true === class_exists("\\{{{modelPackage}}}\\{$subClass}")) {
-                    $subClass = "\\{{{modelPackage}}}\\{$subClass}";
+                if (true === class_exists("\\{{modelPackage}}\\{$subClass}")) {
+                    $subClass = "\\{{modelPackage}}\\{$subClass}";
                 }
                 foreach ($data as $key => $value) {
                     $deserialized[$key] = self::deserialize($value, $subClass, null);
@@ -356,8 +356,8 @@ class ObjectSerializer
             return new \SplFileObject($filename, 'r');
         }
 
-        if (true === class_exists("\\{{{modelPackage}}}\\{$class}")) {
-            $class = "\\{{{modelPackage}}}\\{$class}";
+        if (true === class_exists("\\{{modelPackage}}\\{$class}")) {
+            $class = "\\{{modelPackage}}\\{$class}";
         }
         
         if (method_exists($class, 'getAllowableEnumValues')) {
@@ -374,8 +374,8 @@ class ObjectSerializer
         $discriminator = $class::DISCRIMINATOR;
         if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
             $subclass = $data->{$discriminator};
-            if (true === class_exists("\\{{{modelPackage}}}\\{$subclass}")) {
-                $subclass = "\\{{{modelPackage}}}\\{$subclass}";
+            if (true === class_exists("\\{{modelPackage}}\\{$subclass}")) {
+                $subclass = "\\{{modelPackage}}\\{$subclass}";
             }
             if (is_subclass_of($subclass, $class)) {
                 $class = $subclass;

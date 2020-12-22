@@ -282,8 +282,8 @@ class ObjectSerializer
         if (strcasecmp(substr($class, -2), '[]') === 0) {
             $data = is_string($data) ? json_decode($data) : $data;            
             $subClass = substr($class, 0, -2);
-            if (true === class_exists("\\Nmusco\ShipEngine\v1\Models\\{$subClass}")) {
-                $subClass = "\\Nmusco\ShipEngine\v1\Models\\{$subClass}";
+            if (true === class_exists("\\Nmusco\\ShipEngine\\v1\\Models\\{$subClass}")) {
+                $subClass = "\\Nmusco\\ShipEngine\\v1\\Models\\{$subClass}";
             }
 
             $values = [];
@@ -302,8 +302,8 @@ class ObjectSerializer
             if (strrpos($inner, ",") !== false) {
                 $subClass_array = explode(',', $inner, 2);
                 $subClass = $subClass_array[1];
-                if (true === class_exists("\\Nmusco\ShipEngine\v1\Models\\{$subClass}")) {
-                    $subClass = "\\Nmusco\ShipEngine\v1\Models\\{$subClass}";
+                if (true === class_exists("\\Nmusco\\ShipEngine\\v1\\Models\\{$subClass}")) {
+                    $subClass = "\\Nmusco\\ShipEngine\\v1\\Models\\{$subClass}";
                 }
                 foreach ($data as $key => $value) {
                     $deserialized[$key] = self::deserialize($value, $subClass, null);
@@ -366,8 +366,8 @@ class ObjectSerializer
             return new \SplFileObject($filename, 'r');
         }
 
-        if (true === class_exists("\\Nmusco\ShipEngine\v1\Models\\{$class}")) {
-            $class = "\\Nmusco\ShipEngine\v1\Models\\{$class}";
+        if (true === class_exists("\\Nmusco\\ShipEngine\\v1\\Models\\{$class}")) {
+            $class = "\\Nmusco\\ShipEngine\\v1\\Models\\{$class}";
         }
         
         if (method_exists($class, 'getAllowableEnumValues')) {
@@ -384,8 +384,8 @@ class ObjectSerializer
         $discriminator = $class::DISCRIMINATOR;
         if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
             $subclass = $data->{$discriminator};
-            if (true === class_exists("\\Nmusco\ShipEngine\v1\Models\\{$subclass}")) {
-                $subclass = "\\Nmusco\ShipEngine\v1\Models\\{$subclass}";
+            if (true === class_exists("\\Nmusco\\ShipEngine\\v1\\Models\\{$subclass}")) {
+                $subclass = "\\Nmusco\\ShipEngine\\v1\\Models\\{$subclass}";
             }
             if (is_subclass_of($subclass, $class)) {
                 $class = $subclass;

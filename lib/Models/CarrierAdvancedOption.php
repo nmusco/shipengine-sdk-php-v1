@@ -208,10 +208,6 @@ class CarrierAdvancedOption implements ModelInterface, ArrayAccess, \JsonSeriali
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['default_value']) && (mb_strlen($this->container['default_value']) < 1)) {
-            $invalidProperties[] = "invalid value for 'default_value', the character length must be bigger than or equal to 1.";
-        }
-
         if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
             $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
         }
@@ -279,11 +275,6 @@ class CarrierAdvancedOption implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function setDefaultValue($default_value)
     {
-
-        if (!is_null($default_value) && (mb_strlen($default_value) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $default_value when calling CarrierAdvancedOption., must be bigger than or equal to 1.');
-        }
-
         $this->container['default_value'] = $default_value;
 
         return $this;

@@ -5009,7 +5009,7 @@ components:
           description: Name of advanced option
         default_value:
           type: string
-          minLength: 1
+          nullable: true
           readOnly: true
           example: false
           description: Default value of option

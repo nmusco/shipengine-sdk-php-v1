@@ -260,20 +260,8 @@ class PartialAddress implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'phone', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['company_name']) && (mb_strlen($this->container['company_name']) < 1)) {
-            $invalidProperties[] = "invalid value for 'company_name', the character length must be bigger than or equal to 1.";
-        }
-
         if (!is_null($this->container['address_line1']) && (mb_strlen($this->container['address_line1']) < 1)) {
             $invalidProperties[] = "invalid value for 'address_line1', the character length must be bigger than or equal to 1.";
-        }
-
-        if (!is_null($this->container['address_line2']) && (mb_strlen($this->container['address_line2']) < 1)) {
-            $invalidProperties[] = "invalid value for 'address_line2', the character length must be bigger than or equal to 1.";
-        }
-
-        if (!is_null($this->container['address_line3']) && (mb_strlen($this->container['address_line3']) < 1)) {
-            $invalidProperties[] = "invalid value for 'address_line3', the character length must be bigger than or equal to 1.";
         }
 
         if (!is_null($this->container['city_locality']) && (mb_strlen($this->container['city_locality']) < 1)) {
@@ -376,11 +364,6 @@ class PartialAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setCompanyName($company_name)
     {
-
-        if (!is_null($company_name) && (mb_strlen($company_name) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $company_name when calling PartialAddress., must be bigger than or equal to 1.');
-        }
-
         $this->container['company_name'] = $company_name;
 
         return $this;
@@ -434,11 +417,6 @@ class PartialAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setAddressLine2($address_line2)
     {
-
-        if (!is_null($address_line2) && (mb_strlen($address_line2) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $address_line2 when calling PartialAddress., must be bigger than or equal to 1.');
-        }
-
         $this->container['address_line2'] = $address_line2;
 
         return $this;
@@ -463,11 +441,6 @@ class PartialAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setAddressLine3($address_line3)
     {
-
-        if (!is_null($address_line3) && (mb_strlen($address_line3) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $address_line3 when calling PartialAddress., must be bigger than or equal to 1.');
-        }
-
         $this->container['address_line3'] = $address_line3;
 
         return $this;

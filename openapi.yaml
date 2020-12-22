@@ -3711,6 +3711,7 @@ components:
             this phone number varies depending on the country.
         company_name:
           type: string
+          minLength: 1
           nullable: true
           example: The Home Depot
           description: >
@@ -3725,6 +3726,7 @@ components:
             be the only line.  Other addresses may require 2 or 3 lines.
         address_line2:
           type: string
+          minLength: 1
           nullable: true
           example: Unit 408
           description: >
@@ -3732,6 +3734,7 @@ components:
             line may not be needed.
         address_line3:
           type: string
+          minLength: 1
           nullable: true
           example: 'Building #7'
           description: >

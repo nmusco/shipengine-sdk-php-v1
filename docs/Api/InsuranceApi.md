@@ -1,19 +1,20 @@
 # Nmusco\ShipEngine\v1\InsuranceApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addFundsToInsurance**](InsuranceApi.md#addFundsToInsurance) | **PATCH** /v1/insurance/shipsurance/add_funds | Add Funds To Insurance
-[**connectInsurer**](InsuranceApi.md#connectInsurer) | **POST** /v1/connections/insurance/shipsurance | Connect a Shipsurance Account
-[**disconnectInsurer**](InsuranceApi.md#disconnectInsurer) | **DELETE** /v1/connections/insurance/shipsurance | Disconnect a Shipsurance Account
-[**getInsuranceBalance**](InsuranceApi.md#getInsuranceBalance) | **GET** /v1/insurance/shipsurance/balance | Get Insurance Funds Balance
+[**addFundsToInsurance()**](InsuranceApi.md#addFundsToInsurance) | **PATCH** /v1/insurance/shipsurance/add_funds | Add Funds To Insurance
+[**connectInsurer()**](InsuranceApi.md#connectInsurer) | **POST** /v1/connections/insurance/shipsurance | Connect a Shipsurance Account
+[**disconnectInsurer()**](InsuranceApi.md#disconnectInsurer) | **DELETE** /v1/connections/insurance/shipsurance | Disconnect a Shipsurance Account
+[**getInsuranceBalance()**](InsuranceApi.md#getInsuranceBalance) | **GET** /v1/insurance/shipsurance/balance | Get Insurance Funds Balance
 
 
+## `addFundsToInsurance()`
 
-## addFundsToInsurance
-
-> \Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody addFundsToInsurance($add_funds_to_insurance_request_body)
+```php
+addFundsToInsurance($add_funds_to_insurance_request_body): \Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceResponseBody
+```
 
 Add Funds To Insurance
 
@@ -38,7 +39,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\InsuranceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$add_funds_to_insurance_request_body = new \Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody(); // \Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody | 
+$add_funds_to_insurance_request_body = new \Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody(); // \Nmusco\ShipEngine\v1\Models\AddFundsToInsuranceRequestBody
 
 try {
     $result = $apiInstance->addFundsToInsurance($add_funds_to_insurance_request_body);
@@ -46,11 +47,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InsuranceApi->addFundsToInsurance: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -66,17 +65,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `connectInsurer()`
 
-## connectInsurer
-
-> object connectInsurer($connect_insurer_request_body)
+```php
+connectInsurer($connect_insurer_request_body): object
+```
 
 Connect a Shipsurance Account
 
@@ -101,7 +101,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\InsuranceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$connect_insurer_request_body = new \Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody(); // \Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody | 
+$connect_insurer_request_body = new \Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody(); // \Nmusco\ShipEngine\v1\Models\ConnectInsurerRequestBody
 
 try {
     $result = $apiInstance->connectInsurer($connect_insurer_request_body);
@@ -109,11 +109,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InsuranceApi->connectInsurer: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -129,17 +127,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `disconnectInsurer()`
 
-## disconnectInsurer
-
-> object disconnectInsurer()
+```php
+disconnectInsurer(): object
+```
 
 Disconnect a Shipsurance Account
 
@@ -171,7 +170,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InsuranceApi->disconnectInsurer: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -189,16 +187,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getInsuranceBalance()`
 
-## getInsuranceBalance
-
-> \Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody getInsuranceBalance()
+```php
+getInsuranceBalance(): \Nmusco\ShipEngine\v1\Models\GetInsuranceBalanceResponseBody
+```
 
 Get Insurance Funds Balance
 
@@ -230,7 +229,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling InsuranceApi->getInsuranceBalance: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -248,9 +246,8 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

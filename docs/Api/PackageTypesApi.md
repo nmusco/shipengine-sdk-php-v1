@@ -1,20 +1,21 @@
 # Nmusco\ShipEngine\v1\PackageTypesApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPackageType**](PackageTypesApi.md#createPackageType) | **POST** /v1/packages | Create Custom Package Type
-[**deletePackageType**](PackageTypesApi.md#deletePackageType) | **DELETE** /v1/packages/{package_id} | Delete A Custom Package By ID
-[**getPackageTypeById**](PackageTypesApi.md#getPackageTypeById) | **GET** /v1/packages/{package_id} | Get Custom Package Type By ID
-[**listPackageTypes**](PackageTypesApi.md#listPackageTypes) | **GET** /v1/packages | List Custom Package Types
-[**updatePackageType**](PackageTypesApi.md#updatePackageType) | **PUT** /v1/packages/{package_id} | Update Custom Package Type By ID
+[**createPackageType()**](PackageTypesApi.md#createPackageType) | **POST** /v1/packages | Create Custom Package Type
+[**deletePackageType()**](PackageTypesApi.md#deletePackageType) | **DELETE** /v1/packages/{package_id} | Delete A Custom Package By ID
+[**getPackageTypeById()**](PackageTypesApi.md#getPackageTypeById) | **GET** /v1/packages/{package_id} | Get Custom Package Type By ID
+[**listPackageTypes()**](PackageTypesApi.md#listPackageTypes) | **GET** /v1/packages | List Custom Package Types
+[**updatePackageType()**](PackageTypesApi.md#updatePackageType) | **PUT** /v1/packages/{package_id} | Update Custom Package Type By ID
 
 
+## `createPackageType()`
 
-## createPackageType
-
-> \Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody createPackageType($create_package_type_request_body)
+```php
+createPackageType($create_package_type_request_body): \Nmusco\ShipEngine\v1\Models\CreatePackageTypeResponseBody
+```
 
 Create Custom Package Type
 
@@ -39,7 +40,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\PackageTypesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_package_type_request_body = new \Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody | 
+$create_package_type_request_body = new \Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreatePackageTypeRequestBody
 
 try {
     $result = $apiInstance->createPackageType($create_package_type_request_body);
@@ -47,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PackageTypesApi->createPackageType: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -67,17 +66,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deletePackageType()`
 
-## deletePackageType
-
-> string deletePackageType($package_id)
+```php
+deletePackageType($package_id): string
+```
 
 Delete A Custom Package By ID
 
@@ -110,11 +110,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PackageTypesApi->deletePackageType: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -131,16 +129,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getPackageTypeById()`
 
-## getPackageTypeById
-
-> \Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody getPackageTypeById($package_id)
+```php
+getPackageTypeById($package_id): \Nmusco\ShipEngine\v1\Models\GetPackageTypeByIdResponseBody
+```
 
 Get Custom Package Type By ID
 
@@ -173,11 +172,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PackageTypesApi->getPackageTypeById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -194,16 +191,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listPackageTypes()`
 
-## listPackageTypes
-
-> \Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody listPackageTypes()
+```php
+listPackageTypes(): \Nmusco\ShipEngine\v1\Models\ListPackageTypesResponseBody
+```
 
 List Custom Package Types
 
@@ -235,7 +233,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PackageTypesApi->listPackageTypes: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -253,16 +250,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updatePackageType()`
 
-## updatePackageType
-
-> string updatePackageType($package_id, $update_package_type_request_body)
+```php
+updatePackageType($package_id, $update_package_type_request_body): string
+```
 
 Update Custom Package Type By ID
 
@@ -288,7 +286,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\PackageTypesApi(
     $config
 );
 $package_id = 'package_id_example'; // string | Package ID
-$update_package_type_request_body = new \Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody | 
+$update_package_type_request_body = new \Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdatePackageTypeRequestBody
 
 try {
     $result = $apiInstance->updatePackageType($package_id, $update_package_type_request_body);
@@ -296,11 +294,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PackageTypesApi->updatePackageType: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -317,10 +313,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: text/plain, application/json
+- **Content-Type**: `application/json`
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

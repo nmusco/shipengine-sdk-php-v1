@@ -1,20 +1,21 @@
 # Nmusco\ShipEngine\v1\WebhooksApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createWebhook**](WebhooksApi.md#createWebhook) | **POST** /v1/environment/webhooks | Create a Webhook
-[**deleteWebhook**](WebhooksApi.md#deleteWebhook) | **DELETE** /v1/environment/webhooks/{webhook_id} | Delete Webhook By ID
-[**getWebhookById**](WebhooksApi.md#getWebhookById) | **GET** /v1/environment/webhooks/{webhook_id} | Get Webhook By ID
-[**listWebhooks**](WebhooksApi.md#listWebhooks) | **GET** /v1/environment/webhooks | List Webhooks
-[**updateWebhook**](WebhooksApi.md#updateWebhook) | **PUT** /v1/environment/webhooks/{webhook_id} | Update a Webhook
+[**createWebhook()**](WebhooksApi.md#createWebhook) | **POST** /v1/environment/webhooks | Create a Webhook
+[**deleteWebhook()**](WebhooksApi.md#deleteWebhook) | **DELETE** /v1/environment/webhooks/{webhook_id} | Delete Webhook By ID
+[**getWebhookById()**](WebhooksApi.md#getWebhookById) | **GET** /v1/environment/webhooks/{webhook_id} | Get Webhook By ID
+[**listWebhooks()**](WebhooksApi.md#listWebhooks) | **GET** /v1/environment/webhooks | List Webhooks
+[**updateWebhook()**](WebhooksApi.md#updateWebhook) | **PUT** /v1/environment/webhooks/{webhook_id} | Update a Webhook
 
 
+## `createWebhook()`
 
-## createWebhook
-
-> \Nmusco\ShipEngine\v1\Models\CreateWebhookResponseBody createWebhook($create_webhook_request_body)
+```php
+createWebhook($create_webhook_request_body): \Nmusco\ShipEngine\v1\Models\CreateWebhookResponseBody
+```
 
 Create a Webhook
 
@@ -39,7 +40,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_webhook_request_body = new \Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody | 
+$create_webhook_request_body = new \Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateWebhookRequestBody
 
 try {
     $result = $apiInstance->createWebhook($create_webhook_request_body);
@@ -47,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WebhooksApi->createWebhook: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -67,17 +66,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteWebhook()`
 
-## deleteWebhook
-
-> string deleteWebhook($webhook_id)
+```php
+deleteWebhook($webhook_id): string
+```
 
 Delete Webhook By ID
 
@@ -110,11 +110,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WebhooksApi->deleteWebhook: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -131,16 +129,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getWebhookById()`
 
-## getWebhookById
-
-> \Nmusco\ShipEngine\v1\Models\GetWebhookByIdResponseBody getWebhookById($webhook_id)
+```php
+getWebhookById($webhook_id): \Nmusco\ShipEngine\v1\Models\GetWebhookByIdResponseBody
+```
 
 Get Webhook By ID
 
@@ -173,11 +172,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WebhooksApi->getWebhookById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -194,16 +191,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listWebhooks()`
 
-## listWebhooks
-
-> Webhook[] listWebhooks()
+```php
+listWebhooks(): Webhook[]
+```
 
 List Webhooks
 
@@ -235,7 +233,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WebhooksApi->listWebhooks: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -253,16 +250,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateWebhook()`
 
-## updateWebhook
-
-> string updateWebhook($webhook_id, $update_webhook_request_body)
+```php
+updateWebhook($webhook_id, $update_webhook_request_body): string
+```
 
 Update a Webhook
 
@@ -288,7 +286,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WebhooksApi(
     $config
 );
 $webhook_id = 'webhook_id_example'; // string | Webhook ID
-$update_webhook_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody | 
+$update_webhook_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateWebhookRequestBody
 
 try {
     $result = $apiInstance->updateWebhook($webhook_id, $update_webhook_request_body);
@@ -296,11 +294,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WebhooksApi->updateWebhook: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -317,10 +313,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: text/plain, application/json
+- **Content-Type**: `application/json`
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

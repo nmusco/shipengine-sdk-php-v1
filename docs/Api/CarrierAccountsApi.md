@@ -1,19 +1,20 @@
 # Nmusco\ShipEngine\v1\CarrierAccountsApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**connectCarrier**](CarrierAccountsApi.md#connectCarrier) | **POST** /v1/connections/carriers/{carrier_name} | Connect a carrier account
-[**disconnectCarrier**](CarrierAccountsApi.md#disconnectCarrier) | **DELETE** /v1/connections/carriers/{carrier_name}/{carrier_id} | Disconnect a carrier
-[**getCarrierSettings**](CarrierAccountsApi.md#getCarrierSettings) | **GET** /v1/connections/carriers/{carrier_name}/{carrier_id}/settings | Get carrier settings
-[**updateCarrierSettings**](CarrierAccountsApi.md#updateCarrierSettings) | **PUT** /v1/connections/carriers/{carrier_name}/{carrier_id}/settings | Update carrier settings
+[**connectCarrier()**](CarrierAccountsApi.md#connectCarrier) | **POST** /v1/connections/carriers/{carrier_name} | Connect a carrier account
+[**disconnectCarrier()**](CarrierAccountsApi.md#disconnectCarrier) | **DELETE** /v1/connections/carriers/{carrier_name}/{carrier_id} | Disconnect a carrier
+[**getCarrierSettings()**](CarrierAccountsApi.md#getCarrierSettings) | **GET** /v1/connections/carriers/{carrier_name}/{carrier_id}/settings | Get carrier settings
+[**updateCarrierSettings()**](CarrierAccountsApi.md#updateCarrierSettings) | **PUT** /v1/connections/carriers/{carrier_name}/{carrier_id}/settings | Update carrier settings
 
 
+## `connectCarrier()`
 
-## connectCarrier
-
-> \Nmusco\ShipEngine\v1\Models\ConnectCarrierResponseBody connectCarrier($carrier_name, $connect_carrier_request_body)
+```php
+connectCarrier($carrier_name, $connect_carrier_request_body): \Nmusco\ShipEngine\v1\Models\ConnectCarrierResponseBody
+```
 
 Connect a carrier account
 
@@ -39,7 +40,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarrierAccountsApi(
     $config
 );
 $carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Models\CarrierName | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
-$connect_carrier_request_body = new \Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody | 
+$connect_carrier_request_body = new \Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Models\ConnectCarrierRequestBody
 
 try {
     $result = $apiInstance->connectCarrier($carrier_name, $connect_carrier_request_body);
@@ -47,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarrierAccountsApi->connectCarrier: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -68,17 +67,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `disconnectCarrier()`
 
-## disconnectCarrier
-
-> string disconnectCarrier($carrier_name, $carrier_id)
+```php
+disconnectCarrier($carrier_name, $carrier_id): string
+```
 
 Disconnect a carrier
 
@@ -112,11 +112,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarrierAccountsApi->disconnectCarrier: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -134,16 +132,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCarrierSettings()`
 
-## getCarrierSettings
-
-> \Nmusco\ShipEngine\v1\Models\GetCarrierSettingsResponseBody getCarrierSettings($carrier_name, $carrier_id)
+```php
+getCarrierSettings($carrier_name, $carrier_id): \Nmusco\ShipEngine\v1\Models\GetCarrierSettingsResponseBody
+```
 
 Get carrier settings
 
@@ -177,11 +176,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarrierAccountsApi->getCarrierSettings: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -199,16 +196,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateCarrierSettings()`
 
-## updateCarrierSettings
-
-> string updateCarrierSettings($carrier_name, $carrier_id, $update_carrier_settings_request_body)
+```php
+updateCarrierSettings($carrier_name, $carrier_id, $update_carrier_settings_request_body): string
+```
 
 Update carrier settings
 
@@ -235,7 +233,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarrierAccountsApi(
 );
 $carrier_name = dhl_express; // \Nmusco\ShipEngine\v1\Models\CarrierNameWithSettings | The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
 $carrier_id = se-28529731; // string | Carrier ID
-$update_carrier_settings_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody | 
+$update_carrier_settings_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateCarrierSettingsRequestBody
 
 try {
     $result = $apiInstance->updateCarrierSettings($carrier_name, $carrier_id, $update_carrier_settings_request_body);
@@ -243,11 +241,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarrierAccountsApi->updateCarrierSettings: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -265,10 +261,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: text/plain, application/json
+- **Content-Type**: `application/json`
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,21 +1,22 @@
 # Nmusco\ShipEngine\v1\CarriersApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addFundsToCarrier**](CarriersApi.md#addFundsToCarrier) | **PUT** /v1/carriers/{carrier_id}/add_funds | Add Funds To Carrier
-[**getCarrierById**](CarriersApi.md#getCarrierById) | **GET** /v1/carriers/{carrier_id} | Get Carrier By ID
-[**getCarrierOptions**](CarriersApi.md#getCarrierOptions) | **GET** /v1/carriers/{carrier_id}/options | Get Carrier Options
-[**listCarrierPackageTypes**](CarriersApi.md#listCarrierPackageTypes) | **GET** /v1/carriers/{carrier_id}/packages | List Carrier Package Types
-[**listCarrierServices**](CarriersApi.md#listCarrierServices) | **GET** /v1/carriers/{carrier_id}/services | List Carrier Services
-[**listCarriers**](CarriersApi.md#listCarriers) | **GET** /v1/carriers | List Carriers
+[**addFundsToCarrier()**](CarriersApi.md#addFundsToCarrier) | **PUT** /v1/carriers/{carrier_id}/add_funds | Add Funds To Carrier
+[**getCarrierById()**](CarriersApi.md#getCarrierById) | **GET** /v1/carriers/{carrier_id} | Get Carrier By ID
+[**getCarrierOptions()**](CarriersApi.md#getCarrierOptions) | **GET** /v1/carriers/{carrier_id}/options | Get Carrier Options
+[**listCarrierPackageTypes()**](CarriersApi.md#listCarrierPackageTypes) | **GET** /v1/carriers/{carrier_id}/packages | List Carrier Package Types
+[**listCarrierServices()**](CarriersApi.md#listCarrierServices) | **GET** /v1/carriers/{carrier_id}/services | List Carrier Services
+[**listCarriers()**](CarriersApi.md#listCarriers) | **GET** /v1/carriers | List Carriers
 
 
+## `addFundsToCarrier()`
 
-## addFundsToCarrier
-
-> \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierResponseBody addFundsToCarrier($carrier_id, $add_funds_to_carrier_request_body)
+```php
+addFundsToCarrier($carrier_id, $add_funds_to_carrier_request_body): \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierResponseBody
+```
 
 Add Funds To Carrier
 
@@ -41,7 +42,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\CarriersApi(
     $config
 );
 $carrier_id = se-28529731; // string | Carrier ID
-$add_funds_to_carrier_request_body = new \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody | 
+$add_funds_to_carrier_request_body = new \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody(); // \Nmusco\ShipEngine\v1\Models\AddFundsToCarrierRequestBody
 
 try {
     $result = $apiInstance->addFundsToCarrier($carrier_id, $add_funds_to_carrier_request_body);
@@ -49,11 +50,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarriersApi->addFundsToCarrier: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -70,17 +69,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCarrierById()`
 
-## getCarrierById
-
-> \Nmusco\ShipEngine\v1\Models\GetCarrierByIdResponseBody getCarrierById($carrier_id)
+```php
+getCarrierById($carrier_id): \Nmusco\ShipEngine\v1\Models\GetCarrierByIdResponseBody
+```
 
 Get Carrier By ID
 
@@ -113,11 +113,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarriersApi->getCarrierById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -134,16 +132,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCarrierOptions()`
 
-## getCarrierOptions
-
-> \Nmusco\ShipEngine\v1\Models\GetCarrierOptionsResponseBody getCarrierOptions($carrier_id)
+```php
+getCarrierOptions($carrier_id): \Nmusco\ShipEngine\v1\Models\GetCarrierOptionsResponseBody
+```
 
 Get Carrier Options
 
@@ -176,11 +175,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarriersApi->getCarrierOptions: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -197,16 +194,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listCarrierPackageTypes()`
 
-## listCarrierPackageTypes
-
-> \Nmusco\ShipEngine\v1\Models\ListCarrierPackageTypesResponseBody listCarrierPackageTypes($carrier_id)
+```php
+listCarrierPackageTypes($carrier_id): \Nmusco\ShipEngine\v1\Models\ListCarrierPackageTypesResponseBody
+```
 
 List Carrier Package Types
 
@@ -239,11 +237,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarriersApi->listCarrierPackageTypes: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -260,16 +256,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listCarrierServices()`
 
-## listCarrierServices
-
-> \Nmusco\ShipEngine\v1\Models\ListCarrierServicesResponseBody listCarrierServices($carrier_id)
+```php
+listCarrierServices($carrier_id): \Nmusco\ShipEngine\v1\Models\ListCarrierServicesResponseBody
+```
 
 List Carrier Services
 
@@ -302,11 +299,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarriersApi->listCarrierServices: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -323,16 +318,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listCarriers()`
 
-## listCarriers
-
-> \Nmusco\ShipEngine\v1\Models\GetCarriersResponseBody listCarriers()
+```php
+listCarriers(): \Nmusco\ShipEngine\v1\Models\GetCarriersResponseBody
+```
 
 List Carriers
 
@@ -364,7 +360,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CarriersApi->listCarriers: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -382,9 +377,8 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

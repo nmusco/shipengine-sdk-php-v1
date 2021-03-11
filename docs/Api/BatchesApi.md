@@ -1,25 +1,26 @@
 # Nmusco\ShipEngine\v1\BatchesApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addToBatch**](BatchesApi.md#addToBatch) | **POST** /v1/batches/{batch_id}/add | Add to a Batch
-[**createBatch**](BatchesApi.md#createBatch) | **POST** /v1/batches | Create A Batch
-[**deleteBatch**](BatchesApi.md#deleteBatch) | **DELETE** /v1/batches/{batch_id} | Delete Batch By Id
-[**getBatchByExternalId**](BatchesApi.md#getBatchByExternalId) | **GET** /v1/batches/external_batch_id/{external_batch_id} | Get Batch By External ID
-[**getBatchById**](BatchesApi.md#getBatchById) | **GET** /v1/batches/{batch_id} | Get Batch By ID
-[**listBatchErrors**](BatchesApi.md#listBatchErrors) | **GET** /v1/batches/{batch_id}/errors | Get Batch Errors
-[**listBatches**](BatchesApi.md#listBatches) | **GET** /v1/batches | List Batches
-[**processBatch**](BatchesApi.md#processBatch) | **POST** /v1/batches/{batch_id}/process/labels | Process Batch ID Labels
-[**removeFromBatch**](BatchesApi.md#removeFromBatch) | **POST** /v1/batches/{batch_id}/remove | Remove From Batch
-[**updateBatch**](BatchesApi.md#updateBatch) | **PUT** /v1/batches/{batch_id} | Update Batch By Id
+[**addToBatch()**](BatchesApi.md#addToBatch) | **POST** /v1/batches/{batch_id}/add | Add to a Batch
+[**createBatch()**](BatchesApi.md#createBatch) | **POST** /v1/batches | Create A Batch
+[**deleteBatch()**](BatchesApi.md#deleteBatch) | **DELETE** /v1/batches/{batch_id} | Delete Batch By Id
+[**getBatchByExternalId()**](BatchesApi.md#getBatchByExternalId) | **GET** /v1/batches/external_batch_id/{external_batch_id} | Get Batch By External ID
+[**getBatchById()**](BatchesApi.md#getBatchById) | **GET** /v1/batches/{batch_id} | Get Batch By ID
+[**listBatchErrors()**](BatchesApi.md#listBatchErrors) | **GET** /v1/batches/{batch_id}/errors | Get Batch Errors
+[**listBatches()**](BatchesApi.md#listBatches) | **GET** /v1/batches | List Batches
+[**processBatch()**](BatchesApi.md#processBatch) | **POST** /v1/batches/{batch_id}/process/labels | Process Batch ID Labels
+[**removeFromBatch()**](BatchesApi.md#removeFromBatch) | **POST** /v1/batches/{batch_id}/remove | Remove From Batch
+[**updateBatch()**](BatchesApi.md#updateBatch) | **PUT** /v1/batches/{batch_id} | Update Batch By Id
 
 
+## `addToBatch()`
 
-## addToBatch
-
-> string addToBatch($batch_id, $add_to_batch_request_body)
+```php
+addToBatch($batch_id, $add_to_batch_request_body): string
+```
 
 Add to a Batch
 
@@ -45,7 +46,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     $config
 );
 $batch_id = 'batch_id_example'; // string | Batch ID
-$add_to_batch_request_body = new \Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody | 
+$add_to_batch_request_body = new \Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\AddToBatchRequestBody
 
 try {
     $result = $apiInstance->addToBatch($batch_id, $add_to_batch_request_body);
@@ -53,11 +54,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->addToBatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -74,17 +73,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: text/plain, application/json
+- **Content-Type**: `application/json`
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createBatch()`
 
-## createBatch
-
-> \Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody createBatch($create_batch_request_body)
+```php
+createBatch($create_batch_request_body): \Nmusco\ShipEngine\v1\Models\CreateBatchResponseBody
+```
 
 Create A Batch
 
@@ -109,7 +109,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_batch_request_body = new \Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody | 
+$create_batch_request_body = new \Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateBatchRequestBody
 
 try {
     $result = $apiInstance->createBatch($create_batch_request_body);
@@ -117,11 +117,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->createBatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -137,17 +135,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteBatch()`
 
-## deleteBatch
-
-> string deleteBatch($batch_id)
+```php
+deleteBatch($batch_id): string
+```
 
 Delete Batch By Id
 
@@ -180,11 +179,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->deleteBatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -201,16 +198,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getBatchByExternalId()`
 
-## getBatchByExternalId
-
-> \Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody getBatchByExternalId($external_batch_id)
+```php
+getBatchByExternalId($external_batch_id): \Nmusco\ShipEngine\v1\Models\GetBatchByExternalIdResponseBody
+```
 
 Get Batch By External ID
 
@@ -235,7 +233,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$external_batch_id = 13553d7f-3c87-4771-bae1-c49bacef11cb; // string | 
+$external_batch_id = 13553d7f-3c87-4771-bae1-c49bacef11cb; // string
 
 try {
     $result = $apiInstance->getBatchByExternalId($external_batch_id);
@@ -243,11 +241,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->getBatchByExternalId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -264,16 +260,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getBatchById()`
 
-## getBatchById
-
-> \Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody getBatchById($batch_id)
+```php
+getBatchById($batch_id): \Nmusco\ShipEngine\v1\Models\GetBatchByIdResponseBody
+```
 
 Get Batch By ID
 
@@ -306,11 +303,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->getBatchById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -327,16 +322,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listBatchErrors()`
 
-## listBatchErrors
-
-> \Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody listBatchErrors($batch_id, $page, $pagesize)
+```php
+listBatchErrors($batch_id, $page, $pagesize): \Nmusco\ShipEngine\v1\Models\ListBatchErrorsResponseBody
+```
 
 Get Batch Errors
 
@@ -363,7 +359,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
 );
 $batch_id = 'batch_id_example'; // string | Batch ID
 $page = 2; // int | Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
-$pagesize = 56; // int | 
+$pagesize = 56; // int
 
 try {
     $result = $apiInstance->listBatchErrors($batch_id, $page, $pagesize);
@@ -371,11 +367,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->listBatchErrors: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -394,16 +388,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listBatches()`
 
-## listBatches
-
-> \Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody listBatches($status, $page, $page_size, $sort_dir, $batch_number, $sort_by)
+```php
+listBatches($status, $page, $page_size, $sort_dir, $batch_number, $sort_by): \Nmusco\ShipEngine\v1\Models\ListBatchesResponseBody
+```
 
 List Batches
 
@@ -428,12 +423,12 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$status = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\BatchStatus(); // \Nmusco\ShipEngine\v1\Models\BatchStatus | 
+$status = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\BatchStatus(); // \Nmusco\ShipEngine\v1\Models\BatchStatus
 $page = 2; // int | Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
 $page_size = 50; // int | The number of results to return per response.
 $sort_dir = new \Nmusco\ShipEngine\v1\Models\SortDir(); // SortDir | Controls the sort order of the query.
 $batch_number = 'batch_number_example'; // string | Batch Number
-$sort_by = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\BatchesSortBy(); // \Nmusco\ShipEngine\v1\Models\BatchesSortBy | 
+$sort_by = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\BatchesSortBy(); // \Nmusco\ShipEngine\v1\Models\BatchesSortBy
 
 try {
     $result = $apiInstance->listBatches($status, $page, $page_size, $sort_dir, $batch_number, $sort_by);
@@ -441,11 +436,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->listBatches: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -467,16 +460,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `processBatch()`
 
-## processBatch
-
-> string processBatch($batch_id, $process_batch_request_body)
+```php
+processBatch($batch_id, $process_batch_request_body): string
+```
 
 Process Batch ID Labels
 
@@ -502,7 +496,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     $config
 );
 $batch_id = 'batch_id_example'; // string | Batch ID
-$process_batch_request_body = new \Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody | 
+$process_batch_request_body = new \Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\ProcessBatchRequestBody
 
 try {
     $result = $apiInstance->processBatch($batch_id, $process_batch_request_body);
@@ -510,11 +504,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->processBatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -531,17 +523,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: text/plain, application/json
+- **Content-Type**: `application/json`
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `removeFromBatch()`
 
-## removeFromBatch
-
-> string removeFromBatch($batch_id, $remove_from_batch_request_body)
+```php
+removeFromBatch($batch_id, $remove_from_batch_request_body): string
+```
 
 Remove From Batch
 
@@ -567,7 +560,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\BatchesApi(
     $config
 );
 $batch_id = 'batch_id_example'; // string | Batch ID
-$remove_from_batch_request_body = new \Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody | 
+$remove_from_batch_request_body = new \Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody(); // \Nmusco\ShipEngine\v1\Models\RemoveFromBatchRequestBody
 
 try {
     $result = $apiInstance->removeFromBatch($batch_id, $remove_from_batch_request_body);
@@ -575,11 +568,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->removeFromBatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -596,17 +587,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: text/plain, application/json
+- **Content-Type**: `application/json`
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateBatch()`
 
-## updateBatch
-
-> string updateBatch($batch_id)
+```php
+updateBatch($batch_id): string
+```
 
 Update Batch By Id
 
@@ -639,11 +631,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling BatchesApi->updateBatch: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -660,9 +650,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

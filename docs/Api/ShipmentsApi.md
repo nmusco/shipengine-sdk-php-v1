@@ -1,26 +1,27 @@
 # Nmusco\ShipEngine\v1\ShipmentsApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelShipments**](ShipmentsApi.md#cancelShipments) | **PUT** /v1/shipments/{shipment_id}/cancel | Cancel a Shipment
-[**createShipments**](ShipmentsApi.md#createShipments) | **POST** /v1/shipments | Create Shipments
-[**getShipmentByExternalId**](ShipmentsApi.md#getShipmentByExternalId) | **GET** /v1/shipments/external_shipment_id/{external_shipment_id} | Get Shipment By External ID
-[**getShipmentById**](ShipmentsApi.md#getShipmentById) | **GET** /v1/shipments/{shipment_id} | Get Shipment By ID
-[**listShipmentErrors**](ShipmentsApi.md#listShipmentErrors) | **GET** /v1/shipments/{shipment_id}/errors | Get Shipment Errors
-[**listShipmentRates**](ShipmentsApi.md#listShipmentRates) | **GET** /v1/shipments/{shipment_id}/rates | Get Shipment Rates
-[**listShipments**](ShipmentsApi.md#listShipments) | **GET** /v1/shipments | List Shipments
-[**parseShipment**](ShipmentsApi.md#parseShipment) | **PUT** /v1/shipments/recognize | Parse shipping info
-[**tagShipment**](ShipmentsApi.md#tagShipment) | **POST** /v1/shipments/{shipment_id}/tags/{tag_name} | Add Tag to Shipment
-[**untagShipment**](ShipmentsApi.md#untagShipment) | **DELETE** /v1/shipments/{shipment_id}/tags/{tag_name} | Remove Tag from Shipment
-[**updateShipment**](ShipmentsApi.md#updateShipment) | **PUT** /v1/shipments/{shipment_id} | Update Shipment By ID
+[**cancelShipments()**](ShipmentsApi.md#cancelShipments) | **PUT** /v1/shipments/{shipment_id}/cancel | Cancel a Shipment
+[**createShipments()**](ShipmentsApi.md#createShipments) | **POST** /v1/shipments | Create Shipments
+[**getShipmentByExternalId()**](ShipmentsApi.md#getShipmentByExternalId) | **GET** /v1/shipments/external_shipment_id/{external_shipment_id} | Get Shipment By External ID
+[**getShipmentById()**](ShipmentsApi.md#getShipmentById) | **GET** /v1/shipments/{shipment_id} | Get Shipment By ID
+[**listShipmentErrors()**](ShipmentsApi.md#listShipmentErrors) | **GET** /v1/shipments/{shipment_id}/errors | Get Shipment Errors
+[**listShipmentRates()**](ShipmentsApi.md#listShipmentRates) | **GET** /v1/shipments/{shipment_id}/rates | Get Shipment Rates
+[**listShipments()**](ShipmentsApi.md#listShipments) | **GET** /v1/shipments | List Shipments
+[**parseShipment()**](ShipmentsApi.md#parseShipment) | **PUT** /v1/shipments/recognize | Parse shipping info
+[**tagShipment()**](ShipmentsApi.md#tagShipment) | **POST** /v1/shipments/{shipment_id}/tags/{tag_name} | Add Tag to Shipment
+[**untagShipment()**](ShipmentsApi.md#untagShipment) | **DELETE** /v1/shipments/{shipment_id}/tags/{tag_name} | Remove Tag from Shipment
+[**updateShipment()**](ShipmentsApi.md#updateShipment) | **PUT** /v1/shipments/{shipment_id} | Update Shipment By ID
 
 
+## `cancelShipments()`
 
-## cancelShipments
-
-> string cancelShipments($shipment_id)
+```php
+cancelShipments($shipment_id): string
+```
 
 Cancel a Shipment
 
@@ -53,11 +54,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->cancelShipments: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -74,16 +73,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createShipments()`
 
-## createShipments
-
-> \Nmusco\ShipEngine\v1\Models\CreateShipmentsResponseBody createShipments($create_shipments_request_body)
+```php
+createShipments($create_shipments_request_body): \Nmusco\ShipEngine\v1\Models\CreateShipmentsResponseBody
+```
 
 Create Shipments
 
@@ -108,7 +108,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_shipments_request_body = new \Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody | 
+$create_shipments_request_body = new \Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateShipmentsRequestBody
 
 try {
     $result = $apiInstance->createShipments($create_shipments_request_body);
@@ -116,11 +116,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->createShipments: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -136,17 +134,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getShipmentByExternalId()`
 
-## getShipmentByExternalId
-
-> \Nmusco\ShipEngine\v1\Models\GetShipmentByExternalIdResponseBody getShipmentByExternalId($external_shipment_id)
+```php
+getShipmentByExternalId($external_shipment_id): \Nmusco\ShipEngine\v1\Models\GetShipmentByExternalIdResponseBody
+```
 
 Get Shipment By External ID
 
@@ -171,7 +170,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$external_shipment_id = 0bcb569d-1727-4ff9-ab49-b2fec0cee5ae; // string | 
+$external_shipment_id = 0bcb569d-1727-4ff9-ab49-b2fec0cee5ae; // string
 
 try {
     $result = $apiInstance->getShipmentByExternalId($external_shipment_id);
@@ -179,11 +178,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->getShipmentByExternalId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -200,16 +197,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getShipmentById()`
 
-## getShipmentById
-
-> \Nmusco\ShipEngine\v1\Models\GetShipmentByIdResponseBody getShipmentById($shipment_id)
+```php
+getShipmentById($shipment_id): \Nmusco\ShipEngine\v1\Models\GetShipmentByIdResponseBody
+```
 
 Get Shipment By ID
 
@@ -242,11 +240,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->getShipmentById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -263,16 +259,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listShipmentErrors()`
 
-## listShipmentErrors
-
-> \Nmusco\ShipEngine\v1\Models\ListShipmentErrorsResponseBody listShipmentErrors($shipment_id, $page, $pagesize)
+```php
+listShipmentErrors($shipment_id, $page, $pagesize): \Nmusco\ShipEngine\v1\Models\ListShipmentErrorsResponseBody
+```
 
 Get Shipment Errors
 
@@ -299,7 +296,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
 );
 $shipment_id = 'shipment_id_example'; // string | Shipment ID
 $page = 2; // int | Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
-$pagesize = 56; // int | 
+$pagesize = 56; // int
 
 try {
     $result = $apiInstance->listShipmentErrors($shipment_id, $page, $pagesize);
@@ -307,11 +304,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->listShipmentErrors: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -330,16 +325,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listShipmentRates()`
 
-## listShipmentRates
-
-> \Nmusco\ShipEngine\v1\Models\ListShipmentRatesResponseBody listShipmentRates($shipment_id, $created_at_start)
+```php
+listShipmentRates($shipment_id, $created_at_start): \Nmusco\ShipEngine\v1\Models\ListShipmentRatesResponseBody
+```
 
 Get Shipment Rates
 
@@ -373,11 +369,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->listShipmentRates: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -395,16 +389,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listShipments()`
 
-## listShipments
-
-> \Nmusco\ShipEngine\v1\Models\ListShipmentsResponseBody listShipments($shipment_status, $batch_id, $tag, $created_at_start, $created_at_end, $modified_at_start, $modified_at_end, $page, $page_size, $sales_order_id, $sort_dir, $sort_by)
+```php
+listShipments($shipment_status, $batch_id, $tag, $created_at_start, $created_at_end, $modified_at_start, $modified_at_end, $page, $page_size, $sales_order_id, $sort_dir, $sort_by): \Nmusco\ShipEngine\v1\Models\ListShipmentsResponseBody
+```
 
 List Shipments
 
@@ -429,7 +424,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shipment_status = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\ShipmentStatus(); // \Nmusco\ShipEngine\v1\Models\ShipmentStatus | 
+$shipment_status = new \Nmusco\ShipEngine\v1\Models\\Nmusco\ShipEngine\v1\Models\ShipmentStatus(); // \Nmusco\ShipEngine\v1\Models\ShipmentStatus
 $batch_id = 'batch_id_example'; // string | Batch ID
 $tag = Letters_to_santa; // string | Search for shipments based on the custom tag added to the shipment object
 $created_at_start = 2019-03-12T19:24:13.657Z; // \DateTime | Used to create a filter for when a resource was created (ex. A shipment that was created after a certain time)
@@ -440,7 +435,7 @@ $page = 2; // int | Return a specific page of results. Defaults to the first pag
 $page_size = 50; // int | The number of results to return per response.
 $sales_order_id = 'sales_order_id_example'; // string | Sales Order ID
 $sort_dir = new \Nmusco\ShipEngine\v1\Models\SortDir(); // SortDir | Controls the sort order of the query.
-$sort_by = modified_at; // \Nmusco\ShipEngine\v1\Models\ShipmentsSortBy | 
+$sort_by = modified_at; // \Nmusco\ShipEngine\v1\Models\ShipmentsSortBy
 
 try {
     $result = $apiInstance->listShipments($shipment_status, $batch_id, $tag, $created_at_start, $created_at_end, $modified_at_start, $modified_at_end, $page, $page_size, $sales_order_id, $sort_dir, $sort_by);
@@ -448,11 +443,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->listShipments: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -480,16 +473,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `parseShipment()`
 
-## parseShipment
-
-> \Nmusco\ShipEngine\v1\Models\ParseShipmentResponseBody parseShipment($parse_shipment_request_body)
+```php
+parseShipment($parse_shipment_request_body): \Nmusco\ShipEngine\v1\Models\ParseShipmentResponseBody
+```
 
 Parse shipping info
 
@@ -522,11 +516,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->parseShipment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -542,17 +534,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `tagShipment()`
 
-## tagShipment
-
-> \Nmusco\ShipEngine\v1\Models\TagShipmentResponseBody tagShipment($shipment_id, $tag_name)
+```php
+tagShipment($shipment_id, $tag_name): \Nmusco\ShipEngine\v1\Models\TagShipmentResponseBody
+```
 
 Add Tag to Shipment
 
@@ -578,7 +571,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     $config
 );
 $shipment_id = 'shipment_id_example'; // string | Shipment ID
-$tag_name = 'tag_name_example'; // string | 
+$tag_name = 'tag_name_example'; // string
 
 try {
     $result = $apiInstance->tagShipment($shipment_id, $tag_name);
@@ -586,11 +579,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->tagShipment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -608,16 +599,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `untagShipment()`
 
-## untagShipment
-
-> string untagShipment($shipment_id, $tag_name)
+```php
+untagShipment($shipment_id, $tag_name): string
+```
 
 Remove Tag from Shipment
 
@@ -643,7 +635,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     $config
 );
 $shipment_id = 'shipment_id_example'; // string | Shipment ID
-$tag_name = 'tag_name_example'; // string | 
+$tag_name = 'tag_name_example'; // string
 
 try {
     $result = $apiInstance->untagShipment($shipment_id, $tag_name);
@@ -651,11 +643,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->untagShipment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -673,16 +663,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateShipment()`
 
-## updateShipment
-
-> \Nmusco\ShipEngine\v1\Models\UpdateShipmentResponseBody updateShipment($shipment_id, $update_shipment_request_body)
+```php
+updateShipment($shipment_id, $update_shipment_request_body): \Nmusco\ShipEngine\v1\Models\UpdateShipmentResponseBody
+```
 
 Update Shipment By ID
 
@@ -708,7 +699,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ShipmentsApi(
     $config
 );
 $shipment_id = 'shipment_id_example'; // string | Shipment ID
-$update_shipment_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody | 
+$update_shipment_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateShipmentRequestBody
 
 try {
     $result = $apiInstance->updateShipment($shipment_id, $update_shipment_request_body);
@@ -716,11 +707,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->updateShipment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -737,10 +726,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

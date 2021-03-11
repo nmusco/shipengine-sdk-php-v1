@@ -1,18 +1,19 @@
 # Nmusco\ShipEngine\v1\ManifestsApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createManifest**](ManifestsApi.md#createManifest) | **POST** /v1/manifests | Create Manifest
-[**getManifestById**](ManifestsApi.md#getManifestById) | **GET** /v1/manifests/{manifest_id} | Get Manifest By Id
-[**listManifests**](ManifestsApi.md#listManifests) | **GET** /v1/manifests | List Manifests
+[**createManifest()**](ManifestsApi.md#createManifest) | **POST** /v1/manifests | Create Manifest
+[**getManifestById()**](ManifestsApi.md#getManifestById) | **GET** /v1/manifests/{manifest_id} | Get Manifest By Id
+[**listManifests()**](ManifestsApi.md#listManifests) | **GET** /v1/manifests | List Manifests
 
 
+## `createManifest()`
 
-## createManifest
-
-> \Nmusco\ShipEngine\v1\Models\CreateManifestResponseBody createManifest($create_manifest_request_body)
+```php
+createManifest($create_manifest_request_body): \Nmusco\ShipEngine\v1\Models\CreateManifestResponseBody
+```
 
 Create Manifest
 
@@ -37,7 +38,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\ManifestsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_manifest_request_body = new \Nmusco\ShipEngine\v1\Models\CreateManifestRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateManifestRequestBody | 
+$create_manifest_request_body = new \Nmusco\ShipEngine\v1\Models\CreateManifestRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateManifestRequestBody
 
 try {
     $result = $apiInstance->createManifest($create_manifest_request_body);
@@ -45,11 +46,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ManifestsApi->createManifest: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -65,17 +64,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getManifestById()`
 
-## getManifestById
-
-> \Nmusco\ShipEngine\v1\Models\GetManifestByIdResponseBody getManifestById($manifest_id)
+```php
+getManifestById($manifest_id): \Nmusco\ShipEngine\v1\Models\GetManifestByIdResponseBody
+```
 
 Get Manifest By Id
 
@@ -108,11 +108,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ManifestsApi->getManifestById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -129,16 +127,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listManifests()`
 
-## listManifests
-
-> \Nmusco\ShipEngine\v1\Models\ListManifestsResponseBody listManifests($warehouse_id, $ship_date_start, $ship_date_end, $created_at_start, $created_at_end, $carrier_id, $page, $page_size, $label_ids)
+```php
+listManifests($warehouse_id, $ship_date_start, $ship_date_end, $created_at_start, $created_at_end, $carrier_id, $page, $page_size, $label_ids): \Nmusco\ShipEngine\v1\Models\ListManifestsResponseBody
+```
 
 List Manifests
 
@@ -171,7 +170,7 @@ $created_at_end = 2019-03-12T19:24:13.657Z; // \DateTime | Used to create a filt
 $carrier_id = 'carrier_id_example'; // string | Carrier ID
 $page = 2; // int | Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
 $page_size = 50; // int | The number of results to return per response.
-$label_ids = array('label_ids_example'); // string[] | 
+$label_ids = array('label_ids_example'); // string[]
 
 try {
     $result = $apiInstance->listManifests($warehouse_id, $ship_date_start, $ship_date_end, $created_at_start, $created_at_end, $carrier_id, $page, $page_size, $label_ids);
@@ -179,11 +178,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ManifestsApi->listManifests: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -208,9 +205,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

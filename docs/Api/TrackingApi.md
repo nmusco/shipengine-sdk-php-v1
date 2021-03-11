@@ -1,18 +1,19 @@
 # Nmusco\ShipEngine\v1\TrackingApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getTrackingLog**](TrackingApi.md#getTrackingLog) | **GET** /v1/tracking | Get Tracking Information
-[**startTracking**](TrackingApi.md#startTracking) | **POST** /v1/tracking/start | Start Tracking a Package
-[**stopTracking**](TrackingApi.md#stopTracking) | **POST** /v1/tracking/stop | Stop Tracking a Package
+[**getTrackingLog()**](TrackingApi.md#getTrackingLog) | **GET** /v1/tracking | Get Tracking Information
+[**startTracking()**](TrackingApi.md#startTracking) | **POST** /v1/tracking/start | Start Tracking a Package
+[**stopTracking()**](TrackingApi.md#stopTracking) | **POST** /v1/tracking/stop | Stop Tracking a Package
 
 
+## `getTrackingLog()`
 
-## getTrackingLog
-
-> \Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody getTrackingLog($carrier_code, $tracking_number)
+```php
+getTrackingLog($carrier_code, $tracking_number): \Nmusco\ShipEngine\v1\Models\GetTrackingLogResponseBody
+```
 
 Get Tracking Information
 
@@ -46,11 +47,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TrackingApi->getTrackingLog: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -68,16 +67,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `startTracking()`
 
-## startTracking
-
-> string startTracking($carrier_code, $tracking_number)
+```php
+startTracking($carrier_code, $tracking_number): string
+```
 
 Start Tracking a Package
 
@@ -111,11 +111,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TrackingApi->startTracking: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -133,16 +131,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `stopTracking()`
 
-## stopTracking
-
-> string stopTracking($carrier_code, $tracking_number)
+```php
+stopTracking($carrier_code, $tracking_number): string
+```
 
 Stop Tracking a Package
 
@@ -176,11 +175,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TrackingApi->stopTracking: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -198,9 +195,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

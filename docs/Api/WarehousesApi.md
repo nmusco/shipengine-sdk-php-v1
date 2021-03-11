@@ -1,20 +1,21 @@
 # Nmusco\ShipEngine\v1\WarehousesApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createWarehouse**](WarehousesApi.md#createWarehouse) | **POST** /v1/warehouses | Create Warehouse
-[**deleteWarehouse**](WarehousesApi.md#deleteWarehouse) | **DELETE** /v1/warehouses/{warehouse_id} | Delete Warehouse By ID
-[**getWarehouseById**](WarehousesApi.md#getWarehouseById) | **GET** /v1/warehouses/{warehouse_id} | Get Warehouse By Id
-[**listWarehouses**](WarehousesApi.md#listWarehouses) | **GET** /v1/warehouses | List Warehouses
-[**updateWarehouse**](WarehousesApi.md#updateWarehouse) | **PUT** /v1/warehouses/{warehouse_id} | Update WareHouse By Id
+[**createWarehouse()**](WarehousesApi.md#createWarehouse) | **POST** /v1/warehouses | Create Warehouse
+[**deleteWarehouse()**](WarehousesApi.md#deleteWarehouse) | **DELETE** /v1/warehouses/{warehouse_id} | Delete Warehouse By ID
+[**getWarehouseById()**](WarehousesApi.md#getWarehouseById) | **GET** /v1/warehouses/{warehouse_id} | Get Warehouse By Id
+[**listWarehouses()**](WarehousesApi.md#listWarehouses) | **GET** /v1/warehouses | List Warehouses
+[**updateWarehouse()**](WarehousesApi.md#updateWarehouse) | **PUT** /v1/warehouses/{warehouse_id} | Update WareHouse By Id
 
 
+## `createWarehouse()`
 
-## createWarehouse
-
-> \Nmusco\ShipEngine\v1\Models\CreateWarehouseResponseBody createWarehouse($create_warehouse_request_body)
+```php
+createWarehouse($create_warehouse_request_body): \Nmusco\ShipEngine\v1\Models\CreateWarehouseResponseBody
+```
 
 Create Warehouse
 
@@ -39,7 +40,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WarehousesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_warehouse_request_body = new \Nmusco\ShipEngine\v1\Models\CreateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateWarehouseRequestBody | 
+$create_warehouse_request_body = new \Nmusco\ShipEngine\v1\Models\CreateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateWarehouseRequestBody
 
 try {
     $result = $apiInstance->createWarehouse($create_warehouse_request_body);
@@ -47,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WarehousesApi->createWarehouse: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -67,17 +66,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteWarehouse()`
 
-## deleteWarehouse
-
-> string deleteWarehouse($warehouse_id)
+```php
+deleteWarehouse($warehouse_id): string
+```
 
 Delete Warehouse By ID
 
@@ -110,11 +110,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WarehousesApi->deleteWarehouse: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -131,16 +129,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getWarehouseById()`
 
-## getWarehouseById
-
-> \Nmusco\ShipEngine\v1\Models\GetWarehouseByIdResponseBody getWarehouseById($warehouse_id)
+```php
+getWarehouseById($warehouse_id): \Nmusco\ShipEngine\v1\Models\GetWarehouseByIdResponseBody
+```
 
 Get Warehouse By Id
 
@@ -173,11 +172,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WarehousesApi->getWarehouseById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -194,16 +191,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listWarehouses()`
 
-## listWarehouses
-
-> \Nmusco\ShipEngine\v1\Models\ListWarehousesResponseBody listWarehouses()
+```php
+listWarehouses(): \Nmusco\ShipEngine\v1\Models\ListWarehousesResponseBody
+```
 
 List Warehouses
 
@@ -235,7 +233,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WarehousesApi->listWarehouses: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -253,16 +250,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateWarehouse()`
 
-## updateWarehouse
-
-> string updateWarehouse($warehouse_id, $update_warehouse_request_body)
+```php
+updateWarehouse($warehouse_id, $update_warehouse_request_body): string
+```
 
 Update WareHouse By Id
 
@@ -288,7 +286,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\WarehousesApi(
     $config
 );
 $warehouse_id = 'warehouse_id_example'; // string | Warehouse ID
-$update_warehouse_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateWarehouseRequestBody | 
+$update_warehouse_request_body = new \Nmusco\ShipEngine\v1\Models\UpdateWarehouseRequestBody(); // \Nmusco\ShipEngine\v1\Models\UpdateWarehouseRequestBody
 
 try {
     $result = $apiInstance->updateWarehouse($warehouse_id, $update_warehouse_request_body);
@@ -296,11 +294,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling WarehousesApi->updateWarehouse: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -317,10 +313,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: text/plain, application/json
+- **Content-Type**: `application/json`
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

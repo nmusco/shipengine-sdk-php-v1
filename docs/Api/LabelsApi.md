@@ -1,24 +1,25 @@
 # Nmusco\ShipEngine\v1\LabelsApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLabel**](LabelsApi.md#createLabel) | **POST** /v1/labels | Purchase Label
-[**createLabelFromRate**](LabelsApi.md#createLabelFromRate) | **POST** /v1/labels/rates/{rate_id} | Purchase Label with Rate ID
-[**createLabelFromShipment**](LabelsApi.md#createLabelFromShipment) | **POST** /v1/labels/shipment/{shipment_id} | Purchase Label with Shipment ID
-[**createReturnLabel**](LabelsApi.md#createReturnLabel) | **POST** /v1/labels/{label_id}/return | Create a return label
-[**getLabelByExternalShipmentId**](LabelsApi.md#getLabelByExternalShipmentId) | **GET** /v1/labels/external_shipment_id/{external_shipment_id} | Get Label By External Shipment ID
-[**getLabelById**](LabelsApi.md#getLabelById) | **GET** /v1/labels/{label_id} | Get Label By ID
-[**getTrackingLogFromLabel**](LabelsApi.md#getTrackingLogFromLabel) | **GET** /v1/labels/{label_id}/track | Get Label Tracking Information
-[**listLabels**](LabelsApi.md#listLabels) | **GET** /v1/labels | List labels
-[**voidLabel**](LabelsApi.md#voidLabel) | **PUT** /v1/labels/{label_id}/void | Void a Label By ID
+[**createLabel()**](LabelsApi.md#createLabel) | **POST** /v1/labels | Purchase Label
+[**createLabelFromRate()**](LabelsApi.md#createLabelFromRate) | **POST** /v1/labels/rates/{rate_id} | Purchase Label with Rate ID
+[**createLabelFromShipment()**](LabelsApi.md#createLabelFromShipment) | **POST** /v1/labels/shipment/{shipment_id} | Purchase Label with Shipment ID
+[**createReturnLabel()**](LabelsApi.md#createReturnLabel) | **POST** /v1/labels/{label_id}/return | Create a return label
+[**getLabelByExternalShipmentId()**](LabelsApi.md#getLabelByExternalShipmentId) | **GET** /v1/labels/external_shipment_id/{external_shipment_id} | Get Label By External Shipment ID
+[**getLabelById()**](LabelsApi.md#getLabelById) | **GET** /v1/labels/{label_id} | Get Label By ID
+[**getTrackingLogFromLabel()**](LabelsApi.md#getTrackingLogFromLabel) | **GET** /v1/labels/{label_id}/track | Get Label Tracking Information
+[**listLabels()**](LabelsApi.md#listLabels) | **GET** /v1/labels | List labels
+[**voidLabel()**](LabelsApi.md#voidLabel) | **PUT** /v1/labels/{label_id}/void | Void a Label By ID
 
 
+## `createLabel()`
 
-## createLabel
-
-> \Nmusco\ShipEngine\v1\Models\CreateLabelResponseBody createLabel($create_label_request_body)
+```php
+createLabel($create_label_request_body): \Nmusco\ShipEngine\v1\Models\CreateLabelResponseBody
+```
 
 Purchase Label
 
@@ -43,7 +44,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_label_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody | 
+$create_label_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelRequestBody
 
 try {
     $result = $apiInstance->createLabel($create_label_request_body);
@@ -51,11 +52,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->createLabel: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -71,17 +70,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createLabelFromRate()`
 
-## createLabelFromRate
-
-> \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateResponseBody createLabelFromRate($rate_id, $create_label_from_rate_request_body)
+```php
+createLabelFromRate($rate_id, $create_label_from_rate_request_body): \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateResponseBody
+```
 
 Purchase Label with Rate ID
 
@@ -107,7 +107,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $rate_id = 'rate_id_example'; // string | Rate ID
-$create_label_from_rate_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody | 
+$create_label_from_rate_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelFromRateRequestBody
 
 try {
     $result = $apiInstance->createLabelFromRate($rate_id, $create_label_from_rate_request_body);
@@ -115,11 +115,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->createLabelFromRate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -136,17 +134,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createLabelFromShipment()`
 
-## createLabelFromShipment
-
-> \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentResponseBody createLabelFromShipment($shipment_id, $create_label_from_shipment_request_body)
+```php
+createLabelFromShipment($shipment_id, $create_label_from_shipment_request_body): \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentResponseBody
+```
 
 Purchase Label with Shipment ID
 
@@ -172,7 +171,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $shipment_id = 'shipment_id_example'; // string | Shipment ID
-$create_label_from_shipment_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody | 
+$create_label_from_shipment_request_body = new \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateLabelFromShipmentRequestBody
 
 try {
     $result = $apiInstance->createLabelFromShipment($shipment_id, $create_label_from_shipment_request_body);
@@ -180,11 +179,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->createLabelFromShipment: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -201,17 +198,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createReturnLabel()`
 
-## createReturnLabel
-
-> \Nmusco\ShipEngine\v1\Models\CreateReturnLabelResponseBody createReturnLabel($label_id, $create_return_label_request_body)
+```php
+createReturnLabel($label_id, $create_return_label_request_body): \Nmusco\ShipEngine\v1\Models\CreateReturnLabelResponseBody
+```
 
 Create a return label
 
@@ -237,7 +235,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $label_id = 'label_id_example'; // string | Label ID
-$create_return_label_request_body = new \Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody | 
+$create_return_label_request_body = new \Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody(); // \Nmusco\ShipEngine\v1\Models\CreateReturnLabelRequestBody
 
 try {
     $result = $apiInstance->createReturnLabel($label_id, $create_return_label_request_body);
@@ -245,11 +243,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->createReturnLabel: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -266,17 +262,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getLabelByExternalShipmentId()`
 
-## getLabelByExternalShipmentId
-
-> \Nmusco\ShipEngine\v1\Models\GetLabelByExternalShipmentIdResponseBody getLabelByExternalShipmentId($external_shipment_id, $label_download_type)
+```php
+getLabelByExternalShipmentId($external_shipment_id, $label_download_type): \Nmusco\ShipEngine\v1\Models\GetLabelByExternalShipmentIdResponseBody
+```
 
 Get Label By External Shipment ID
 
@@ -301,8 +298,8 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$external_shipment_id = 0bcb569d-1727-4ff9-ab49-b2fec0cee5ae; // string | 
-$label_download_type = url; // \Nmusco\ShipEngine\v1\Models\LabelDownloadType | 
+$external_shipment_id = 0bcb569d-1727-4ff9-ab49-b2fec0cee5ae; // string
+$label_download_type = url; // \Nmusco\ShipEngine\v1\Models\LabelDownloadType
 
 try {
     $result = $apiInstance->getLabelByExternalShipmentId($external_shipment_id, $label_download_type);
@@ -310,11 +307,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->getLabelByExternalShipmentId: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -332,16 +327,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getLabelById()`
 
-## getLabelById
-
-> \Nmusco\ShipEngine\v1\Models\GetLabelByIdResponseBody getLabelById($label_id, $label_download_type)
+```php
+getLabelById($label_id, $label_download_type): \Nmusco\ShipEngine\v1\Models\GetLabelByIdResponseBody
+```
 
 Get Label By ID
 
@@ -367,7 +363,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\LabelsApi(
     $config
 );
 $label_id = 'label_id_example'; // string | Label ID
-$label_download_type = url; // \Nmusco\ShipEngine\v1\Models\LabelDownloadType | 
+$label_download_type = url; // \Nmusco\ShipEngine\v1\Models\LabelDownloadType
 
 try {
     $result = $apiInstance->getLabelById($label_id, $label_download_type);
@@ -375,11 +371,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->getLabelById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -397,16 +391,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getTrackingLogFromLabel()`
 
-## getTrackingLogFromLabel
-
-> \Nmusco\ShipEngine\v1\Models\GetTrackingLogFromLabelResponseBody getTrackingLogFromLabel($label_id)
+```php
+getTrackingLogFromLabel($label_id): \Nmusco\ShipEngine\v1\Models\GetTrackingLogFromLabelResponseBody
+```
 
 Get Label Tracking Information
 
@@ -439,11 +434,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->getTrackingLogFromLabel: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -460,16 +453,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listLabels()`
 
-## listLabels
-
-> \Nmusco\ShipEngine\v1\Models\ListLabelsResponseBody listLabels($label_status, $service_code, $carrier_id, $tracking_number, $batch_id, $rate_id, $shipment_id, $warehouse_id, $created_at_start, $created_at_end, $page, $page_size, $sort_dir, $sort_by)
+```php
+listLabels($label_status, $service_code, $carrier_id, $tracking_number, $batch_id, $rate_id, $shipment_id, $warehouse_id, $created_at_start, $created_at_end, $page, $page_size, $sort_dir, $sort_by): \Nmusco\ShipEngine\v1\Models\ListLabelsResponseBody
+```
 
 List labels
 
@@ -515,11 +509,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->listLabels: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -549,16 +541,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `voidLabel()`
 
-## voidLabel
-
-> \Nmusco\ShipEngine\v1\Models\VoidLabelResponseBody voidLabel($label_id)
+```php
+voidLabel($label_id): \Nmusco\ShipEngine\v1\Models\VoidLabelResponseBody
+```
 
 Void a Label By ID
 
@@ -591,11 +584,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LabelsApi->voidLabel: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -612,9 +603,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,16 +1,17 @@
 # Nmusco\ShipEngine\v1\DownloadsApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**downloadFile**](DownloadsApi.md#downloadFile) | **GET** /v1/downloads/{dir}/{subdir}/{filename} | Download File
+[**downloadFile()**](DownloadsApi.md#downloadFile) | **GET** /v1/downloads/{dir}/{subdir}/{filename} | Download File
 
 
+## `downloadFile()`
 
-## downloadFile
-
-> \SplFileObject downloadFile($subdir, $filename, $dir, $download, $rotation)
+```php
+downloadFile($subdir, $filename, $dir, $download, $rotation): \SplFileObject
+```
 
 Download File
 
@@ -35,11 +36,11 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\DownloadsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$subdir = 'subdir_example'; // string | 
-$filename = 'filename_example'; // string | 
-$dir = 'dir_example'; // string | 
-$download = 'download_example'; // string | 
-$rotation = 56; // int | 
+$subdir = 'subdir_example'; // string
+$filename = 'filename_example'; // string
+$dir = 'dir_example'; // string
+$download = 'download_example'; // string
+$rotation = 56; // int
 
 try {
     $result = $apiInstance->downloadFile($subdir, $filename, $dir, $download, $rotation);
@@ -47,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DownloadsApi->downloadFile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -72,9 +71,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/pdf, image/png, application/zpl, application/json
+- **Accept**: `application/pdf`, `image/png`, `application/zpl`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

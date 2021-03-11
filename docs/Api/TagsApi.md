@@ -1,19 +1,20 @@
 # Nmusco\ShipEngine\v1\TagsApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createTag**](TagsApi.md#createTag) | **POST** /v1/tags/{tag_name} | Create a New Tag
-[**deleteTag**](TagsApi.md#deleteTag) | **DELETE** /v1/tags/{tag_name} | Delete Tag
-[**listTags**](TagsApi.md#listTags) | **GET** /v1/tags | Get Tags
-[**renameTag**](TagsApi.md#renameTag) | **PUT** /v1/tags/{tag_name}/{new_tag_name} | Update Tag Name
+[**createTag()**](TagsApi.md#createTag) | **POST** /v1/tags/{tag_name} | Create a New Tag
+[**deleteTag()**](TagsApi.md#deleteTag) | **DELETE** /v1/tags/{tag_name} | Delete Tag
+[**listTags()**](TagsApi.md#listTags) | **GET** /v1/tags | Get Tags
+[**renameTag()**](TagsApi.md#renameTag) | **PUT** /v1/tags/{tag_name}/{new_tag_name} | Update Tag Name
 
 
+## `createTag()`
 
-## createTag
-
-> \Nmusco\ShipEngine\v1\Models\CreateTagResponseBody createTag($tag_name)
+```php
+createTag($tag_name): \Nmusco\ShipEngine\v1\Models\CreateTagResponseBody
+```
 
 Create a New Tag
 
@@ -38,7 +39,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\TagsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$tag_name = 'tag_name_example'; // string | 
+$tag_name = 'tag_name_example'; // string
 
 try {
     $result = $apiInstance->createTag($tag_name);
@@ -46,11 +47,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->createTag: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -67,16 +66,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteTag()`
 
-## deleteTag
-
-> string deleteTag($tag_name)
+```php
+deleteTag($tag_name): string
+```
 
 Delete Tag
 
@@ -101,7 +101,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\TagsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$tag_name = 'tag_name_example'; // string | 
+$tag_name = 'tag_name_example'; // string
 
 try {
     $result = $apiInstance->deleteTag($tag_name);
@@ -109,11 +109,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->deleteTag: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -130,16 +128,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listTags()`
 
-## listTags
-
-> \Nmusco\ShipEngine\v1\Models\ListTagsResponseBody listTags()
+```php
+listTags(): \Nmusco\ShipEngine\v1\Models\ListTagsResponseBody
+```
 
 Get Tags
 
@@ -171,7 +170,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->listTags: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -189,16 +187,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `renameTag()`
 
-## renameTag
-
-> string renameTag($tag_name, $new_tag_name)
+```php
+renameTag($tag_name, $new_tag_name): string
+```
 
 Update Tag Name
 
@@ -223,8 +222,8 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\TagsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$tag_name = 'tag_name_example'; // string | 
-$new_tag_name = 'new_tag_name_example'; // string | 
+$tag_name = 'tag_name_example'; // string
+$new_tag_name = 'new_tag_name_example'; // string
 
 try {
     $result = $apiInstance->renameTag($tag_name, $new_tag_name);
@@ -232,11 +231,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->renameTag: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -254,9 +251,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json
+- **Accept**: `text/plain`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

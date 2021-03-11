@@ -3704,7 +3704,7 @@ components:
             instead of - or in addition to - the `company_name` field.
         phone:
           type: string
-          minLength: 1
+          nullable: true
           example: +1 204-253-9411 ext. 123
           description: >
             The phone number of a contact person at this address.  The format of

@@ -1,17 +1,18 @@
 # Nmusco\ShipEngine\v1\AddressesApi
 
-All URIs are relative to *https://api.shipengine.com*
+All URIs are relative to https://api.shipengine.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**parseAddress**](AddressesApi.md#parseAddress) | **PUT** /v1/addresses/recognize | Parse an address
-[**validateAddress**](AddressesApi.md#validateAddress) | **POST** /v1/addresses/validate | Validate An Address
+[**parseAddress()**](AddressesApi.md#parseAddress) | **PUT** /v1/addresses/recognize | Parse an address
+[**validateAddress()**](AddressesApi.md#validateAddress) | **POST** /v1/addresses/validate | Validate An Address
 
 
+## `parseAddress()`
 
-## parseAddress
-
-> \Nmusco\ShipEngine\v1\Models\ParseAddressResponseBody parseAddress($parse_address_request_body)
+```php
+parseAddress($parse_address_request_body): \Nmusco\ShipEngine\v1\Models\ParseAddressResponseBody
+```
 
 Parse an address
 
@@ -44,11 +45,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AddressesApi->parseAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -64,17 +63,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `validateAddress()`
 
-## validateAddress
-
-> AddressValidationResult[] validateAddress($address_to_validate)
+```php
+validateAddress($address_to_validate): AddressValidationResult[]
+```
 
 Validate An Address
 
@@ -99,7 +99,7 @@ $apiInstance = new Nmusco\ShipEngine\v1\Api\AddressesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$address_to_validate = [{"name":"Mickey and Minnie Mouse","phone":"714-781-4565","company_name":"The Walt Disney Company","address_line1":"500 South Buena Vista Street","city_locality":"Burbank","state_province":"CA","postal_code":91521,"country_code":"US"}]; // AddressToValidate[] | 
+$address_to_validate = [{"name":"Mickey and Minnie Mouse","phone":"714-781-4565","company_name":"The Walt Disney Company","address_line1":"500 South Buena Vista Street","city_locality":"Burbank","state_province":"CA","postal_code":91521,"country_code":"US"}]; // AddressToValidate[]
 
 try {
     $result = $apiInstance->validateAddress($address_to_validate);
@@ -107,11 +107,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AddressesApi->validateAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -127,10 +125,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-
